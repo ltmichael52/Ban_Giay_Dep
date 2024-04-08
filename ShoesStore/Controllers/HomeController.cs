@@ -1,37 +1,38 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ShoesStore.InterfaceRepositories;
 using ShoesStore.Models;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Mail;
+using System.Net;
+using System.Diagnostics.Eventing.Reader;
 
 namespace ShoesStore.Controllers
 {
-    public class HomeController : Controller
-    {
-        private readonly ILogger<HomeController> _logger;
+	public class HomeController : Controller
+	{
+		ShoesDbContext _context; IKhuyenMai kmRepo;
+		public HomeController(ShoesDbContext context, IKhuyenMai km)
+		{
+			_context = context;
+			this.kmRepo = km;
+		}
+		public IActionResult Index()
+		{
+            
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+            var banners = _context.Banners.Where(b => b.Hoatdong).ToList();
+			int checkKm = kmRepo.GetAllKhuyenMaiToday("","",0,0,0, -1) == null ? 0 : 1;
 
-		public IActionResult Index1()
+			HttpContext.Session.SetInt32("Khuyenmai", checkKm);
+
+			return View(banners);
+		}
+		public IActionResult Zalo()
 		{
 			return View();
 		}
 
-		public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
+	}
 }

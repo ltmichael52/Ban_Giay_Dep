@@ -1,0 +1,165 @@
+﻿@using ShoesStore.Areas.Admin.ViewModels;
+@model SanPhamViewModel
+@{
+    ViewData["Title"] = "Update San Pham";
+}
+
+<h1>Cập nhật chi tiết giày</h1>
+
+<form asp-action="UpdateSanPham" asp-controller="SanPhamAdmin" asp-route-masp="@ViewBag.Masp" method="post" enctype="multipart/form-data">
+    <input asp-for="DongsanphamId" hidden />
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label asp-for="DongsanphamName" class="control-label">Tên giày</label>
+                <input asp-for="DongsanphamName" readonly class="form-control" />
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label asp-for="TypeName" class="control-label">Tên loại giày</label>
+                <input asp-for="TypeName" readonly class="form-control" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label asp-for="IdMau" class="control-label">Màu</label>
+                <select asp-for="IdMau" id="colorChoice" class="form-control" style="width: 200px;" asp-items="ViewBag.ColorChoice">
+                </select>
+                <span asp-validation-for="IdMau" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label asp-for="TrangThai" class="control-label">Trạng thái</label>
+                <select asp-for="TrangThai" id="colorChoice" class="form-control" style="width: 200px;">
+                    @foreach(var value in Enum.GetValues(typeof(SanPhamViewModel.TrangThaiEnum)))
+                    {
+                        var enumMember = typeof(SanPhamViewModel.TrangThaiEnum).GetMember(value.ToString())[0];
+                        var vietnameseName = ((VietnameseNameAttribute)enumMember.GetCustomAttributes(typeof(VietnameseNameAttribute), false)[0]).Name;
+                        <option value="@value">@vietnameseName</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="selectedColor" name="SelectedColor" />
+
+
+    <label class="control-label">Size And Amounts</label>
+    <div class="form-inline">
+
+        @if (Model.tenSize != null)
+        {
+            for (int i = 0; i < Model.tenSize.Count(); i++)
+            {
+                <div class="row mb-2">
+                    <div class="col" style="text-align:center">
+                        <p asp-for="@Model.tenSize[i]" class="text-center" style="margin:auto">@Model.tenSize[i]</p>
+                    </div>
+                    <div class="col">
+                        <input asp-for="@Model.slton[i]" class="form-control" />
+                        <input asp-for="@Model.tenSize[i]" class="form-control" style="display:none" />
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label asp-for="AvatarImage" class="control-label">Avatar Image</label>
+                <div class="custom-file">
+                    <input type="file" asp-for="AvatarImage" class="custom-file-input" id="FLAvatarImage" onchange="previewImage(this)"/>
+                    <label class="custom-file-label" for="FLAvatarImage">Choose file</label>
+
+                </div>
+                <span asp-validation-for="AvatarImage" class="text-danger"></span>
+                <img src="~/img/@Model.DongsanphamId/@ViewBag.Anhdaidien" id="AvatarImagePrv" src="#" width="150" height="150" style="border: 1px solid; margin: 20px auto;" />
+
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label asp-for="TopImage" class="control-label">Top Image</label>
+                <div class="custom-file">
+                    <input type="file" asp-for="TopImage" class="custom-file-input" id="FLTopImage" onchange="previewImage1(this)" />
+                    <label class="custom-file-label" for="FLTopImage">Choose file</label>
+                    <span asp-validation-for="TopImage" class="text-danger"></span>
+                </div>
+                <img src="~/img/@Model.DongsanphamId/@ViewBag.Anhmattren" id="TopImagePrv" src="#" width="150" height="150" style="border: 1px solid; margin: 20px auto;" />
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label class="control-label">Bottom Image</label>
+                <div class="custom-file">
+                    <input type="file" asp-for="BottomImage" class="custom-file-input" id="FLBottomImage" onchange="previewImage2(this)" />
+                    <label class="custom-file-label" for="FLBottomImage">Choose file</label>
+                    <span asp-validation-for="BottomImage" class="text-danger"></span>
+                </div>
+                <img src ="~/img/@Model.DongsanphamId/@ViewBag.Anhdegiay" id="BottomImagePrv" src="#" width="150" height="150" style="border: 1px solid; margin: 20px auto;" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <a asp-action="SanPhamList" asp-controller="SanPhamAdmin" asp-route-madongsp="@Model.DongsanphamId" class="btn btn-secondary">Quay lại danh sách chi tiết sản phẩm</a>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+<script type="text/javascript">
+    console.log("Testing2: ");
+
+    function previewImage(input) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#AvatarImagePrv').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+
+        var fileName = input.files[0].name;
+        $(input).siblings(".custom-file-label").addClass("selected").html(fileName);
+    }
+
+    function previewImage1(input) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#TopImagePrv').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+
+        var fileName = input.files[0].name;
+        $(input).siblings(".custom-file-label").addClass("selected").html(fileName);
+    }
+
+    function previewImage2(input) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#BottomImagePrv').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+
+        var fileName = input.files[0].name;
+        $(input).siblings(".custom-file-label").addClass("selected").html(fileName);
+    }
+</script>
+
+

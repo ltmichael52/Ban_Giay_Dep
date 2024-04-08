@@ -1,0 +1,49 @@
+﻿@model ShoesStore.Models.Dongsanpham
+
+@{
+    ViewData["Title"] = "Create";
+   
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Tạo Dòng Sản Phẩm Mới</h4>
+
+            <form asp-action="Create" method="post" id="createForm">
+                <input asp-for="MaloaiNavigation.Maloai" value="0" hidden />
+                <input asp-for="MaloaiNavigation.Tenloai" value="0" hidden />
+                <div class="form-group">
+                    <label asp-for="Tendongsp">Tên</label>
+                    <input asp-for="Tendongsp" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Maloai">Loại</label>
+                    <select asp-for="Maloai" class="form-control" asp-items="ViewBag.Selectloai"></select>
+                    <span asp-validation-for="Maloai" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Giagoc">Giá Gốc</label>
+                    <input asp-for="Giagoc" class="form-control" type="number" step="0.01" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mota">Mô Tả</label>
+                    <textarea asp-for="Mota" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Trangthai" class="form-label">Trạng Thái</label>
+                    <select asp-for="Trangthai" class="form-control">
+                        <option value="Đang Bán">Đang Bán</option>
+                        <option value="New">New</option>
+                        <option value="Hot">Hot</option>
+                    </select>
+                </div>
+
+                <!-- Button type="submit" đã được di chuyển ra ngoài form -->
+                <button type="submit" class="btn btn-gradient-primary me-2">Tạo</button>
+                <a href="@Url.Action("Index", "Dongsanpham")" class="btn btn-light">Hủy</a>
+            </form>
+        </div>
+    </div>
+</div>

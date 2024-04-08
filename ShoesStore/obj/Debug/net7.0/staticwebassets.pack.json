@@ -5,12 +5,2740 @@
       "PackagePath": "staticwebassets\\ShoesStore.bundle.scp.css"
     },
     {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\.DS_Store",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\.DS_Store"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\.gitignore",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\.gitignore"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\CHANGELOG.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\LICENSE",
+      "PackagePath": "staticwebassets\\LayoutAdmin"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\PSD\\Purple_dashboard_free.psd",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\PSD\\Purple_dashboard_free.psd"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\README.md",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\README.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\css\\style.css.map",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\css\\style.css.map"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.eot",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.eot"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.ttf",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.ttf"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.woff",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.woff"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.woff2",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.woff2"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Light.eot",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Light.eot"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Light.ttf",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Light.ttf"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Light.woff",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Light.woff"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Light.woff2",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Light.woff2"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.eot",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.eot"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.ttf",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.ttf"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.woff",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.woff"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.woff2",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.woff2"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.eot",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.eot"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.ttf",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.ttf"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff2",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff2"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\dashboard\\circle.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\dashboard\\circle.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\dashboard\\circle.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\dashboard\\circle.svg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\dashboard\\img_1.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\dashboard\\img_1.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\dashboard\\img_2.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\dashboard\\img_2.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\dashboard\\img_3.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\dashboard\\img_3.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\dashboard\\img_4.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\dashboard\\img_4.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces-clipart\\pic-1.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces-clipart\\pic-1.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces-clipart\\pic-2.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces-clipart\\pic-2.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces-clipart\\pic-3.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces-clipart\\pic-3.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces-clipart\\pic-4.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces-clipart\\pic-4.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face1.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face1.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face10.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face10.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face11.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face11.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face12.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face12.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face13.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face13.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face14.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face14.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face15.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face15.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face16.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face16.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face17.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face17.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face18.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face18.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face19.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face19.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face2.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face2.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face20.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face20.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face21.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face21.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face22.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face22.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face23.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face23.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face24.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face24.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face25.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face25.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face26.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face26.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face27.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face27.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face3.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face3.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face4.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face4.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face5.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face5.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face6.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face6.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face7.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face7.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face8.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face8.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face9.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face9.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\favicon.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\logo-mini.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\logo-mini.svg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\logo.svg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\sprites\\blue.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\sprites\\blue.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\sprites\\dark.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\sprites\\dark.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\sprites\\flag.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\sprites\\flag.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\sprites\\green.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\sprites\\green.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\sprites\\jsgrid-icons.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\sprites\\jsgrid-icons.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\sprites\\red.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\sprites\\red.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\images\\sprites\\yellow.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\sprites\\yellow.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\js\\chart.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\chart.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\dashboard.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\js\\file-upload.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\file-upload.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\js\\hoverable-collapse.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\hoverable-collapse.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\js\\jquery.cookie.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\jquery.cookie.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\js\\misc.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\misc.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\js\\off-canvas.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\off-canvas.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\js\\todo.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\todo.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\js\\todolist.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\todolist.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_dashboard.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_dashboard.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_demo.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_demo.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_fonts.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_fonts.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_footer.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_footer.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_functions.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_layouts.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_layouts.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_misc.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_misc.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_reset.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_reset.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_sidebar.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_sidebar.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_typography.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_typography.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_vertical-wrapper.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_vertical-wrapper.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\_widget-grid.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\_widget-grid.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_badges.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_badges.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_bootstrap-progress.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_bootstrap-progress.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_breadcrumbs.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_breadcrumbs.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_buttons.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_cards.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_cards.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_checkbox-radio.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_checkbox-radio.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_dropdown.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_forms.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_icons.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_icons.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_lists.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_lists.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_preview.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_preview.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_tables.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_tables.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_todo-list.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\components\\_todo-list.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\landing-screens\\_auth.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\landing-screens\\_auth.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_animation.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_animation.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_background.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_background.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_badges.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_badges.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_blockqoute.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_blockqoute.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_breadcrumbs.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_breadcrumbs.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_cards.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_cards.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_misc.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_misc.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_popovers.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_popovers.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_text.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_text.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\mixins\\_tooltips.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\mixins\\_tooltips.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\style.scss"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\vendors\\chart.js\\Chart.min.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\vendors\\chart.js\\Chart.min.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\vendors\\css\\vendor.bundle.base.css",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\vendors\\css\\vendor.bundle.base.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\vendors\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\vendors\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\vendors\\js\\vendor.bundle.base.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\vendors\\js\\vendor.bundle.base.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css.map",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css.map"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\gulp-tasks\\inject.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\gulp-tasks\\inject.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\gulp-tasks\\serve.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\gulp-tasks\\serve.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\gulp-tasks\\vendors.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\gulp-tasks\\vendors.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\gulpfile.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\gulpfile.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\index.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\index.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\package.json",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\package.json"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\pages\\charts\\chartjs.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\charts\\chartjs.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\pages\\forms\\basic_elements.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\forms\\basic_elements.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\pages\\icons\\mdi.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\icons\\mdi.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\pages\\samples\\blank-page.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\samples\\blank-page.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\pages\\samples\\error-404.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\samples\\error-404.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\pages\\samples\\error-500.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\samples\\error-500.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\pages\\samples\\login.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\samples\\login.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\pages\\samples\\register.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\samples\\register.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\pages\\tables\\basic-table.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\tables\\basic-table.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\pages\\ui-features\\buttons.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\ui-features\\buttons.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\pages\\ui-features\\typography.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\ui-features\\typography.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\partials\\_footer.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\partials\\_footer.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\partials\\_navbar.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\partials\\_navbar.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\partials\\_sidebar.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\partials\\_sidebar.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\LayoutAdmin\\screenshot.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\screenshot.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\CHANGES.md",
+      "PackagePath": "staticwebassets\\ckeditor\\CHANGES.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\LICENSE.md",
+      "PackagePath": "staticwebassets\\ckeditor\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\README.md",
+      "PackagePath": "staticwebassets\\ckeditor\\README.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\SECURITY.md",
+      "PackagePath": "staticwebassets\\ckeditor\\SECURITY.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\adapters\\jquery.js",
+      "PackagePath": "staticwebassets\\ckeditor\\adapters\\jquery.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\build-config.js",
+      "PackagePath": "staticwebassets\\ckeditor\\build-config.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\ckeditor.js",
+      "PackagePath": "staticwebassets\\ckeditor\\ckeditor.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\config.js",
+      "PackagePath": "staticwebassets\\ckeditor\\config.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\contents.css",
+      "PackagePath": "staticwebassets\\ckeditor\\contents.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\af.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\af.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\ar.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ar.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\az.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\az.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\bg.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\bg.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\bn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\bn.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\bs.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\bs.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\ca.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ca.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\cs.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\cy.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\da.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\da.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\de-ch.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\de-ch.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\de.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\de.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\el.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\el.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\en-au.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\en-au.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\en-ca.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\en-ca.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\en-gb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\en-gb.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\en.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\eo.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\es-mx.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\es-mx.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\es.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\es.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\et.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\et.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\eu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\eu.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\fa.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\fi.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\fo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\fo.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\fr-ca.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\fr-ca.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\fr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\gl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\gl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\gu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\gu.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\he.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\he.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\hi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\hi.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\hr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\hr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\hu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\hu.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\id.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\id.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\is.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\is.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\it.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\it.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\ja.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ja.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\ka.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ka.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\km.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\km.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\ko.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ko.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\ku.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ku.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\lt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\lt.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\lv.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\lv.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\mk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\mk.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\mn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\mn.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\ms.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ms.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\nb.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\nl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\no.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\no.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\oc.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\oc.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\pl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\pl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\pt-br.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\pt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\pt.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\ro.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ro.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\ru.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ru.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\si.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\si.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\sk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\sk.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\sl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\sl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\sq.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\sq.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\sr-latn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\sr-latn.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\sr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\sr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\sv.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\sv.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\th.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\th.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\tr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\tt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\tt.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\ug.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\uk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\uk.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\vi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\vi.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\lang\\zh.js",
+      "PackagePath": "staticwebassets\\ckeditor\\lang\\zh.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\a11yhelp.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\a11yhelp.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\_translationstatus.txt",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\_translationstatus.txt"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\af.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\af.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ar.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ar.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\az.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\az.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\bg.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\bg.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ca.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ca.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\cs.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\cy.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\da.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\da.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\de-ch.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\de-ch.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\de.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\de.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\el.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\el.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en-au.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en-au.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en-gb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en-gb.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\eo.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\es-mx.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\es-mx.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\es.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\es.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\et.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\et.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\eu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\eu.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fa.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fi.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fo.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fr-ca.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fr-ca.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\gl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\gl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\gu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\gu.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\he.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\he.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hi.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hu.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\id.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\id.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\it.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\it.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ja.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ja.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\km.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\km.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ko.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ko.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ku.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ku.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\lt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\lt.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\lv.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\lv.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\mk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\mk.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\mn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\mn.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\nb.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\nl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\no.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\no.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\oc.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\oc.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pt-br.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pt.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ro.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ro.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ru.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ru.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\si.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\si.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sk.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sq.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sq.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sr-latn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sr-latn.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sv.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sv.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\th.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\th.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\tr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\tt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\tt.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ug.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\uk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\uk.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\vi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\vi.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\zh.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\zh.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\about\\dialogs\\about.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\about\\dialogs\\about.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\about\\dialogs\\hidpi\\logo_ckeditor.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\about\\dialogs\\hidpi\\logo_ckeditor.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\about\\dialogs\\logo_ckeditor.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\about\\dialogs\\logo_ckeditor.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\balloonpanel\\skins\\kama\\balloonpanel.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\balloonpanel\\skins\\kama\\balloonpanel.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\balloonpanel\\skins\\moono-lisa\\balloonpanel.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\balloonpanel\\skins\\moono-lisa\\balloonpanel.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\balloonpanel\\skins\\moono-lisa\\images\\close.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\balloonpanel\\skins\\moono-lisa\\images\\close.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\balloonpanel\\skins\\moono-lisa\\images\\hidpi\\close.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\balloonpanel\\skins\\moono-lisa\\images\\hidpi\\close.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\balloonpanel\\skins\\moono\\balloonpanel.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\balloonpanel\\skins\\moono\\balloonpanel.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\balloonpanel\\skins\\moono\\images\\close.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\balloonpanel\\skins\\moono\\images\\close.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\balloonpanel\\skins\\moono\\images\\hidpi\\close.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\balloonpanel\\skins\\moono\\images\\hidpi\\close.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\balloontoolbar\\skins\\default.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\balloontoolbar\\skins\\default.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\balloontoolbar\\skins\\kama\\balloontoolbar.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\balloontoolbar\\skins\\kama\\balloontoolbar.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\balloontoolbar\\skins\\moono-lisa\\balloontoolbar.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\balloontoolbar\\skins\\moono-lisa\\balloontoolbar.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\balloontoolbar\\skins\\moono\\balloontoolbar.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\balloontoolbar\\skins\\moono\\balloontoolbar.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\clipboard\\dialogs\\paste.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\clipboard\\dialogs\\paste.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\copyformatting\\cursors\\cursor-disabled.svg",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\copyformatting\\cursors\\cursor-disabled.svg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\copyformatting\\cursors\\cursor.svg",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\copyformatting\\cursors\\cursor.svg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\copyformatting\\styles\\copyformatting.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\copyformatting\\styles\\copyformatting.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\dialog\\dialogDefinition.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\dialog\\dialogDefinition.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\dialog\\styles\\dialog.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\dialog\\styles\\dialog.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\div\\dialogs\\div.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\div\\dialogs\\div.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\easyimage\\dialogs\\easyimagealt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\easyimage\\dialogs\\easyimagealt.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\easyimage\\styles\\easyimage.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\easyimage\\styles\\easyimage.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\CHANGELOG.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\LICENSE.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\README.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\README.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\plugindefinition.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\plugindefinition.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\_helpers\\tools.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\_helpers\\tools.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\authentication.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\authentication.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\exportpdf.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\exportpdf.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\configfilename.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\configfilename.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\configfilename.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\configfilename.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\emptyeditor.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\emptyeditor.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\emptyeditor.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\emptyeditor.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integration.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integration.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integration.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integration.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integrations\\easyimage.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integrations\\easyimage.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integrations\\easyimage.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integrations\\easyimage.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notifications.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notifications.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notifications.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notifications.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notificationsasync.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notificationsasync.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notificationsasync.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notificationsasync.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\paperformat.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\paperformat.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\paperformat.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\paperformat.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\readonly.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\readonly.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\readonly.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\readonly.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\stylesheets.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\stylesheets.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\stylesheets.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\stylesheets.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenfetching.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenfetching.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenfetching.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenfetching.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorscorrect.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorscorrect.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorscorrect.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorscorrect.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorswrong.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorswrong.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorswrong.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorswrong.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenwithouturl.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenwithouturl.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenwithouturl.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenwithouturl.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\wrongendpoint.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\wrongendpoint.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\manual\\wrongendpoint.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\manual\\wrongendpoint.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\notification.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\notification.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\resourcespaths.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\resourcespaths.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\statistics.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\statistics.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\exportpdf\\tests\\stylesheets.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\exportpdf\\tests\\stylesheets.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\find\\dialogs\\find.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\find\\dialogs\\find.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\button.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\button.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\checkbox.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\checkbox.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\form.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\form.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\hiddenfield.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\hiddenfield.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\radio.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\radio.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\select.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\select.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\textarea.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\textarea.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\forms\\dialogs\\textfield.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\dialogs\\textfield.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\forms\\images\\hiddenfield.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\forms\\images\\hiddenfield.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\icons.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\icons.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\icons_hidpi.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\icons_hidpi.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\iframe\\dialogs\\iframe.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\iframe\\dialogs\\iframe.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\iframe\\images\\placeholder.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\iframe\\images\\placeholder.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\image\\dialogs\\image.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\image\\dialogs\\image.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\image\\images\\noimage.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\image\\images\\noimage.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\imagebase\\styles\\imagebase.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\imagebase\\styles\\imagebase.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\link\\dialogs\\anchor.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\link\\dialogs\\anchor.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\link\\dialogs\\link.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\link\\dialogs\\link.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\link\\images\\anchor.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\link\\images\\anchor.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\link\\images\\hidpi\\anchor.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\link\\images\\hidpi\\anchor.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\liststyle\\dialogs\\liststyle.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\liststyle\\dialogs\\liststyle.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon-rtl.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon-rtl.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\magicline\\images\\icon-rtl.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\magicline\\images\\icon-rtl.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\magicline\\images\\icon.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\magicline\\images\\icon.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\pagebreak\\images\\pagebreak.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\pagebreak\\images\\pagebreak.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\pastefromgdocs\\filter\\default.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\pastefromgdocs\\filter\\default.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\pastefromlibreoffice\\filter\\default.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\pastefromlibreoffice\\filter\\default.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\pastefromword\\filter\\default.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\pastefromword\\filter\\default.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\pastetools\\filter\\common.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\pastetools\\filter\\common.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\pastetools\\filter\\image.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\pastetools\\filter\\image.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\preview\\images\\pagebreak.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\preview\\images\\pagebreak.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\preview\\preview.html",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\preview\\preview.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\preview\\styles\\screen.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\preview\\styles\\screen.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\scayt\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\scayt\\CHANGELOG.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\scayt\\LICENSE.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\scayt\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\scayt\\README.md",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\scayt\\README.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\scayt\\dialogs\\dialog.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\scayt\\dialogs\\dialog.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\scayt\\dialogs\\options.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\scayt\\dialogs\\options.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\scayt\\dialogs\\toolbar.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\scayt\\dialogs\\toolbar.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\scayt\\skins\\moono-lisa\\scayt.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\scayt\\skins\\moono-lisa\\scayt.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_address.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_address.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_blockquote.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_blockquote.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_div.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_div.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h1.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h1.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h2.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h2.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h3.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h3.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h4.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h4.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h5.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h5.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_h6.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_h6.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_p.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_p.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\showblocks\\images\\block_pre.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\showblocks\\images\\block_pre.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\dialogs\\smiley.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\dialogs\\smiley.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\angel_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\angel_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\angel_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\angel_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\angry_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\angry_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\angry_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\angry_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\broken_heart.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\broken_heart.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\broken_heart.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\broken_heart.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\confused_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\confused_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\confused_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\confused_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\cry_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\cry_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\cry_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\cry_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\devil_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\devil_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\devil_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\devil_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\embaressed_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\embaressed_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\envelope.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\envelope.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\envelope.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\envelope.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\heart.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\heart.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\heart.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\heart.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\kiss.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\kiss.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\kiss.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\kiss.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\lightbulb.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\lightbulb.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\lightbulb.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\lightbulb.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\omg_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\omg_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\omg_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\omg_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\regular_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\regular_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\regular_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\regular_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\sad_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\sad_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\sad_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\sad_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\shades_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\shades_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\shades_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\shades_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\teeth_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\teeth_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\teeth_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\teeth_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\thumbs_down.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\thumbs_down.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\thumbs_down.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\thumbs_down.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\thumbs_up.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\thumbs_up.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\thumbs_up.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\thumbs_up.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\tongue_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\tongue_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\tongue_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\tongue_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\tounge_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\tounge_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\wink_smile.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\wink_smile.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\smiley\\images\\wink_smile.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\smiley\\images\\wink_smile.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\_translationstatus.txt",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\_translationstatus.txt"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\af.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\af.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ar.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ar.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\az.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\az.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\bg.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\bg.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ca.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ca.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\cs.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\cy.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\da.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\da.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\de-ch.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\de-ch.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\de.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\de.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\el.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\el.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-au.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-au.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-ca.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-ca.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-gb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-gb.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\eo.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\es-mx.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\es-mx.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\es.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\es.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\et.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\et.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\eu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\eu.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fa.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fi.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fr-ca.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fr-ca.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\gl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\gl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\he.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\he.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\hr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\hr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\hu.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\hu.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\id.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\id.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\it.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\it.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ja.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ja.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\km.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\km.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ko.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ko.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ku.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ku.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\lt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\lt.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\lv.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\lv.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\nb.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\nl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\no.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\no.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\oc.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\oc.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pt-br.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pt.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ro.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ro.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ru.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ru.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\si.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\si.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sk.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sl.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sl.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sq.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sq.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sr-latn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sr-latn.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sv.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sv.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\th.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\th.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\tr.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\tt.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\tt.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ug.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\uk.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\uk.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\vi.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\vi.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\zh.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\zh.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\specialchar\\dialogs\\specialchar.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\specialchar\\dialogs\\specialchar.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\table\\dialogs\\table.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\table\\dialogs\\table.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\tableselection\\styles\\tableselection.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\tableselection\\styles\\tableselection.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\tabletools\\dialogs\\tableCell.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\tabletools\\dialogs\\tableCell.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\templates\\dialogs\\templates.css",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\dialogs\\templates.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\templates\\dialogs\\templates.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\dialogs\\templates.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\templates\\templatedefinition.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templatedefinition.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\templates\\templates\\default.js",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\default.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\templates\\templates\\images\\template1.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\images\\template1.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\templates\\templates\\images\\template2.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\images\\template2.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\templates\\templates\\images\\template3.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\templates\\templates\\images\\template3.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\plugins\\widget\\images\\handle.png",
+      "PackagePath": "staticwebassets\\ckeditor\\plugins\\widget\\images\\handle.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\css\\samples.css",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\css\\samples.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\img\\github-top.png",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\img\\github-top.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\img\\header-bg.png",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\img\\header-bg.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\img\\header-separator.png",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\img\\header-separator.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\img\\logo.png",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\img\\logo.svg",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\img\\logo.svg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\img\\navigation-tip.png",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\img\\navigation-tip.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\index.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\index.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\js\\sample.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\js\\sample.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\js\\sf.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\js\\sf.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\ajax.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\ajax.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\api.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\api.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\appendto.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\appendto.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\assets\\inlineall\\logo.png",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\assets\\inlineall\\logo.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\assets\\outputxhtml\\outputxhtml.css",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\assets\\outputxhtml\\outputxhtml.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\assets\\posteddata.php",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\assets\\posteddata.php"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\assets\\sample.jpg",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\assets\\sample.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\assets\\uilanguages\\languages.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\assets\\uilanguages\\languages.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\datafiltering.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\datafiltering.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\dialog\\assets\\my_dialog.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\dialog\\assets\\my_dialog.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\dialog\\dialog.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\dialog\\dialog.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\divreplace.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\divreplace.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\easyimage\\easyimage.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\easyimage\\easyimage.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\enterkey\\enterkey.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\enterkey\\enterkey.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\htmlwriter\\outputhtml.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\htmlwriter\\outputhtml.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\index.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\index.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\inlineall.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\inlineall.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\inlinebycode.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\inlinebycode.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\inlinetextarea.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\inlinetextarea.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\jquery.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\jquery.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\magicline\\magicline.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\magicline\\magicline.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\readonly.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\readonly.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\replacebyclass.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\replacebyclass.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\replacebycode.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\replacebycode.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\sample.css",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\sample.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\sample.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\sample.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\sample_posteddata.php",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\sample_posteddata.php"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\tabindex.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\tabindex.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\toolbar\\toolbar.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\toolbar\\toolbar.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\uicolor.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\uicolor.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\uilanguages.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\uilanguages.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\wysiwygarea\\fullpage.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\wysiwygarea\\fullpage.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\old\\xhtmlstyle.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\old\\xhtmlstyle.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\css\\fontello.css",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\css\\fontello.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\font\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\font\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\font\\config.json",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\font\\config.json"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.eot",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.eot"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.svg",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.svg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.ttf",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.ttf"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.woff",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.woff"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\index.html",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\index.html"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\js\\abstracttoolbarmodifier.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\js\\abstracttoolbarmodifier.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\js\\fulltoolbareditor.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\js\\fulltoolbareditor.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\js\\toolbarmodifier.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\js\\toolbarmodifier.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\js\\toolbartextmodifier.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\js\\toolbartextmodifier.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\LICENSE",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\codemirror.css",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\codemirror.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\codemirror.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\codemirror.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\javascript.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\javascript.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\neo.css",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\neo.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\show-hint.css",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\show-hint.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\show-hint.js",
+      "PackagePath": "staticwebassets\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\show-hint.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\dialog.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\dialog.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\dialog_ie.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\dialog_ie.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\dialog_ie8.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\dialog_ie8.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\dialog_iequirks.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\dialog_iequirks.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\editor.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\editor.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\editor_gecko.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\editor_gecko.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\editor_ie.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\editor_ie.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\editor_ie8.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\editor_ie8.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\editor_iequirks.css",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\editor_iequirks.css"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\icons.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\icons.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\icons_hidpi.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\icons_hidpi.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\images\\arrow.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\images\\arrow.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\images\\close.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\images\\close.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\close.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\close.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\lock-open.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\lock-open.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\lock.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\lock.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\refresh.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\refresh.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\images\\lock-open.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\images\\lock-open.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\images\\lock.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\images\\lock.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\images\\refresh.png",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\images\\refresh.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\images\\spinner.gif",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\images\\spinner.gif"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\skins\\moono-lisa\\readme.md",
+      "PackagePath": "staticwebassets\\ckeditor\\skins\\moono-lisa\\readme.md"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\styles.js",
+      "PackagePath": "staticwebassets\\ckeditor\\styles.js"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\ckeditor\\vendor\\promise.js",
+      "PackagePath": "staticwebassets\\ckeditor\\vendor\\promise.js"
+    },
+    {
       "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\0fdde7bc-6d59-489a-9348-eba8a8299778_5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\0fdde7bc-6d59-489a-9348-eba8a8299778_5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\2a5f1129-c7c0-47e8-9d49-4dd39d993fbc_abd78516-d585-4306-91dd-85e9fb76641b_30dd4eb6-53a1-41fd-b2b9-f943db9ddf2d.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\2a5f1129-c7c0-47e8-9d49-4dd39d993fbc_abd78516-d585-4306-91dd-85e9fb76641b_30dd4eb6-53a1-41fd-b2b9-f943db9ddf2d.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\337bbab8-a6fc-4ccb-8c68-84ede000163b_5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\337bbab8-a6fc-4ccb-8c68-84ede000163b_5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\48088425-aa9f-4728-a303-209962c31c5c_58615265-1ab4-44e5-ba7b-a10584b64181_TurfCopaAvatar.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\48088425-aa9f-4728-a303-209962c31c5c_58615265-1ab4-44e5-ba7b-a10584b64181_TurfCopaAvatar.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\569eafdc-5adf-4152-a7ac-20c3d0994686_58615265-1ab4-44e5-ba7b-a10584b64181_TurfCopaAvatar.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\569eafdc-5adf-4152-a7ac-20c3d0994686_58615265-1ab4-44e5-ba7b-a10584b64181_TurfCopaAvatar.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\5bfa9815-80e7-4bb4-acef-6e94324c7451_85844507-5c23-4d48-9999-874f4cdd7c59_95c544e4-00bf-4f77-ae04-920c2a9604fb_886e73bf-7bef-4df5-9233-544b25798bd0_46d1eb79-a1d0-4cd0-b03f-b0ea0c3af149.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\5bfa9815-80e7-4bb4-acef-6e94324c7451_85844507-5c23-4d48-9999-874f4cdd7c59_95c544e4-00bf-4f77-ae04-920c2a9604fb_886e73bf-7bef-4df5-9233-544b25798bd0_46d1eb79-a1d0-4cd0-b03f-b0ea0c3af149.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\66ab7b9e-f586-4cdd-baf9-c2a836b12635_5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\66ab7b9e-f586-4cdd-baf9-c2a836b12635_5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\6999ecfb-9d60-4e2a-9d75-1d1688c17594_4342b420-91be-485e-86df-80eb5d75fb9c_TurfCopaPinkAbove.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\6999ecfb-9d60-4e2a-9d75-1d1688c17594_4342b420-91be-485e-86df-80eb5d75fb9c_TurfCopaPinkAbove.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\73dffc9a-c56e-469e-b75a-d160a3cbc73b_58615265-1ab4-44e5-ba7b-a10584b64181_TurfCopaAvatar.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\73dffc9a-c56e-469e-b75a-d160a3cbc73b_58615265-1ab4-44e5-ba7b-a10584b64181_TurfCopaAvatar.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\848932b8-5585-46ba-9095-04bfb62c6d72_5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\848932b8-5585-46ba-9095-04bfb62c6d72_5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\85844507-5c23-4d48-9999-874f4cdd7c59_95c544e4-00bf-4f77-ae04-920c2a9604fb_886e73bf-7bef-4df5-9233-544b25798bd0_46d1eb79-a1d0-4cd0-b03f-b0ea0c3af149.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\85844507-5c23-4d48-9999-874f4cdd7c59_95c544e4-00bf-4f77-ae04-920c2a9604fb_886e73bf-7bef-4df5-9233-544b25798bd0_46d1eb79-a1d0-4cd0-b03f-b0ea0c3af149.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\93bf20c3-2a25-44ac-b2e9-a66e175b929b_4342b420-91be-485e-86df-80eb5d75fb9c_TurfCopaPinkAbove.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\93bf20c3-2a25-44ac-b2e9-a66e175b929b_4342b420-91be-485e-86df-80eb5d75fb9c_TurfCopaPinkAbove.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\95c544e4-00bf-4f77-ae04-920c2a9604fb_886e73bf-7bef-4df5-9233-544b25798bd0_46d1eb79-a1d0-4cd0-b03f-b0ea0c3af149.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\95c544e4-00bf-4f77-ae04-920c2a9604fb_886e73bf-7bef-4df5-9233-544b25798bd0_46d1eb79-a1d0-4cd0-b03f-b0ea0c3af149.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\9c98d9f7-587f-4a30-9182-2f4542ca46a2_dc05571f-6d28-4406-95d6-bef3f11c43cd_c05e4d64-0078-4ec0-a7c2-4c32d6bb6274.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\9c98d9f7-587f-4a30-9182-2f4542ca46a2_dc05571f-6d28-4406-95d6-bef3f11c43cd_c05e4d64-0078-4ec0-a7c2-4c32d6bb6274.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\ae4828a2-39fb-467a-bcd3-8f40899424fb_5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\ae4828a2-39fb-467a-bcd3-8f40899424fb_5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\bbcf8798-94a6-480d-9e91-7171082cfc5a_5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\bbcf8798-94a6-480d-9e91-7171082cfc5a_5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\c2bdacdb-c50d-48ef-8cb9-34b5336da385_png-clipart-white-and-black-adidas-superstar-shoes-adidas-superstar-sneakers-shoe-adidas-originals-adidas-white-fashion.png",
+      "PackagePath": "staticwebassets\\img\\1\\c2bdacdb-c50d-48ef-8cb9-34b5336da385_png-clipart-white-and-black-adidas-superstar-shoes-adidas-superstar-sneakers-shoe-adidas-originals-adidas-white-fashion.png"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\d0ad0aed-3944-4e99-b331-e3927524fcc8_12f6d7be-a99f-4767-9ae0-b16de1081ca6_2a5f1129-c7c0-47e8-9d49-4dd39d993fbc_abd78516-d585-4306-91dd-85e9fb76641b_30dd4eb6-53a1-41fd-b2b9-f943db9ddf2d.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\d0ad0aed-3944-4e99-b331-e3927524fcc8_12f6d7be-a99f-4767-9ae0-b16de1081ca6_2a5f1129-c7c0-47e8-9d49-4dd39d993fbc_abd78516-d585-4306-91dd-85e9fb76641b_30dd4eb6-53a1-41fd-b2b9-f943db9ddf2d.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\dc05571f-6d28-4406-95d6-bef3f11c43cd_c05e4d64-0078-4ec0-a7c2-4c32d6bb6274.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\dc05571f-6d28-4406-95d6-bef3f11c43cd_c05e4d64-0078-4ec0-a7c2-4c32d6bb6274.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\dcbb36b5-b01e-43a8-95e6-0531450bd2a7_55ed857c-9e97-4ae5-a094-93b424d97b61.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\dcbb36b5-b01e-43a8-95e6-0531450bd2a7_55ed857c-9e97-4ae5-a094-93b424d97b61.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\e309311c-5437-4cd0-9c87-636e61e87329_2a5f1129-c7c0-47e8-9d49-4dd39d993fbc_abd78516-d585-4306-91dd-85e9fb76641b_30dd4eb6-53a1-41fd-b2b9-f943db9ddf2d.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\e309311c-5437-4cd0-9c87-636e61e87329_2a5f1129-c7c0-47e8-9d49-4dd39d993fbc_abd78516-d585-4306-91dd-85e9fb76641b_30dd4eb6-53a1-41fd-b2b9-f943db9ddf2d.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\ed6250c9-07c0-4f47-a8c8-9ad6dca21af7_ae4828a2-39fb-467a-bcd3-8f40899424fb_5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\ed6250c9-07c0-4f47-a8c8-9ad6dca21af7_ae4828a2-39fb-467a-bcd3-8f40899424fb_5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\f60a7891-1d3b-43ef-885f-749cc32ba64e_dcbb36b5-b01e-43a8-95e6-0531450bd2a7_55ed857c-9e97-4ae5-a094-93b424d97b61.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\f60a7891-1d3b-43ef-885f-749cc32ba64e_dcbb36b5-b01e-43a8-95e6-0531450bd2a7_55ed857c-9e97-4ae5-a094-93b424d97b61.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\1\\ff90a7cf-ca86-4eef-9a28-8a50b32ade32_dcbb36b5-b01e-43a8-95e6-0531450bd2a7_55ed857c-9e97-4ae5-a094-93b424d97b61.jpg",
+      "PackagePath": "staticwebassets\\img\\1\\ff90a7cf-ca86-4eef-9a28-8a50b32ade32_dcbb36b5-b01e-43a8-95e6-0531450bd2a7_55ed857c-9e97-4ae5-a094-93b424d97b61.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\2\\024deca1-9c9a-4ac4-a25c-a8cc31e6371a_53c22ffd-c22c-4c31-b570-c8c8ceb87523.jpg",
+      "PackagePath": "staticwebassets\\img\\2\\024deca1-9c9a-4ac4-a25c-a8cc31e6371a_53c22ffd-c22c-4c31-b570-c8c8ceb87523.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\2\\1899e2d2-8ef4-4258-a96e-8e68c617d6a4_4e8dc4f8-59d8-4dcb-b629-5d67f1a6aa02.jpg",
+      "PackagePath": "staticwebassets\\img\\2\\1899e2d2-8ef4-4258-a96e-8e68c617d6a4_4e8dc4f8-59d8-4dcb-b629-5d67f1a6aa02.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\2\\26f0da21-73be-4729-a729-b1707ad7d327_duramoabove.jpg",
+      "PackagePath": "staticwebassets\\img\\2\\26f0da21-73be-4729-a729-b1707ad7d327_duramoabove.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\2\\39d75dda-e7fd-45ac-9bc0-e6e0e60d6b2f_c3984f39-ddc6-47ea-8d08-8b7ada2a99fb_6888be03-d3ed-47dd-87f1-52ef3001c49a.jpg",
+      "PackagePath": "staticwebassets\\img\\2\\39d75dda-e7fd-45ac-9bc0-e6e0e60d6b2f_c3984f39-ddc6-47ea-8d08-8b7ada2a99fb_6888be03-d3ed-47dd-87f1-52ef3001c49a.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\2\\7a7055eb-7189-4a48-9d63-390eff8f7e40_024deca1-9c9a-4ac4-a25c-a8cc31e6371a_53c22ffd-c22c-4c31-b570-c8c8ceb87523.jpg",
+      "PackagePath": "staticwebassets\\img\\2\\7a7055eb-7189-4a48-9d63-390eff8f7e40_024deca1-9c9a-4ac4-a25c-a8cc31e6371a_53c22ffd-c22c-4c31-b570-c8c8ceb87523.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\2\\8ff58404-da87-46c2-aa87-2935ee7de5e9_duramobottom.jpg",
+      "PackagePath": "staticwebassets\\img\\2\\8ff58404-da87-46c2-aa87-2935ee7de5e9_duramobottom.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\2\\93a54454-8ca9-443e-b9ff-a770448df959_c05e4d64-0078-4ec0-a7c2-4c32d6bb6274.jpg",
+      "PackagePath": "staticwebassets\\img\\2\\93a54454-8ca9-443e-b9ff-a770448df959_c05e4d64-0078-4ec0-a7c2-4c32d6bb6274.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\2\\b47930d4-b563-4990-92cc-f37898d9561a_duramo.jpg",
+      "PackagePath": "staticwebassets\\img\\2\\b47930d4-b563-4990-92cc-f37898d9561a_duramo.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\2\\bb014c5c-042a-409e-aca0-d44420175da7_53c22ffd-c22c-4c31-b570-c8c8ceb87523.jpg",
+      "PackagePath": "staticwebassets\\img\\2\\bb014c5c-042a-409e-aca0-d44420175da7_53c22ffd-c22c-4c31-b570-c8c8ceb87523.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\2\\c3984f39-ddc6-47ea-8d08-8b7ada2a99fb_6888be03-d3ed-47dd-87f1-52ef3001c49a.jpg",
+      "PackagePath": "staticwebassets\\img\\2\\c3984f39-ddc6-47ea-8d08-8b7ada2a99fb_6888be03-d3ed-47dd-87f1-52ef3001c49a.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\3\\1af203ae-9e72-405e-ad1f-b687ff2af69e_1e1807d5-fb18-4781-84ef-ebbc24d38283.jpg",
+      "PackagePath": "staticwebassets\\img\\3\\1af203ae-9e72-405e-ad1f-b687ff2af69e_1e1807d5-fb18-4781-84ef-ebbc24d38283.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\3\\4342b420-91be-485e-86df-80eb5d75fb9c_TurfCopaPinkAbove.jpg",
+      "PackagePath": "staticwebassets\\img\\3\\4342b420-91be-485e-86df-80eb5d75fb9c_TurfCopaPinkAbove.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\3\\58615265-1ab4-44e5-ba7b-a10584b64181_TurfCopaAvatar.jpg",
+      "PackagePath": "staticwebassets\\img\\3\\58615265-1ab4-44e5-ba7b-a10584b64181_TurfCopaAvatar.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\3\\5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg",
+      "PackagePath": "staticwebassets\\img\\3\\5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\3\\6969f9e7-81c6-48d2-95d5-09d5c4d01bb6_72101b7d-147c-4dde-a360-6c359a19035a.jpg",
+      "PackagePath": "staticwebassets\\img\\3\\6969f9e7-81c6-48d2-95d5-09d5c4d01bb6_72101b7d-147c-4dde-a360-6c359a19035a.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\3\\6b35a36e-9ae3-4b8a-b075-b1deced97c4e_4342b420-91be-485e-86df-80eb5d75fb9c_TurfCopaPinkAbove.jpg",
+      "PackagePath": "staticwebassets\\img\\3\\6b35a36e-9ae3-4b8a-b075-b1deced97c4e_4342b420-91be-485e-86df-80eb5d75fb9c_TurfCopaPinkAbove.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\3\\96215044-f18c-4e64-9792-0de192cd53c5_5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg",
+      "PackagePath": "staticwebassets\\img\\3\\96215044-f18c-4e64-9792-0de192cd53c5_5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\3\\f7799cf8-a76c-4583-b0eb-16baca96fcc8_58615265-1ab4-44e5-ba7b-a10584b64181_TurfCopaAvatar.jpg",
+      "PackagePath": "staticwebassets\\img\\3\\f7799cf8-a76c-4583-b0eb-16baca96fcc8_58615265-1ab4-44e5-ba7b-a10584b64181_TurfCopaAvatar.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\3\\fbcf3a14-68a4-4848-be1e-200ce441b364_395c2873-94e7-4e4c-a963-083f96959d8b.jpg",
+      "PackagePath": "staticwebassets\\img\\3\\fbcf3a14-68a4-4848-be1e-200ce441b364_395c2873-94e7-4e4c-a963-083f96959d8b.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\276dfd20-44fd-4da6-99ff-57c6a986486f_68ee269e-f3e8-448b-b2b1-09a35351b5fa.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\276dfd20-44fd-4da6-99ff-57c6a986486f_68ee269e-f3e8-448b-b2b1-09a35351b5fa.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\404e82da-a83a-48af-88a0-22e1a9e97fe8.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\404e82da-a83a-48af-88a0-22e1a9e97fe8.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\5168301f-b119-4d61-a5b3-aee3edd19425.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\5168301f-b119-4d61-a5b3-aee3edd19425.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\5ab4f94a-0f4c-4f60-b4a9-88032c68198d_8c95e9dc-9336-4db2-a30c-717e49b95a81.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\5ab4f94a-0f4c-4f60-b4a9-88032c68198d_8c95e9dc-9336-4db2-a30c-717e49b95a81.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\658ee8fa-522a-49dc-ba8e-21efb2ff3516_98384c1f-cd28-4884-b070-e7b7d8058ef4.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\658ee8fa-522a-49dc-ba8e-21efb2ff3516_98384c1f-cd28-4884-b070-e7b7d8058ef4.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\68ee269e-f3e8-448b-b2b1-09a35351b5fa.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\68ee269e-f3e8-448b-b2b1-09a35351b5fa.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\6ce353e4-d1c9-49fd-a384-47e720375d88_88eed805-a5e4-46d4-977d-9a5dee60ec81.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\6ce353e4-d1c9-49fd-a384-47e720375d88_88eed805-a5e4-46d4-977d-9a5dee60ec81.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\88eed805-a5e4-46d4-977d-9a5dee60ec81.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\88eed805-a5e4-46d4-977d-9a5dee60ec81.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\8a5623d4-05b2-4872-8e2d-cefbf4ad3b00_404e82da-a83a-48af-88a0-22e1a9e97fe8.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\8a5623d4-05b2-4872-8e2d-cefbf4ad3b00_404e82da-a83a-48af-88a0-22e1a9e97fe8.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\8c95e9dc-9336-4db2-a30c-717e49b95a81.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\8c95e9dc-9336-4db2-a30c-717e49b95a81.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\98384c1f-cd28-4884-b070-e7b7d8058ef4.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\98384c1f-cd28-4884-b070-e7b7d8058ef4.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\4\\ff98759e-5ff1-446c-bf83-0cddc01cf9a2_5168301f-b119-4d61-a5b3-aee3edd19425.jpg",
+      "PackagePath": "staticwebassets\\img\\4\\ff98759e-5ff1-446c-bf83-0cddc01cf9a2_5168301f-b119-4d61-a5b3-aee3edd19425.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\6\\8f3433e2-d319-4d24-9b04-f2c4f5790c0e_85844507-5c23-4d48-9999-874f4cdd7c59_95c544e4-00bf-4f77-ae04-920c2a9604fb_886e73bf-7bef-4df5-9233-544b25798bd0_46d1eb79-a1d0-4cd0-b03f-b0ea0c3af149.jpg",
+      "PackagePath": "staticwebassets\\img\\6\\8f3433e2-d319-4d24-9b04-f2c4f5790c0e_85844507-5c23-4d48-9999-874f4cdd7c59_95c544e4-00bf-4f77-ae04-920c2a9604fb_886e73bf-7bef-4df5-9233-544b25798bd0_46d1eb79-a1d0-4cd0-b03f-b0ea0c3af149.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\6\\904a6f75-b1f3-43dd-8771-44454c52346c_e309311c-5437-4cd0-9c87-636e61e87329_2a5f1129-c7c0-47e8-9d49-4dd39d993fbc_abd78516-d585-4306-91dd-85e9fb76641b_30dd4eb6-53a1-41fd-b2b9-f943db9ddf2d.jpg",
+      "PackagePath": "staticwebassets\\img\\6\\904a6f75-b1f3-43dd-8771-44454c52346c_e309311c-5437-4cd0-9c87-636e61e87329_2a5f1129-c7c0-47e8-9d49-4dd39d993fbc_abd78516-d585-4306-91dd-85e9fb76641b_30dd4eb6-53a1-41fd-b2b9-f943db9ddf2d.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\6\\ced66f8f-8b41-4d99-a181-92e65e027887_ed6250c9-07c0-4f47-a8c8-9ad6dca21af7_ae4828a2-39fb-467a-bcd3-8f40899424fb_5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg",
+      "PackagePath": "staticwebassets\\img\\6\\ced66f8f-8b41-4d99-a181-92e65e027887_ed6250c9-07c0-4f47-a8c8-9ad6dca21af7_ae4828a2-39fb-467a-bcd3-8f40899424fb_5350fcaf-45cf-44f5-8390-e57cc51e71d7_89fbe085-9047-45ff-a634-e7eafa3b1806.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\banner\\0751cf62-826b-43ba-93b3-678a10a81cb3_2a5f1129-c7c0-47e8-9d49-4dd39d993fbc_abd78516-d585-4306-91dd-85e9fb76641b_30dd4eb6-53a1-41fd-b2b9-f943db9ddf2d.jpg",
+      "PackagePath": "staticwebassets\\img\\banner\\0751cf62-826b-43ba-93b3-678a10a81cb3_2a5f1129-c7c0-47e8-9d49-4dd39d993fbc_abd78516-d585-4306-91dd-85e9fb76641b_30dd4eb6-53a1-41fd-b2b9-f943db9ddf2d.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\banner\\4a0439f8-e002-4461-9b2b-d9a3ae4f2fcd_0fdde7bc-6d59-489a-9348-eba8a8299778_5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg",
+      "PackagePath": "staticwebassets\\img\\banner\\4a0439f8-e002-4461-9b2b-d9a3ae4f2fcd_0fdde7bc-6d59-489a-9348-eba8a8299778_5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg"
+    },
+    {
+      "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\banner\\5f2568bf-4437-48d4-b23b-5b7c4eef0edf_png-clipart-white-and-black-adidas-superstar-shoes-adidas-superstar-sneakers-shoe-adidas-originals-adidas-white-fashion.png",
+      "PackagePath": "staticwebassets\\img\\banner\\5f2568bf-4437-48d4-b23b-5b7c4eef0edf_png-clipart-white-and-black-adidas-superstar-shoes-adidas-superstar-sneakers-shoe-adidas-originals-adidas-white-fashion.png"
     },
     {
       "Id": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\banner\\next.png",

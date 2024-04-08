@@ -1,17 +1,47 @@
 using Microsoft.EntityFrameworkCore;
+using ShoesStore.Areas.Admin.InterfaceRepositories;
+using ShoesStore.Areas.Admin.Repositories;
+//using ShoesStore.Areas.Admin.Repositories;
+using ShoesStore.InterfaceRepositories;
 using ShoesStore.Models;
+using ShoesStore.Repositories;
+//using ShoesStore.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpContextAccessor(); // Add this line
+builder.Services.AddMemoryCache();
+builder.Services.AddSession();
 
-builder.Services.AddDbContext<ShoesDbContext>(options => 
+builder.Services.AddDbContext<ShoesDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Shoes"));
-  });
+});
+builder.Services.AddScoped<IPhieuMuaAdmin, PhieuMuaAdminRepo>();
+builder.Services.AddScoped<IDongsanphamAdmin, DongsanphamAdminRepo>();
+builder.Services.AddScoped<ILoaiAdmin, LoaiAdminRepo>();
+builder.Services.AddScoped<IMauAdmin, MauAdminRepo>();
+builder.Services.AddScoped<ISizeAdmin, SizeAdminRepo>();
+builder.Services.AddScoped<ISpSizeAdmin, SpSizeAdminRepo>();
+builder.Services.AddScoped<ISanPhamAdmin, SanPhamAdminRepo>();
+builder.Services.AddScoped<IDongSanpham, DongSanphamRepo>();
+builder.Services.AddScoped<IPhuongthucthanhtoan, PhuongthucthanhtoanRepo>();
+builder.Services.AddScoped<ISanpham, SanphamRepo>();
+builder.Services.AddScoped<ISize, SizeRepo>();
+builder.Services.AddScoped<ISanphamSize, SanphamSizeRepo>();
+builder.Services.AddScoped<IMau, MauRepo>();
+builder.Services.AddScoped<IKhachhang, KhachhangRepo>();
+builder.Services.AddScoped<IPhieuMua, PhieuMuaRepo>();
+builder.Services.AddScoped<IKhuyenMai, KhuyenMaiRepo>();
+builder.Services.AddScoped<IBannerRepository, BannerRepository>();
+builder.Services.AddScoped<IBlogAdmin, BlogAdminRepo>();
+builder.Services.AddScoped<IBinhLuan, BinhLuanRepository>();
 
 var app = builder.Build();
+app.UseSession();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -27,9 +57,13 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.MapAreaControllerRoute(
+    name: "Admin",
+    areaName: "Admin",
+    pattern: "Admin/{controller=PhieuMuaAdmin}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=SanPham}/{action=SanPhamTheoLoai}/{id=-1}");
 
 app.Run();

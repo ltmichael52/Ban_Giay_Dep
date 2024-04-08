@@ -11,7 +11,7 @@ public partial class Taikhoan
 
     public int Loaitk { get; set; }
 
-    public virtual ICollection<Khachhang> Khachhangs { get; set; } = new List<Khachhang>();
+    public virtual Khachhang? Khachhang { get; set; }
 
-    public virtual ICollection<Nhanvien> Nhanviens { get; set; } = new List<Nhanvien>();
+    public virtual Nhanvien? Nhanvien { get; set; }
 }

@@ -1,9 +1,71 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using Newtonsoft.Json;
+@{
+	ViewData["Title"] = "Home Page";
+}
+@*
+@{
+	int a = 9;
+	int[] array = { 1, 2, 3 };
+	string b = "39W";
+	string bJson = JsonConvert.SerializeObject(b);
+	string json = JsonConvert.SerializeObject(array);
+}
+@section Script{
+	<script>
+		function updateIndex123(index) {
+			var array2 = @json;
+			var num = index;
+			console.log("Array:", array2);
+			console.log("Index:", num);
+			console.log("A: ", @a);
+			console.log("B; ", @bJson);
+			document.getElementsByClassName("Index")[0].innerText = "Index: " + array2[num];
+		}
+
+	</script>
 }
 
+@for (int i = 0; i < 3; ++i)
+{
+	<div class="btn" onclick="updateIndex123(@i)">Value : @i</div>
+}
+<div class="btn" onclick="updateIndex123(1)">Value : 5</div>
+<div class="btn Index">Index : @ViewBag.Index .....</div>
+<div class="btn">Value in json var:  json</div>*@
+
 <!-- start banner Area -->
+@model List<ShoesStore.Models.Banner>
 <section class="banner-area">
+	<div class="container">
+		<div class="row fullscreen align-items-center justify-content-start">
+			<div class="col-lg-12">
+				<div class="active-banner-slider owl-carousel">
+					@foreach (var banner in Model)
+					{
+						<div class="row single-slide align-items-center d-flex">
+							<div class="col-lg-5 col-md-6">
+								<div class="banner-content">
+									<h1>@banner.Tenbanner</h1>
+									<h3>@banner.Vitri</h3>
+									<div class="add-bag d-flex align-items-center">
+										<a class="primary-btn" href="@banner.Link">Shopping Now</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-7">
+								<div class="banner-img">
+									<a href="@banner.Link"><img style="width:300px;height:300px"src="@Url.Content($"~/img/banner/{banner.Vitri}")" alt="Banner Image"></a>
+								</div>
+							</div>
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+@*
+ <section class="banner-area">
 	<div class="container">
 		<div class="row fullscreen align-items-center justify-content-start">
 			<div class="col-lg-12">
@@ -12,14 +74,10 @@
 					<div class="row single-slide align-items-center d-flex">
 						<div class="col-lg-5 col-md-6">
 							<div class="banner-content">
-								<h1>Nike New <br>Collection!</h1>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-								</p>
+								<h1>RUNNING<br />COLLECTION</h1>
+								<h3>Chạy nhanh hơn êm chân hơn</h3>
 								<div class="add-bag d-flex align-items-center">
-									<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-									<span class="add-text text-uppercase">Add to Bag</span>
+									<a class="primary-btn" href="">Shopping Now</a>
 								</div>
 							</div>
 						</div>
@@ -30,17 +88,13 @@
 						</div>
 					</div>
 					<!-- single-slide -->
-					<div class="row single-slide">
-						<div class="col-lg-5">
+					<div class="row single-slide align-items-center d-flex">
+						<div class="col-lg-5 col-md-6">
 							<div class="banner-content">
-								<h1>Nike New <br>Collection!</h1>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-								</p>
+								<h1>FOOTBALL<br />COLLECTION</h1>
+								<h3>Tự tin ghi bàn</h3>
 								<div class="add-bag d-flex align-items-center">
-									<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-									<span class="add-text text-uppercase">Add to Bag</span>
+									<a class="primary-btn" href="">Shopping Now</a>
 								</div>
 							</div>
 						</div>
@@ -54,7 +108,8 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> *@
+
 <!-- End banner Area -->
 <!-- start features Area -->
 <section class="features-area section_gap">
@@ -66,8 +121,8 @@
 					<div class="f-icon">
 						<img src="~/karma-master/img/features/f-icon1.png" alt="">
 					</div>
-					<h6>Free Delivery</h6>
-					<p>Free Shipping on all order</p>
+					<h6>Miễn phí vận chuyển</h6>
+					<p>Cho tất cả đơn hàng</p>
 				</div>
 			</div>
 			<!-- single features -->
@@ -76,8 +131,8 @@
 					<div class="f-icon">
 						<img src="~/karma-master/img/features/f-icon2.png" alt="">
 					</div>
-					<h6>Return Policy</h6>
-					<p>Free Shipping on all order</p>
+					<h6>Chính sách hoàn trả</h6>
+					<p>14 Ngày</p>
 				</div>
 			</div>
 			<!-- single features -->
@@ -86,8 +141,8 @@
 					<div class="f-icon">
 						<img src="~/karma-master/img/features/f-icon3.png" alt="">
 					</div>
-					<h6>24/7 Support</h6>
-					<p>Free Shipping on all order</p>
+					<h6>Hỗ trợ 24/7</h6>
+					<p>Nhiệt tình giúp đỡ</p>
 				</div>
 			</div>
 			<!-- single features -->
@@ -96,8 +151,8 @@
 					<div class="f-icon">
 						<img src="~/karma-master/img/features/f-icon4.png" alt="">
 					</div>
-					<h6>Secure Payment</h6>
-					<p>Free Shipping on all order</p>
+					<h6>Bảo mật thanh toán</h6>
+					<p>An tâm mua sắm</p>
 				</div>
 			</div>
 		</div>
@@ -116,7 +171,7 @@
 							<img class="img-fluid w-100" src="~/karma-master/img/category/c1.jpg" alt="">
 							<a href="~/karma-master/img/category/c1.jpg" class="img-pop-up" target="_blank">
 								<div class="deal-details">
-									<h6 class="deal-title">Sneaker for Sports</h6>
+									<h6 class="deal-title">Running Collections</h6>
 								</div>
 							</a>
 						</div>
@@ -179,11 +234,9 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
 					<div class="section-title">
-						<h1>Latest Products</h1>
+						<h1>Sản phẩm Mới</h1>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-							dolore
-							magna aliqua.
+							Những đôi giày mới nhất cho xu hướng hiện tại
 						</p>
 					</div>
 				</div>
@@ -468,6 +521,7 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -477,11 +531,9 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
 					<div class="section-title">
-						<h1>Coming Products</h1>
+						<h1>Sản phẩm Giảm Giá</h1>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-							dolore
-							magna aliqua.
+							Giày tốt Giá tốt
 						</p>
 					</div>
 				</div>
@@ -779,7 +831,7 @@
 			<div class="col-lg-6 no-padding exclusive-left">
 				<div class="row clock_sec clockdiv" id="clockdiv">
 					<div class="col-lg-12">
-						<h1>Exclusive Hot Deal Ends Soon!</h1>
+						<h1>Deal HOT Trong Tuần</h1>
 						<p>Who are in extremely love with eco friendly system.</p>
 					</div>
 					<div class="col-lg-12">
@@ -873,140 +925,4 @@
 </section>
 <!-- End brand Area -->
 <!-- Start related-product Area -->
-<section class="related-product-area section_gap_bottom">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-6 text-center">
-				<div class="section-title">
-					<h1>Deals of the Week</h1>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua.
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-9">
-				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="~/karma-master/img/r1.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="~/karma-master/img/r2.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="~/karma-master/img/r3.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="~/karma-master/img/r5.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="~/karma-master/img/r6.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="~/karma-master/img/r7.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="~/karma-master/img/r9.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="~/karma-master/img/r10.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="~/karma-master/img/r11.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="ctg-right">
-					<a href="#" target="_blank">
-						<img class="img-fluid d-block mx-auto" src="~/karma-master/img/category/c5.jpg" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End related-product Area -->
+@await Component.InvokeAsync("HotDeal");

@@ -7,13 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\img\logo.png" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <None Include="wwwroot\ckeditor\.circleci\config.yml" />
     <None Include="wwwroot\img\banner\next.png" />
     <None Include="wwwroot\img\banner\prev.png" />
-    <None Include="wwwroot\img\logo.png" />
     <None Include="wwwroot\img\product\next.png" />
     <None Include="wwwroot\img\product\prev.png" />
     <None Include="wwwroot\karma-master\.DS_Store" />
@@ -359,6 +355,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.12" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="X.PagedList" Version="8.4.7" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="8.4.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

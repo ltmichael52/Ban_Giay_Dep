@@ -22,43 +22,209 @@ namespace ShoesStore.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ShoesStore.Models.Chitietphieudat", b =>
+            modelBuilder.Entity("Chitietkhuyenmai", b =>
                 {
-                    b.Property<int>("Idpd")
+                    b.Property<int>("Makm")
                         .HasColumnType("int")
-                        .HasColumnName("IDPD");
+                        .HasColumnName("MAKM");
 
-                    b.Property<int>("Idsp")
+                    b.Property<int>("Madongsanpham")
                         .HasColumnType("int")
-                        .HasColumnName("IDSP");
+                        .HasColumnName("MADONGSANPHAM");
 
-                    b.Property<int?>("Soluong")
+                    b.HasKey("Makm", "Madongsanpham");
+
+                    b.HasIndex(new[] { "Madongsanpham" }, "IX_CHITIETKHUYENMAI_MADONGSANPHAM");
+
+                    b.HasIndex(new[] { "Makm" }, "IX_CHITIETKHUYENMAI_MAKM");
+
+                    b.ToTable("CHITIETKHUYENMAI", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Banner", b =>
+                {
+                    b.Property<int>("Mabanner")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MABANNER");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Mabanner"));
+
+                    b.Property<bool>("Hoatdong")
+                        .HasColumnType("bit")
+                        .HasColumnName("HOATDONG");
+
+                    b.Property<string>("Link")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("LINK");
+
+                    b.Property<string>("Slogan")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("SLOGAN");
+
+                    b.Property<string>("Tenbanner")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("TENBANNER");
+
+                    b.Property<string>("Vitri")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("VITRI");
+
+                    b.HasKey("Mabanner");
+
+                    b.ToTable("Banner", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Binhluan", b =>
+                {
+                    b.Property<int>("Mabl")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MABL");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Mabl"));
+
+                    b.Property<int>("Madongsanpham")
+                        .HasColumnType("int")
+                        .HasColumnName("MADONGSANPHAM");
+
+                    b.Property<int>("Makh")
+                        .HasColumnType("int")
+                        .HasColumnName("MAKH");
+
+                    b.Property<DateTime>("Ngaybl")
+                        .HasColumnType("datetime")
+                        .HasColumnName("NGAYBL");
+
+                    b.Property<string>("Noidungbl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("NOIDUNGBL");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int")
+                        .HasColumnName("RATING");
+
+                    b.HasKey("Mabl");
+
+                    b.HasIndex("Madongsanpham");
+
+                    b.HasIndex("Makh");
+
+                    b.ToTable("BINHLUAN", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Blog", b =>
+                {
+                    b.Property<int>("Mablog")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MABLOG");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Mablog"));
+
+                    b.Property<int>("Manv")
+                        .HasColumnType("int")
+                        .HasColumnName("MANV");
+
+                    b.Property<string>("Noidung")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("NOIDUNG");
+
+                    b.Property<string>("Theloai")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("THELOAI");
+
+                    b.HasKey("Mablog");
+
+                    b.HasIndex(new[] { "Manv" }, "IX_BLOG_MANV");
+
+                    b.ToTable("BLOG", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Chitietphieumua", b =>
+                {
+                    b.Property<int>("Mapm")
+                        .HasColumnType("int")
+                        .HasColumnName("MAPM");
+
+                    b.Property<int>("Maspsize")
+                        .HasColumnType("int")
+                        .HasColumnName("MASPSIZE");
+
+                    b.Property<decimal>("Dongia")
+                        .HasColumnType("money")
+                        .HasColumnName("DONGIA");
+
+                    b.Property<int>("Soluong")
                         .HasColumnType("int")
                         .HasColumnName("SOLUONG");
 
-                    b.Property<decimal>("Tongtien")
+                    b.HasKey("Mapm", "Maspsize");
+
+                    b.HasIndex(new[] { "Maspsize" }, "IX_CHITIETPHIEUMUA_IDCHITIETSP");
+
+                    b.ToTable("CHITIETPHIEUMUA", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Dongsanpham", b =>
+                {
+                    b.Property<int>("Madongsanpham")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MADONGSANPHAM");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Madongsanpham"));
+
+                    b.Property<decimal>("Giagoc")
                         .HasColumnType("decimal(18, 2)")
-                        .HasColumnName("TONGTIEN");
+                        .HasColumnName("GIAGOC");
 
-                    b.HasKey("Idpd", "Idsp")
-                        .HasName("PK__CHITIETP__F3FB9B27CF54D311");
+                    b.Property<int>("Maloai")
+                        .HasColumnType("int")
+                        .HasColumnName("MALOAI");
 
-                    b.HasIndex("Idsp");
+                    b.Property<string>("Mota")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("MOTA");
 
-                    b.ToTable("CHITIETPHIEUDAT", (string)null);
+                    b.Property<string>("Tendongsp")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("TENDONGSP");
+
+                    b.Property<string>("Trangthai")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("TRANGTHAI");
+
+                    b.HasKey("Madongsanpham")
+                        .HasName("PK__SANPHAM__B87C02A5C6299161");
+
+                    b.HasIndex(new[] { "Maloai" }, "IX_DONGSANPHAM_MALOAI");
+
+                    b.ToTable("DONGSANPHAM", (string)null);
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Khachhang", b =>
                 {
-                    b.Property<int>("Idkh")
+                    b.Property<int>("Makh")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("IDKH");
+                        .HasColumnName("MAKH");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Idkh"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Makh"));
 
                     b.Property<string>("Diachi")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("DIACHI");
@@ -89,22 +255,49 @@ namespace ShoesStore.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("TENKH");
 
-                    b.HasKey("Idkh")
-                        .HasName("PK__KHACHHAN__B87DC1A7CB39008C");
+                    b.HasKey("Makh")
+                        .HasName("PK__KHACHHAN__B87DC1A73C57F8C5");
 
-                    b.HasIndex("Email");
+                    b.HasIndex(new[] { "Email" }, "IX_KHACHHANG_EMAIL")
+                        .IsUnique();
 
                     b.ToTable("KHACHHANG", (string)null);
                 });
 
-            modelBuilder.Entity("ShoesStore.Models.Loai", b =>
+            modelBuilder.Entity("ShoesStore.Models.Khuyenmai", b =>
                 {
-                    b.Property<int>("Idloai")
+                    b.Property<int>("Makm")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("IDLOAI");
+                        .HasColumnName("MAKM");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Idloai"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Makm"));
+
+                    b.Property<DateTime>("Ngaybd")
+                        .HasColumnType("datetime")
+                        .HasColumnName("NGAYBD");
+
+                    b.Property<DateTime>("Ngaykt")
+                        .HasColumnType("datetime")
+                        .HasColumnName("NGAYKT");
+
+                    b.Property<int>("Phantramgiam")
+                        .HasColumnType("int")
+                        .HasColumnName("PHANTRAMGIAM");
+
+                    b.HasKey("Makm");
+
+                    b.ToTable("KHUYENMAI", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Loai", b =>
+                {
+                    b.Property<int>("Maloai")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MALOAI");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Maloai"));
 
                     b.Property<string>("Tenloai")
                         .IsRequired()
@@ -112,26 +305,43 @@ namespace ShoesStore.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("TENLOAI");
 
-                    b.HasKey("Idloai")
-                        .HasName("PK__LOAI__0CDEF519CBA4AE7B");
+                    b.HasKey("Maloai")
+                        .HasName("PK__LOAI__0CDEF5199DDB5F30");
 
-                    b.HasIndex(new[] { "Tenloai" }, "UQ__LOAI__BF45B9967472A113")
+                    b.HasIndex(new[] { "Tenloai" }, "UQ__LOAI__BF45B996B528FC06")
                         .IsUnique();
 
                     b.ToTable("LOAI", (string)null);
                 });
 
+            modelBuilder.Entity("ShoesStore.Models.Mau", b =>
+                {
+                    b.Property<string>("Mamau")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("MAMAU");
+
+                    b.Property<string>("Tenmau")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("TENMAU");
+
+                    b.HasKey("Mamau")
+                        .HasName("PK__MAU__94185D28760C1F74");
+
+                    b.ToTable("MAU", (string)null);
+                });
+
             modelBuilder.Entity("ShoesStore.Models.Nhanvien", b =>
                 {
-                    b.Property<int>("Idnv")
+                    b.Property<int>("Manv")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("IDNV");
+                        .HasColumnName("MANV");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Idnv"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Manv"));
 
                     b.Property<string>("Diachi")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("DIACHI");
@@ -162,49 +372,48 @@ namespace ShoesStore.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("TENNV");
 
-                    b.HasKey("Idnv")
-                        .HasName("PK__NHANVIEN__B87DC9B2BB746F56");
+                    b.HasKey("Manv")
+                        .HasName("PK__NHANVIEN__B87DC9B274B84C76");
 
-                    b.HasIndex("Email");
+                    b.HasIndex(new[] { "Email" }, "IX_NHANVIEN_EMAIL")
+                        .IsUnique();
 
                     b.ToTable("NHANVIEN", (string)null);
                 });
 
-            modelBuilder.Entity("ShoesStore.Models.Phieudat", b =>
+            modelBuilder.Entity("ShoesStore.Models.Phieumua", b =>
                 {
-                    b.Property<int>("Idpd")
+                    b.Property<int>("Mapm")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("IDPD");
+                        .HasColumnName("MAPM");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Idpd"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Mapm"));
 
                     b.Property<string>("Ghichu")
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("GHICHU");
-
-                    b.Property<int>("Idkh")
-                        .HasColumnType("int")
-                        .HasColumnName("IDKH");
-
-                    b.Property<int?>("Idnv")
-                        .HasColumnType("int")
-                        .HasColumnName("IDNV");
 
                     b.Property<string>("Lydohuydon")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("LYDOHUYDON");
 
+                    b.Property<int?>("Makh")
+                        .HasColumnType("int")
+                        .HasColumnName("MAKH");
+
+                    b.Property<int?>("Manv")
+                        .HasColumnType("int")
+                        .HasColumnName("MANV");
+
+                    b.Property<int>("Mapttt")
+                        .HasColumnType("int")
+                        .HasColumnName("MAPTTT");
+
                     b.Property<DateTime>("Ngaydat")
                         .HasColumnType("datetime")
                         .HasColumnName("NGAYDAT");
-
-                    b.Property<string>("Phuongthucthanhtoan")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("PHUONGTHUCTHANHTOAN");
 
                     b.Property<string>("Tinhtrang")
                         .IsRequired()
@@ -212,92 +421,140 @@ namespace ShoesStore.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("TINHTRANG");
 
-                    b.HasKey("Idpd")
-                        .HasName("PK__PHIEUDAT__B87C5B0D773093A2");
+                    b.Property<decimal?>("Tongtien")
+                        .HasColumnType("money")
+                        .HasColumnName("TONGTIEN");
 
-                    b.HasIndex("Idkh");
+                    b.HasKey("Mapm")
+                        .HasName("PK__PHIEUDAT__B87C5B0D30DC315E");
 
-                    b.HasIndex("Idnv");
+                    b.HasIndex(new[] { "Makh" }, "IX_PHIEUMUA_MAKH");
 
-                    b.ToTable("PHIEUDAT", (string)null);
+                    b.HasIndex(new[] { "Manv" }, "IX_PHIEUMUA_MANV");
+
+                    b.HasIndex(new[] { "Mapttt" }, "IX_PHIEUMUA_MAPTTT");
+
+                    b.ToTable("PHIEUMUA", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Phuongthucthanhtoan", b =>
+                {
+                    b.Property<int>("Mapttt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MAPTTT");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Mapttt"));
+
+                    b.Property<string>("Tenphuongthuc")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("TENPHUONGTHUC");
+
+                    b.HasKey("Mapttt");
+
+                    b.ToTable("PHUONGTHUCTHANHTOAN", (string)null);
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Sanpham", b =>
                 {
-                    b.Property<int>("Idsp")
+                    b.Property<int>("Masp")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("IDSP");
+                        .HasColumnName("MASP");
 
-                    b.Property<string>("Detail")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Masp"));
+
+                    b.Property<string>("Anhdaidien")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("DETAIL");
+                        .HasColumnName("ANHDAIDIEN");
 
-                    b.Property<decimal>("Giagoc")
-                        .HasColumnType("decimal(18, 2)")
-                        .HasColumnName("GIAGOC");
-
-                    b.Property<bool?>("Giamgia")
-                        .HasColumnType("bit")
-                        .HasColumnName("GIAMGIA");
-
-                    b.Property<decimal?>("Giasale")
-                        .HasColumnType("decimal(18, 2)")
-                        .HasColumnName("GIASALE");
-
-                    b.Property<bool?>("Hethang")
-                        .HasColumnType("bit")
-                        .HasColumnName("HETHANG");
-
-                    b.Property<bool?>("Hienthi")
-                        .HasColumnType("bit")
-                        .HasColumnName("HIENTHI");
-
-                    b.Property<string>("Hinhanh")
+                    b.Property<string>("Anhdegiay")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("HINHANH");
+                        .HasColumnName("ANHDEGIAY");
 
-                    b.Property<bool?>("Hot")
-                        .HasColumnType("bit")
-                        .HasColumnName("HOT");
+                    b.Property<string>("Anhmattren")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("ANHMATTREN");
 
-                    b.Property<int>("Idloai")
+                    b.Property<int>("Madongsanpham")
                         .HasColumnType("int")
-                        .HasColumnName("IDLOAI");
+                        .HasColumnName("MADONGSANPHAM");
 
-                    b.Property<string>("Mau")
+                    b.Property<string>("Mamau")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
-                        .HasColumnName("MAU");
+                        .HasColumnName("MAMAU");
 
-                    b.Property<bool?>("Moi")
-                        .HasColumnType("bit")
-                        .HasColumnName("MOI");
-
-                    b.Property<string>("Size")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("SIZE");
-
-                    b.Property<int>("Soluong")
+                    b.Property<int>("TrangThai")
                         .HasColumnType("int")
-                        .HasColumnName("SOLUONG");
+                        .HasColumnName("TRANGTHAI");
 
-                    b.Property<string>("Tensp")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("TENSP");
+                    b.HasKey("Masp");
 
-                    b.HasKey("Idsp")
-                        .HasName("PK__SANPHAM__B87C02A535A2ED70");
+                    b.HasIndex("Mamau");
 
-                    b.HasIndex("Idloai");
+                    b.HasIndex(new[] { "Madongsanpham", "Mamau" }, "idx_unique_DongSp_Mau")
+                        .IsUnique();
 
                     b.ToTable("SANPHAM", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Sanphamsize", b =>
+                {
+                    b.Property<int>("Maspsize")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MASPSIZE");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Maspsize"));
+
+                    b.Property<int>("Masize")
+                        .HasColumnType("int")
+                        .HasColumnName("MASIZE");
+
+                    b.Property<int>("Masp")
+                        .HasColumnType("int")
+                        .HasColumnName("MASP");
+
+                    b.Property<int>("Slton")
+                        .HasColumnType("int")
+                        .HasColumnName("SLTON");
+
+                    b.HasKey("Maspsize");
+
+                    b.HasIndex("Masize");
+
+                    b.HasIndex(new[] { "Masp", "Masize" }, "idx_unique_Sanpham_size")
+                        .IsUnique();
+
+                    b.ToTable("SANPHAMSIZE", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Size", b =>
+                {
+                    b.Property<int>("Masize")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MASIZE");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Masize"));
+
+                    b.Property<string>("Tensize")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("TENSIZE");
+
+                    b.HasKey("Masize")
+                        .HasName("PK__SIZE__8DA14C4EB0779537");
+
+                    b.ToTable("SIZE", (string)null);
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Taikhoan", b =>
@@ -318,35 +575,91 @@ namespace ShoesStore.Migrations
                         .HasColumnName("MATKHAU");
 
                     b.HasKey("Email")
-                        .HasName("PK__TAIKHOAN__161CF725D610CA2A");
+                        .HasName("PK__TAIKHOAN__161CF7258466B7F4");
 
                     b.ToTable("TAIKHOAN", (string)null);
                 });
 
-            modelBuilder.Entity("ShoesStore.Models.Chitietphieudat", b =>
+            modelBuilder.Entity("Chitietkhuyenmai", b =>
                 {
-                    b.HasOne("ShoesStore.Models.Phieudat", "IdpdNavigation")
-                        .WithMany("Chitietphieudats")
-                        .HasForeignKey("Idpd")
+                    b.HasOne("ShoesStore.Models.Dongsanpham", null)
+                        .WithMany()
+                        .HasForeignKey("Madongsanpham")
                         .IsRequired()
-                        .HasConstraintName("FK__CHITIETPHI__IDPD__48CFD27E");
+                        .HasConstraintName("FK_CHITIETKHUYENMAI_DONGSANPHAM");
 
-                    b.HasOne("ShoesStore.Models.Sanpham", "IdspNavigation")
-                        .WithMany("Chitietphieudats")
-                        .HasForeignKey("Idsp")
+                    b.HasOne("ShoesStore.Models.Khuyenmai", null)
+                        .WithMany()
+                        .HasForeignKey("Makm")
                         .IsRequired()
-                        .HasConstraintName("FK__CHITIETPHI__IDSP__49C3F6B7");
+                        .HasConstraintName("FK_CHITIETKHUYENMAI_KHUYENMAI");
+                });
 
-                    b.Navigation("IdpdNavigation");
+            modelBuilder.Entity("ShoesStore.Models.Binhluan", b =>
+                {
+                    b.HasOne("ShoesStore.Models.Dongsanpham", "MadongsanphamNavigation")
+                        .WithMany("Binhluans")
+                        .HasForeignKey("Madongsanpham")
+                        .IsRequired()
+                        .HasConstraintName("FK_BINHLUAN_DONGSANPHAM");
 
-                    b.Navigation("IdspNavigation");
+                    b.HasOne("ShoesStore.Models.Khachhang", "MakhNavigation")
+                        .WithMany("Binhluans")
+                        .HasForeignKey("Makh")
+                        .IsRequired()
+                        .HasConstraintName("FK_BINHLUAN_KHACHHANG");
+
+                    b.Navigation("MadongsanphamNavigation");
+
+                    b.Navigation("MakhNavigation");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Blog", b =>
+                {
+                    b.HasOne("ShoesStore.Models.Nhanvien", "ManvNavigation")
+                        .WithMany("Blogs")
+                        .HasForeignKey("Manv")
+                        .IsRequired()
+                        .HasConstraintName("FK_BLOG_NHANVIEN");
+
+                    b.Navigation("ManvNavigation");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Chitietphieumua", b =>
+                {
+                    b.HasOne("ShoesStore.Models.Phieumua", "MapmNavigation")
+                        .WithMany("Chitietphieumuas")
+                        .HasForeignKey("Mapm")
+                        .IsRequired()
+                        .HasConstraintName("FK_CHITIETPHIEUMUA_PHIEUMUA");
+
+                    b.HasOne("ShoesStore.Models.Sanphamsize", "MaspsizeNavigation")
+                        .WithMany("Chitietphieumuas")
+                        .HasForeignKey("Maspsize")
+                        .IsRequired()
+                        .HasConstraintName("FK_CHITIETPHIEUMUA_SANPHAMSIZE");
+
+                    b.Navigation("MapmNavigation");
+
+                    b.Navigation("MaspsizeNavigation");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Dongsanpham", b =>
+                {
+                    b.HasOne("ShoesStore.Models.Loai", "MaloaiNavigation")
+                        .WithMany("Dongsanphams")
+                        .HasForeignKey("Maloai")
+                        .IsRequired()
+                        .HasConstraintName("FK__SANPHAM__IDLOAI__4222D4EF");
+
+                    b.Navigation("MaloaiNavigation");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Khachhang", b =>
                 {
                     b.HasOne("ShoesStore.Models.Taikhoan", "EmailNavigation")
-                        .WithMany("Khachhangs")
-                        .HasForeignKey("Email")
+                        .WithOne("Khachhang")
+                        .HasForeignKey("ShoesStore.Models.Khachhang", "Email")
                         .IsRequired()
                         .HasConstraintName("FK__KHACHHANG__EMAIL__398D8EEE");
 
@@ -356,73 +669,138 @@ namespace ShoesStore.Migrations
             modelBuilder.Entity("ShoesStore.Models.Nhanvien", b =>
                 {
                     b.HasOne("ShoesStore.Models.Taikhoan", "EmailNavigation")
-                        .WithMany("Nhanviens")
-                        .HasForeignKey("Email")
+                        .WithOne("Nhanvien")
+                        .HasForeignKey("ShoesStore.Models.Nhanvien", "Email")
                         .IsRequired()
                         .HasConstraintName("FK__NHANVIEN__EMAIL__3C69FB99");
 
                     b.Navigation("EmailNavigation");
                 });
 
-            modelBuilder.Entity("ShoesStore.Models.Phieudat", b =>
+            modelBuilder.Entity("ShoesStore.Models.Phieumua", b =>
                 {
-                    b.HasOne("ShoesStore.Models.Khachhang", "IdkhNavigation")
-                        .WithMany("Phieudats")
-                        .HasForeignKey("Idkh")
+                    b.HasOne("ShoesStore.Models.Khachhang", "MakhNavigation")
+                        .WithMany("Phieumuas")
+                        .HasForeignKey("Makh")
+                        .HasConstraintName("FK_PHIEUMUA_KHACHHANG");
+
+                    b.HasOne("ShoesStore.Models.Nhanvien", "ManvNavigation")
+                        .WithMany("Phieumuas")
+                        .HasForeignKey("Manv")
+                        .HasConstraintName("FK__PHIEUDAT__IDNV__5441852A");
+
+                    b.HasOne("ShoesStore.Models.Phuongthucthanhtoan", "MaptttNavigation")
+                        .WithMany("Phieumuas")
+                        .HasForeignKey("Mapttt")
                         .IsRequired()
-                        .HasConstraintName("FK__PHIEUDAT__IDKH__44FF419A");
+                        .HasConstraintName("FK_PHIEUMUA_PHUONGTHUCTHANHTOAN");
 
-                    b.HasOne("ShoesStore.Models.Nhanvien", "IdnvNavigation")
-                        .WithMany("Phieudats")
-                        .HasForeignKey("Idnv")
-                        .HasConstraintName("FK__PHIEUDAT__IDNV__45F365D3");
+                    b.Navigation("MakhNavigation");
 
-                    b.Navigation("IdkhNavigation");
+                    b.Navigation("ManvNavigation");
 
-                    b.Navigation("IdnvNavigation");
+                    b.Navigation("MaptttNavigation");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Sanpham", b =>
                 {
-                    b.HasOne("ShoesStore.Models.Loai", "IdloaiNavigation")
+                    b.HasOne("ShoesStore.Models.Dongsanpham", "MadongsanphamNavigation")
                         .WithMany("Sanphams")
-                        .HasForeignKey("Idloai")
+                        .HasForeignKey("Madongsanpham")
                         .IsRequired()
-                        .HasConstraintName("FK__SANPHAM__IDLOAI__4222D4EF");
+                        .HasConstraintName("FK_SANPHAM_DONGSANPHAM");
 
-                    b.Navigation("IdloaiNavigation");
+                    b.HasOne("ShoesStore.Models.Mau", "MamauNavigation")
+                        .WithMany("Sanphams")
+                        .HasForeignKey("Mamau")
+                        .IsRequired()
+                        .HasConstraintName("FK_SANPHAM_MAU");
+
+                    b.Navigation("MadongsanphamNavigation");
+
+                    b.Navigation("MamauNavigation");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Sanphamsize", b =>
+                {
+                    b.HasOne("ShoesStore.Models.Size", "MasizeNavigation")
+                        .WithMany("Sanphamsizes")
+                        .HasForeignKey("Masize")
+                        .IsRequired()
+                        .HasConstraintName("FK_SANPHAMSIZE_SIZE");
+
+                    b.HasOne("ShoesStore.Models.Sanpham", "MaspNavigation")
+                        .WithMany("Sanphamsizes")
+                        .HasForeignKey("Masp")
+                        .IsRequired()
+                        .HasConstraintName("FK_SANPHAMSIZE_SANPHAM");
+
+                    b.Navigation("MasizeNavigation");
+
+                    b.Navigation("MaspNavigation");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Dongsanpham", b =>
+                {
+                    b.Navigation("Binhluans");
+
+                    b.Navigation("Sanphams");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Khachhang", b =>
                 {
-                    b.Navigation("Phieudats");
+                    b.Navigation("Binhluans");
+
+                    b.Navigation("Phieumuas");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Loai", b =>
+                {
+                    b.Navigation("Dongsanphams");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Mau", b =>
                 {
                     b.Navigation("Sanphams");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Nhanvien", b =>
                 {
-                    b.Navigation("Phieudats");
+                    b.Navigation("Blogs");
+
+                    b.Navigation("Phieumuas");
                 });
 
-            modelBuilder.Entity("ShoesStore.Models.Phieudat", b =>
+            modelBuilder.Entity("ShoesStore.Models.Phieumua", b =>
                 {
-                    b.Navigation("Chitietphieudats");
+                    b.Navigation("Chitietphieumuas");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Phuongthucthanhtoan", b =>
+                {
+                    b.Navigation("Phieumuas");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Sanpham", b =>
                 {
-                    b.Navigation("Chitietphieudats");
+                    b.Navigation("Sanphamsizes");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Sanphamsize", b =>
+                {
+                    b.Navigation("Chitietphieumuas");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Size", b =>
+                {
+                    b.Navigation("Sanphamsizes");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Taikhoan", b =>
                 {
-                    b.Navigation("Khachhangs");
+                    b.Navigation("Khachhang");
 
-                    b.Navigation("Nhanviens");
+                    b.Navigation("Nhanvien");
                 });
 #pragma warning restore 612, 618
         }

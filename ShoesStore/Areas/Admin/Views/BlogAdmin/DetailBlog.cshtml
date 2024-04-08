@@ -1,0 +1,15 @@
+﻿@model ShoesStore.Models.Blog
+
+<h2>Detail of Blog</h2>
+
+<div>
+    <h4>Blog ID: @Model.Mablog</h4>
+    <h4>Author ID: @Model.Manv</h4>
+    <div class="form-group">
+        <label asp-for="Noidung">Nội dung:</label>
+        <div>@Html.Raw(Model.Noidung)</div>
+    </div>
+
+</div>
+
+<a asp-action="ListBlogs" class="btn btn-secondary">Back to List</a>

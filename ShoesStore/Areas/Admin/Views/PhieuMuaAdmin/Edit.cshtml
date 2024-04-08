@@ -1,0 +1,98 @@
+﻿
+@model ShoesStore.Models.Phieumua
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Chỉnh Sửa Phiếu Mua</h4>
+            <form asp-action="Edit" method="post">
+
+
+                <!-- Thêm thuộc tính action để xác định form sẽ được gửi đến đâu -->
+                <div class="form-group">
+                  @*   <input asp-for="MakhNavigation.Makh" value="0" hidden />
+                    <input asp-for="MakhNavigation.Tenkh" value="0" hidden />
+                    <input asp-for="MakhNavigation.Email" value="0" hidden />
+                    <input asp-for="MakhNavigation.Diachi" value="0" hidden />
+                    <input asp-for="MakhNavigation.Sdt" value="0" hidden />
+                    <input asp-for="MakhNavigation.Gioitinh" value="0" hidden />
+                    <input asp-for="MakhNavigation.Ngaysinh" value="0" hidden />
+                    <input asp-for="MakhNavigation.EmailNavigation.Email" value="0" hidden />
+                    <input asp-for="MakhNavigation.EmailNavigation.Matkhau" value="0" hidden />
+                    <input asp-for="ManvNavigation.EmailNavigation.Loaitk" value="0" hidden />
+
+                    <input asp-for="ManvNavigation.Manv" value="0" hidden />
+                    <input asp-for="ManvNavigation.Tennv" value="0" hidden />
+                    <input asp-for="ManvNavigation.Email" value="0" hidden />
+                    <input asp-for="ManvNavigation.Sdt" value="0" hidden />
+                    <input asp-for="ManvNavigation.Diachi" value="0" hidden />
+                    <input asp-for="ManvNavigation.Gioitinh" value="0" hidden />
+                    <input asp-for="MakhNavigation.Ngaysinh" value="0" hidden />
+                    <input asp-for="ManvNavigation.EmailNavigation.Email" value="0" hidden />
+                    <input asp-for="ManvNavigation.EmailNavigation.Matkhau" value="0" hidden />
+                    <input asp-for="ManvNavigation.EmailNavigation.Loaitk" value="1" hidden />
+
+                    <input asp-for="MaptttNavigation.Mapttt" value="0" hidden />
+                    <input asp-for="MaptttNavigation.Tenphuongthuc" value="0" hidden /> *@
+                    <label asp-for="Ngaydat">Ngày Đặt</label>
+                    <p class="form-control">@Model.Ngaydat</p>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Makh">Khách Hàng</label>
+                    <input readonly asp-for="Makh" class="form-control" />
+                    <span asp-validation-for="Makh" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Manv">Nhân Viên</label>
+                    <input readonly asp-for="Manv" class="form-control" />
+                    <span asp-validation-for="Manv" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Tinhtrang">Tình Trạng</label>
+                    <select asp-for="Tinhtrang" class="form-control">
+                        <option value="Đã duyệt">Đã duyệt</option>
+
+                        <option value="Hủy">Hủy</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mapttt">Phương Thức Thanh Toán</label>
+                    <input readonly asp-for="Mapttt" class="form-control" />
+                    <span asp-validation-for="Mapttt" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Ghichu">Ghi Chú</label>
+                    <p>@Model.Ghichu</p>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Lydohuydon">Lý Do Hủy Đơn (nếu có)</label>
+                    <textarea  asp-for="Lydohuydon" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Tongtien">Tổng Tiền</label>
+                    <p class="form-control">@Model.Tongtien?.ToString("#,##0")₫</p>
+                </div>
+               @*  <div>
+                    @Html.Partial("Partial_SanPham", new PhieuMuaDetailViewModel { Mapm = Model.Mapm, Chitietphieumuas = Model.Chitietphieumuas })
+
+                </div> *@
+                <button type="submit" class="btn btn-gradient-primary me-2">Sửa</button>
+                <a href="@Url.Action("Index", "PhieuMuaAdmin")" class="btn btn-light">Hủy</a>
+            </form>
+        </div>
+    </div>       
+ </div>
+
+
+
+
+    
+
+
+
+

@@ -5,9 +5,9 @@ namespace ShoesStore.Models;
 
 public partial class Loai
 {
-    public int Idloai { get; set; }
+    public int Maloai { get; set; }
 
     public string Tenloai { get; set; } = null!;
 
-    public virtual ICollection<Sanpham> Sanphams { get; set; } = new List<Sanpham>();
+    public virtual ICollection<Dongsanpham> Dongsanphams { get; set; } = new List<Dongsanpham>();
 }

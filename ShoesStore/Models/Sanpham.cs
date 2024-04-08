@@ -1,41 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace ShoesStore.Models;
 
 public partial class Sanpham
 {
-    public int Idsp { get; set; }
+    public int Masp { get; set; }
 
-    public int Idloai { get; set; }
+    public int Madongsanpham { get; set; }
 
-    public string Tensp { get; set; } = null!;
+    public string Mamau { get; set; } = null!;
 
-    public string Hinhanh { get; set; } = null!;
+    public string Anhdaidien { get; set; } = null!;
 
-    public int Soluong { get; set; }
+    public string Anhmattren { get; set; } = null!;
 
-    public decimal Giagoc { get; set; }
+    public string Anhdegiay { get; set; } = null!;
 
-    public decimal? Giasale { get; set; }
+	[JsonIgnore]
+    public virtual Dongsanpham MadongsanphamNavigation { get; set; } = null!;
+	[JsonIgnore]
 
-    public string Mau { get; set; } = null!;
+	public virtual Mau MamauNavigation { get; set; } = null!;
 
-    public string Size { get; set; } = null!;
+    public virtual ICollection<Sanphamsize> Sanphamsizes { get; set; } = new List<Sanphamsize>();
+    public enum TrangThaiEnum
+    {
+        DangBan = 1,
+        NgungBan = 2,
+        Hot = 3,
+        New = 4
+    }
 
-    public string Detail { get; set; } = null!;
-
-    public bool? Hienthi { get; set; }
-
-    public bool? Hethang { get; set; }
-
-    public bool? Giamgia { get; set; }
-
-    public bool? Moi { get; set; }
-
-    public bool? Hot { get; set; }
-
-    public virtual ICollection<Chitietphieudat> Chitietphieudats { get; set; } = new List<Chitietphieudat>();
-
-    public virtual Loai IdloaiNavigation { get; set; } = null!;
+	public TrangThaiEnum TrangThai { get; set; }
 }
+

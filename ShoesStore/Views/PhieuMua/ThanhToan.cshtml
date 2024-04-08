@@ -1,0 +1,142 @@
+﻿@using ShoesStore.ViewModels
+@model PhieuMuaViewModel
+@{
+    decimal tongtien = 0;
+}
+<style>
+    .imgProduct {
+        max-height: 60px;
+        max-width: 60px;
+    }
+</style>
+<script>
+    function passMaptttOnClick(mapttt) {
+        console.log("Mapttt: ", mapttt);
+        document.getElementById('MaptttHidden').value = mapttt;
+    }
+</script>
+<!-- Start Header Area -->
+<!-- End Header Area -->
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <div class="col-first">
+                <h1>Checkout</h1>
+                <nav class="d-flex align-items-center">
+                    <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="single-product.html">Checkout</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Banner Area -->
+<!--================Checkout Area =================-->
+<section class="checkout_area section_gap">
+    <div class="container">
+
+        <div class="billing_details">
+            <div class="row">
+                <form class="row contact_form" asp-action="ThanhToan" method="post" novalidate="novalidate">
+                    <input asp-for="@Model.khInfo.Makh" value="@Model.khInfo.Makh" hidden/>
+                    <input asp-for="@Model.khInfo.Ngaysinh" value="@Model.khInfo.Ngaysinh" hidden />
+                    <div class="col-lg-8">
+                        <h2 style="border-bottom: solid 1px #ccc">Chi tiết đơn hàng</h2>
+                        <br />
+                        <div class="row contact_form" novalidate="novalidate">
+                            <div class="col-md-6 form-group p_star">
+                                <label for="exampleFormControlInput1" class="form-label" asp-for="@Model.khInfo.Tenkh"><strong>Tên khách hàng</strong></label>
+                                <input readonly type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tên khách hàng" asp-for="@Model.khInfo.Tenkh">
+                                <span asp-validation-for="@Model.khInfo.Tenkh" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 form-group p_star">
+                                <label for="exampleFormControlInput1" class="form-label" asp-for="@Model.khInfo.Gioitinh"><strong>Giới tính</strong></label>
+                                <input readonly type="text" class="form-control" id="exampleFormControlInput1" asp-for="@Model.khInfo.Gioitinh"
+                                       value="@(Model.khInfo.Gioitinh == true ? "Nam" : "Nữ")">
+                            </div>
+                            <div class="col-md-6 form-group p_star">
+                                <label for="exampleFormControlInput1" class="form-label" asp-for="@Model.khInfo.Sdt"><strong>Số điện thoại</strong></label>
+                                <input readonly type="number" class="form-control" id="exampleFormControlInput1" placeholder="Số điện thoại" asp-for="@Model.khInfo.Sdt">
+                                <span asp-validation-for="@Model.khInfo.Sdt" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 form-group p_star">
+                                <label for="exampleFormControlInput1" class="form-label" asp-for="@Model.khInfo.Email"><strong>Email</strong></label>
+                                <input readonly type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" asp-for="@Model.khInfo.Email">
+                                <span asp-validation-for="@Model.khInfo.Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <label for="exampleFormControlInput1" class="form-label" asp-for="@Model.khInfo.Diachi"><strong>Địa chỉ</strong></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Địa chỉ" asp-for="@Model.khInfo.Diachi">
+                                <span asp-validation-for="@Model.khInfo.Diachi" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <label for="exampleFormControlInput1" class="form-label" asp-for="@Model.GhiChu"><strong>Ghi chú</strong></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ghi chú" asp-for="@Model.GhiChu">
+                                <span asp-validation-for="@Model.GhiChu" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="order_box">
+                            <h2>ĐƠN CỦA BẠN</h2>
+                            <ul class="list">
+                                <li><a href="#">Sản phẩm<span>Tổng tiền</span></a></li>
+                                @foreach (ShoppingCartItem shopcartItem in Model.listcartItem)
+                                {
+                                    <li class="d-flex justify-content-between align-items-center mb-1">
+                                        <div class="img-container">
+                                            <img class="imgProduct" src="~/img/@shopcartItem.sanpham.Madongsanpham/@shopcartItem.sanpham.Anhdaidien" alt="@shopcartItem.Name">
+                                        </div>
+                                        <div class="product-details">
+                                            <span>@shopcartItem.Name</span>
+                                            <div>Màu: @shopcartItem.TenMau</div>
+                                            <div>Size: @shopcartItem.Size <span class="middle">SL: @shopcartItem.Quantity</span></div>
+                                        </div>
+                                        <div class="quantity-price">
+
+                                            @{
+                                                decimal tiensp;
+                                                if (shopcartItem.PhanTramGiam != 1)
+                                                {
+                                                    tiensp = shopcartItem.Quantity * (shopcartItem.GiaGoc - (shopcartItem.GiaGoc * shopcartItem.PhanTramGiam / 100));
+                                                }
+                                                else{
+                                                    tiensp = shopcartItem.Quantity * shopcartItem.GiaGoc;
+                                                }
+                                                tongtien += tiensp;
+                                            }
+                                            <span class="last">@(tiensp.ToString("#,##0"))₫</span>
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                            <ul class="list list_2">
+                                <li><a href="#">Tổng tiền<span>@tongtien.ToString("#,##0")₫</span></a></li>
+                            </ul>
+                            <input id="MaptttHidden" asp-for="@Model.Mapttt" hidden/>
+                            @foreach (Phuongthucthanhtoan pttt in ViewBag.MethodPurchase)
+                            {
+                                <div class="form-check">
+                                    <input class="form-check-input" onclick="passMaptttOnClick('@pttt.Mapttt')" type="radio" name="flexRadioDefault"
+                                           id="flexRadioDefault1">
+                                    <label class="form-check-label" asp-for="@Model.Mapttt">
+                                        @pttt.Tenphuongthuc
+                                    </label>
+                                    
+                                </div>
+                                
+                            }
+                            <span asp-validation-for="@Model.Mapttt" class="text-danger"></span>
+                            
+                            <button class="primary-btn" type="submit">Xác nhận đặt hàng</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!--================End Checkout Area =================-->
