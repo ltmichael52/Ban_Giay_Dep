@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ShoesStore.Areas.Admin.InterfaceRepositories;
+using ShoesStore.Areas.Admin.ViewModels;
 using ShoesStore.InterfaceRepositories;
 using ShoesStore.Models;
 using ShoesStore.Models.Authentication;
@@ -10,7 +11,7 @@ using System.Security.Claims;
 namespace ShoesStore.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
+    [AuthenticationM_S]
     public class PhieuMuaAdminController : Controller
     {
         private readonly IPhieuMuaAdmin _pmrepo;
@@ -29,23 +30,33 @@ namespace ShoesStore.Areas.Admin.Controllers
         {
             Phieumua phieuMua = _pmrepo.GetPhieuMuaById(id);
 
-            // Get the current user's email from claims
+
             var currentUserEmail = HttpContext.User.FindFirst(ClaimTypes.Email)?.Value;
 
-            // Find the employee associated with the current user's email
             var currentEmployee = _db.Nhanviens.FirstOrDefault(e => e.Email == currentUserEmail);
 
-            // If the current employee is found, set the Manv field
             if (currentEmployee != null)
             {
                 phieuMua.Manv = currentEmployee.Manv;
             }
 
-           /* ViewBag.SelectKhachhang = new SelectList(_db.Khachhangs, "Makh", "Tenkh", phieuMua.Makh);
-            ViewBag.SelectNhanVien = new SelectList(_db.Nhanviens, "Manv", "Tennv", phieuMua.Manv);
-            ViewBag.SelectPTTT = new SelectList(_db.Phuongthucthanhtoans, "Mapttt", "Tenphuongthuc", phieuMua.Mapttt);
-*/
-            return View(phieuMua); // Trả về view edit với dữ liệu phiếu mua
+            var chitietphieumua = _db.Chitietphieumuas.Where(ct => ct.Mapm == id)
+                                        .Include(x => x.MaspsizeNavigation)
+                                        .ThenInclude(x => x.MasizeNavigation)
+                                        .Include(x => x.MaspsizeNavigation)
+                                        .ThenInclude(x => x.MaspNavigation)
+                                        .ThenInclude(x => x.MadongsanphamNavigation)
+                                        .Include(x => x.MaspsizeNavigation)
+                                        .ThenInclude(x => x.MaspNavigation)
+                                        .ThenInclude(x => x.MamauNavigation).ToList();
+
+            var ctpm = new PhieuMuaDetailViewModel
+            {
+                Phieumua = phieuMua,
+                Chitietphieumuas = chitietphieumua
+
+            };
+            return View(ctpm); // Trả về view edit với dữ liệu phiếu mua
         }
 
         // POST: /Admin/PhieuMuaAdmin/Edit/5
@@ -54,15 +65,9 @@ namespace ShoesStore.Areas.Admin.Controllers
         public IActionResult Edit(int id, Phieumua phieuMua)
         {
 
-            _pmrepo.UpdatePhieuMua(phieuMua, id); 
+            _pmrepo.UpdatePhieuMua(phieuMua, id);
             return RedirectToAction(nameof(Index));
-          
-        }
 
-        public IActionResult Partial_SanPham(int id)
-        {
-            var items = _db.Chitietphieumuas.Where(x => x.Mapm == id).ToList();
-            return PartialView(items);
         }
     }
 }

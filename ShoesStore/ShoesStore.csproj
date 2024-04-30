@@ -363,6 +363,7 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\img\blog\" />
   </ItemGroup>
 
 </Project>

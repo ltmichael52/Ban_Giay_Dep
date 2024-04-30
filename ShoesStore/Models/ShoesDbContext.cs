@@ -27,6 +27,12 @@ public partial class ShoesDbContext : DbContext
 
     public virtual DbSet<Khachhang> Khachhangs { get; set; }
 
+    public virtual DbSet<Voucher> Vouchers {  get; set; }
+
+    public virtual DbSet<Sodiachi> Sodiachis {  get; set; }
+
+    public virtual DbSet<Soxu> Soxus {  get; set; }
+
     public virtual DbSet<Khuyenmai> Khuyenmais { get; set; }
 
     public virtual DbSet<Loai> Loais { get; set; }
@@ -180,9 +186,7 @@ public partial class ShoesDbContext : DbContext
             entity.HasIndex(e => e.Email, "IX_KHACHHANG_EMAIL").IsUnique();
 
             entity.Property(e => e.Makh).HasColumnName("MAKH");
-            entity.Property(e => e.Diachi)
-                .HasMaxLength(255)
-                .HasColumnName("DIACHI");
+            entity.Property(e => e.Xephang).HasColumnName("XEPHANG");
             entity.Property(e => e.Email)
                 .HasMaxLength(255)
                 .HasColumnName("EMAIL");
@@ -190,6 +194,9 @@ public partial class ShoesDbContext : DbContext
             entity.Property(e => e.Ngaysinh)
                 .HasColumnType("datetime")
                 .HasColumnName("NGAYSINH");
+            entity.Property(e => e.Ngayxephang)
+               .HasColumnType("datetime")
+               .HasColumnName("NGAYXEPHANG");
             entity.Property(e => e.Sdt)
                 .HasMaxLength(255)
                 .HasColumnName("SDT");
@@ -201,6 +208,71 @@ public partial class ShoesDbContext : DbContext
                 .HasForeignKey<Khachhang>(d => d.Email)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__KHACHHANG__EMAIL__398D8EEE");
+        });
+
+        modelBuilder.Entity<Voucher>(entity =>
+        {
+            entity.HasKey(e => e.Mavoucher);
+            entity.ToTable("VOUCHER");
+            entity.Property(e => e.Mavoucher).HasColumnName("MAVOUCHER");
+            entity.Property(e => e.Soluong).HasColumnName("SOLUONG");
+            entity.Property(e => e.Phantramgiam).HasColumnName("PHANTRAMGIAM");
+
+            entity.Property(e => e.Giatoithieu)
+                .HasColumnType("money")
+                .HasColumnName("GIATOITHIEU");
+
+            entity.Property(e => e.Giamtoida)
+                .HasColumnType("money")
+                .HasColumnName("GIAMTOIDA");
+            entity.Property(e => e.Ngaytao)
+                  .HasColumnType("datetime")
+                  .HasColumnName("NGAYTAO");
+
+            entity.Property(e => e.Ngayhethan)
+                   .HasColumnType("datetime")
+                   .HasColumnName("NGAYHETHAN");
+
+        });
+
+        modelBuilder.Entity<Sodiachi>(entity => {
+            entity.HasKey(e => e.Masodiachi);
+            entity.ToTable("SODIACHI");
+            entity.HasIndex(e => e.Makh, "IX_SODIACHI_MAKH");
+            entity.Property(e => e.Masodiachi).HasColumnName("MASODIACHI");
+            
+            entity.Property(e => e.Makh).HasColumnName("MAKH");
+            entity.Property(e => e.Tennguoinhan)
+                .HasMaxLength(500)
+                .HasColumnName("TENNGUOINHAN");
+            entity.Property(e => e.Sdtnguoinhan)
+                .HasMaxLength(255)
+                .HasColumnName("SDTNGUOINHAN");
+
+            entity.Property(e => e.Diachi)
+                .HasMaxLength(500)
+                .HasColumnName("DIACHI");
+            entity.HasOne(d => d.MakhNavigation).WithMany(p => p.Sodiachis)
+             .HasForeignKey(d => d.Makh)
+             .OnDelete(DeleteBehavior.ClientSetNull)
+             .HasConstraintName("FK__KHACHHAG__SODIACHI__123213");
+
+        });
+
+        modelBuilder.Entity<Soxu>(entity => {
+            entity.HasKey(e => e.Masoxu);
+            entity.ToTable("SOXU");
+            entity.HasIndex(e => e.Makh, "IX_SOXU_MAKH");
+            entity.Property(e => e.Masoxu).HasColumnName("MASOXU");
+            entity.Property(e => e.Makh).HasColumnName("MAKH");
+            entity.Property(e => e.Tongxu)
+               .HasColumnType("money")
+               .HasColumnName("TONGXU");
+            entity.HasOne(d => d.MakhNavigation).WithMany(p => p.Soxus)
+             .HasForeignKey(d => d.Makh)
+             .OnDelete(DeleteBehavior.ClientSetNull)
+             .HasConstraintName("FK__KHACHHAG__SOXU__123213");
+
         });
 
         modelBuilder.Entity<Khuyenmai>(entity =>
@@ -312,7 +384,10 @@ public partial class ShoesDbContext : DbContext
 
             entity.HasIndex(e => e.Mapttt, "IX_PHIEUMUA_MAPTTT");
 
+            entity.HasIndex(e => e.Mavoucher, "IX_PHIEUMUA_MAVOUCHER");
+
             entity.Property(e => e.Mapm).HasColumnName("MAPM");
+            entity.Property(e => e.Mavoucher).HasColumnName("MAVOUCHER");
             entity.Property(e => e.Ghichu).HasColumnName("GHICHU");
             entity.Property(e => e.Lydohuydon)
                 .HasMaxLength(255)
@@ -342,6 +417,10 @@ public partial class ShoesDbContext : DbContext
                 .HasForeignKey(d => d.Mapttt)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_PHIEUMUA_PHUONGTHUCTHANHTOAN");
+            entity.HasOne(d => d.MavoucherNavigation).WithMany(p => p.Phieumuas)
+               .HasForeignKey(d => d.Mavoucher)
+               .OnDelete(DeleteBehavior.ClientSetNull)
+               .HasConstraintName("FK_PHIEUMUA_VOUCHER");
         });
 
         modelBuilder.Entity<Phuongthucthanhtoan>(entity =>

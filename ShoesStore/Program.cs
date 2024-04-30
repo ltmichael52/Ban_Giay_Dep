@@ -22,6 +22,8 @@ builder.Services.AddDbContext<ShoesDbContext>(options =>
 });
 builder.Services.AddScoped<IPhieuMuaAdmin, PhieuMuaAdminRepo>();
 builder.Services.AddScoped<IDongsanphamAdmin, DongsanphamAdminRepo>();
+builder.Services.AddScoped<INhanvien, NhanvienAdminRepo>();
+builder.Services.AddScoped<IBlogAdmin, BlogAdminRepo>();
 builder.Services.AddScoped<ILoaiAdmin, LoaiAdminRepo>();
 builder.Services.AddScoped<IMauAdmin, MauAdminRepo>();
 builder.Services.AddScoped<ISizeAdmin, SizeAdminRepo>();
@@ -37,9 +39,8 @@ builder.Services.AddScoped<IKhachhang, KhachhangRepo>();
 builder.Services.AddScoped<IPhieuMua, PhieuMuaRepo>();
 builder.Services.AddScoped<IKhuyenMai, KhuyenMaiRepo>();
 builder.Services.AddScoped<IBannerRepository, BannerRepository>();
-builder.Services.AddScoped<IBlogAdmin, BlogAdminRepo>();
 builder.Services.AddScoped<IBinhLuan, BinhLuanRepository>();
-
+builder.Services.AddScoped<IReportRepository, ReportRepository>();
 var app = builder.Build();
 app.UseSession();
 
@@ -64,6 +65,6 @@ app.MapAreaControllerRoute(
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=SanPham}/{action=SanPhamTheoLoai}/{id=-1}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

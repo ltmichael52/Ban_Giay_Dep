@@ -119,8 +119,9 @@
 			}
 
 			function getToController() {
+				console.log("Get to controller: ");
 				$.ajax({
-					url: 'SanPham/SanPhamTheoLoai',
+					url: '/SanPham/SanPhamTheoLoai',
 					type: 'Get',
 					data: {
 						page: null,
@@ -161,7 +162,7 @@
 				<h1>Shop Category page</h1>
 				<nav class="d-flex align-items-center">
 					<a asp-action="Index" asp-controller="Home">Home<span class="lnr lnr-arrow-right"></span></a>
-					<a href="#">Mua sắm<span class="lnr lnr-arrow-right"></span></a>
+					<a href="#">Shopping<span class="lnr lnr-arrow-right"></span></a>
 					<a href="#">Running</a>
 				</nav>
 			</div>
@@ -174,9 +175,9 @@
 		<div class="col-xl-3 col-lg-4 col-md-5">
 			<div class="sidebar-filter mt-0">
 				<form asp-action="SanPhamList" asp-controller="SanPham" id="form-search">
-					<div class="top-filter-head">Lọc sản phẩm</div>
+					<div class="top-filter-head">Filter Products</div>
 					<div class="common-filter">
-						<div class="head">Màu</div>
+						<div class="head">Colors</div>
 						<ul>
 							@foreach (SelectListItem mau in ViewBag.MauList)
 							{
@@ -192,11 +193,11 @@
 						</ul>
 					</div>
 					<div class="common-filter">
-						<div class="head">Giá</div>
+						<div class="head">Price</div>
 						<div class="price-range-area">
 							<div id="price-range2"></div>
 							<div class="value-wrapper d-flex">
-								<div class="price">Giá:</div>
+								<div class="price">Price from:</div>
 								<div id="lower-value2"></div>
 								<span>₫</span>
 								<div class="to"> - </div>
@@ -213,9 +214,9 @@
 			<div class="filter-bar d-flex flex-wrap align-items-center">
 				<div class="sorting">
 					<select id="sortGia" name="sortGia">
-						<option value="0">Sort Giá</option>
-						<option value="1">Giá tăng dần</option>
-						<option value="2">Giá giảm dần</option>
+						<option value="0">Sort Price</option>
+						<option value="1">Price ascending</option>
+						<option value="2">Price descending</option>
 					</select>
 				</div>
 				
@@ -236,7 +237,7 @@
 	</div>
 </div>
 
-@await Component.InvokeAsync("HotDeal");
+@await Component.InvokeAsync("BlogLast",new {theloai = "Thumbnail"});
 
 
 

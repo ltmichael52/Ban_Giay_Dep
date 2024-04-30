@@ -4,7 +4,7 @@
     ViewData["Title"] = "Add San Pham";
 }
 
-<h1>Thêm chi tiết giày</h1>
+<h1>Create New Shoes Detail</h1>
 
 <form asp-action="AddSanPham" asp-controller="SanPhamAdmin" method="post" enctype="multipart/form-data">
     <input asp-for="DongsanphamId" hidden />
@@ -12,13 +12,13 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group">
-                <label asp-for="DongsanphamName" class="control-label">Tên giày</label>
+                <label asp-for="DongsanphamName" class="control-label">Shoes Name</label>
                 <input asp-for="DongsanphamName" readonly class="form-control" />
             </div>
         </div>
         <div class="col-sm-4">
             <div class="form-group">
-                <label asp-for="TypeName" class="control-label">Tên loại giày</label>
+                <label asp-for="TypeName" class="control-label">Shoes Category</label>
                 <input asp-for="TypeName" readonly class="form-control" />
             </div>
         </div>
@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group">
-                <label asp-for="IdMau" class="control-label">Màu</label>
+                <label asp-for="IdMau" class="control-label">Color</label>
                 <select asp-for="IdMau" id="colorChoice" class="form-control" style="width: 200px;" asp-items="ViewBag.ColorChoice">
                 </select>
                 <span asp-validation-for="IdMau" class="text-danger"></span>
@@ -35,7 +35,7 @@
         </div>
         <div class="col-sm-4">
             <div class="form-group">
-                <label asp-for="TrangThai" class="control-label">Trạng thái</label>
+                <label asp-for="TrangThai" class="control-label">State</label>
                 <select asp-for="TrangThai" id="colorChoice" class="form-control" style="width: 200px;">
                     @foreach (var value in Enum.GetValues(typeof(SanPhamViewModel.TrangThaiEnum)))
                     {
@@ -113,7 +113,7 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group">
-                <a asp-action="SanPhamList" asp-controller="SanPhamAdmin" asp-route-madongsp="@Model.DongsanphamId" class="btn btn-secondary">Quay lại danh sách chi tiết sản phẩm</a>
+                <a asp-action="SanPhamList" asp-controller="SanPhamAdmin" asp-route-madongsp="@Model.DongsanphamId" class="btn btn-secondary">Back To Shoes Detail List</a>
             </div>
         </div>
         <div class="col-sm-4">

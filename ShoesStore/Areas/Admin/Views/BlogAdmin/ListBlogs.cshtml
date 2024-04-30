@@ -1,4 +1,4 @@
-﻿@model List<ShoesStore.Models.Blog>
+﻿@model List<Blog>
 
 @{
     ViewData["Title"] = "List of Blogs";
@@ -17,6 +17,7 @@
                 <tr>
                     <th>Blog ID</th>
                     <th>Author ID</th>
+                    <th>Avatar</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -26,6 +27,7 @@
                     <tr>
                         <td>@blog.Mablog</td>
                         <td>@blog.Manv</td>
+                        <td><img src="@Url.Content($"~/img/blog/{blog.Anhdaidien}")" style="width:100px; height:100px;" /></td>
                         <td>
                             <form asp-action="DetailBlog" method="get" class="d-inline">
                                 <input type="hidden" name="Mablog" value="@blog.Mablog" />

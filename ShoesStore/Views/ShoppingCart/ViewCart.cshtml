@@ -35,9 +35,9 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col"><h4>Sản phẩm</h4></th>
-                            <th scope="col" class="text-center"><h4>Số lượng</h4></th>
-                            <th scope="col" class="text-center"><h4>Tổng tiền</h4</th>
+                            <th scope="col"><h4>Products</h4></th>
+                            <th scope="col" class="text-center"><h4>Quantity</h4></th>
+                            <th scope="col" class="text-center"><h4>Total cost</h4></th>
                             <th scope="col" class="text-center"></th>
                         </tr>
                     </thead>
@@ -58,11 +58,11 @@
                                             <div>
                                                 <a asp-action="HienThiSanpham" asp-controller="Sanpham"
                                                    asp-route-madongsanpham="@cartItem.sanpham.Madongsanpham" asp-route-masp="@cartItem.sanpham.Masp">
-                                                    <h4>Giày @cartItem.Name</h4>
+                                                    <h4>Shoes @cartItem.Name</h4>
                                                 </a>
                                             </div>
                                             <div>
-                                                <h5>Màu: @cartItem.TenMau</h5>
+                                                <h5>Color: @cartItem.TenMau</h5>
                                             </div>
                                             <div>
                                                 <h5>Size: @cartItem.Size</h5>
@@ -123,7 +123,7 @@
                             <td>
                             </td>
                             <td>
-                                <h4>Tổng Đơn Hàng</h4>
+                                <h4>Total Bill</h4>
                             </td>
                             <td>
                                 <h4>@TotalCost.ToString("#,##0")₫</h4>
@@ -140,8 +140,8 @@
                             <td>
                                 <div class="checkout_btn_inner d-flex align-items-center">
                                     <a class="gray_btn" 
-                                        asp-action="SanPhamTheoLoai" asp-controller="SanPham" asp-route-idType="0">Tiếp tục mua hàng</a>
-                                    <a class="primary-btn"asp-action="ThanhToan" asp-controller="PhieuMua">Thanh toán</a>
+                                        asp-action="SanPhamTheoLoai" asp-controller="SanPham" asp-route-idType="0">Continue shopping</a>
+                                    <a class="primary-btn"asp-action="ThanhToan" asp-controller="PhieuMua">Checkout</a>
                                 </div>
                             </td>
                         </tr>

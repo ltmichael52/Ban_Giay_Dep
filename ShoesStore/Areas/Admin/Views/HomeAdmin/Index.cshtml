@@ -2,5 +2,12 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Index";
 }
-
-<h1>Hello admin</h1>
+@inject IHttpContextAccessor HttpContextAccessor
+@if (HttpContextAccessor.HttpContext.Session.GetString("Loaitk") == "2")
+{
+    <h1>Hello admin</h1>
+}
+else
+{
+    <h1> Hello Staff</h1>
+}

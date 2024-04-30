@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShoesStore.Areas.Admin.InterfaceRepositories;
+using System.Linq;
 
 namespace ShoesStore.Controllers
 {
@@ -14,13 +15,13 @@ namespace ShoesStore.Controllers
 
 		public IActionResult Index()
 		{
-			var blogs =  _blogRepository.GetBlogs();
+			var blogs = _blogRepository.GetBlogs();
 			return View(blogs);
 		}
 
-		public async Task<IActionResult> Detail(int id)
+		public IActionResult Detail(int id)
 		{
-			var blog = await _blogRepository.GetBlog(id);
+			var blog = _blogRepository.GetBlog(id);
 			if (blog == null)
 			{
 				return NotFound();
@@ -28,6 +29,5 @@ namespace ShoesStore.Controllers
 
 			return View(blog);
 		}
-		
 	}
 }

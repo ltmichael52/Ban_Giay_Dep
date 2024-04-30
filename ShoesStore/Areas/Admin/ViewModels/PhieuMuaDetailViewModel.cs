@@ -6,6 +6,11 @@ namespace ShoesStore.Areas.Admin.ViewModels
     {
         public int Mapm { get; set; }
         public string Tendongsp { get; set; } = null!;
-        public IEnumerable<Chitietphieumua> Chitietphieumuas { get; set; }
+        public string Tensize { get; set; } = null!;
+        public string Tennv { get; set; } = null!;
+        public string Tenkh { get; set; } = null!;
+
+        public Phieumua Phieumua { get; set; }
+        public List<Chitietphieumua> Chitietphieumuas { get; set; }
     }
 }

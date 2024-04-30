@@ -7,6 +7,8 @@ public partial class Phieumua
 {
     public int Mapm { get; set; }
 
+    public int? Mavoucher {  get; set; }
+
     public DateTime Ngaydat { get; set; }
 
     public int? Makh { get; set; }
@@ -28,6 +30,8 @@ public partial class Phieumua
     public virtual Khachhang? MakhNavigation { get; set; }
 
     public virtual Nhanvien? ManvNavigation { get; set; }
+
+    public virtual Voucher? MavoucherNavigation {  get; set; }
 
     public virtual Phuongthucthanhtoan MaptttNavigation { get; set; } = null!;
 }

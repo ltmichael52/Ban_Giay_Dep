@@ -7,13 +7,13 @@
 <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css" />
 
 <div class="text-center">
-    <h2 class="display-4">DANH SÁCH MÀU</h2>
+    <h2 class="display-4">COLOR LIST</h2>
 </div>
 @section searchArea{
     <form id="searchForm" asp-controller="Mau" asp-action="Index" method="get" class="d-flex" style="width:468px">
         <div class="input-group">
             <!-- Search bar -->
-            <input name="searchString" id="searchString" type="search" placeholder="tìm kiếm màu..." class="form-control rounded" aria-label="Search" style="width:100px">
+            <input name="searchString" id="searchString" type="search" placeholder="searching color..." class="form-control rounded" aria-label="Search" style="width:100px">
             <button class="btn btn-info rounded" type="submit" style="width: 40px; height: 40px;">
                 <i class="fas fa-search"></i>
             </button>
@@ -31,9 +31,9 @@
     <table class="table table-striped table-bordered text-center">
         <thead>
             <tr>
-                <th scope="col">Mã Màu</th>
-                <th scope="col">Tên Màu</th>               
-                <th scope="col">Thao Tác</th>
+                <th scope="col">Color Id</th>
+                <th scope="col">Color Name</th>               
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>

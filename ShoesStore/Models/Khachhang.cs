@@ -11,17 +11,23 @@ public partial class Khachhang
 
     public string Email { get; set; } = null!;
 
-    public string? Diachi { get; set; }
-
     public string Sdt { get; set; } = null!;
 
     public bool? Gioitinh { get; set; }
 
     public DateTime? Ngaysinh { get; set; }
 
+    public int Xephang {  get; set; }
+
+    public DateTime? Ngayxephang {  get; set; }
+
     public virtual ICollection<Binhluan> Binhluans { get; set; } = new List<Binhluan>();
 
     public virtual Taikhoan EmailNavigation { get; set; } = null!;
+
+    public virtual ICollection<Sodiachi> Sodiachis {  get; set; }
+
+    public virtual ICollection<Soxu> Soxus { get; set; }
 
     public virtual ICollection<Phieumua> Phieumuas { get; set; } = new List<Phieumua>();
 }

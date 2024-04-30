@@ -2,18 +2,18 @@
 @model IEnumerable<Nhanvien>
 
 <!--Just show data of nhan vien, just show password in update because it not frequently data used-->
-<a asp-action="CreateEmployee" class="btn btn-primary">Thêm nhân viên</a>
+<a asp-action="CreateEmployee" class="btn btn-primary">Add Employee</a>
 <div class="container">
     <h2 class="text-center">List of Employees</h2>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Họ và Tên</th>
-                <th>Ngày sinh</th>
-                <th>Giới tính</th>
-                <th>Số điện thoại</th>
+                <th>Name</th>
+                <th>Birth</th>
+                <th>Gender</th>
+                <th>Phone number</th>
                 <th>Email</th>
-                <th>Thao tác</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -26,7 +26,7 @@
                     <td>@employee.Sdt</td>
                     <td>@employee.Email</td>
                     <td>
-                        <form asp-controller="StaffAdmin" asp-action="EditEmployee" method="post">
+                        <form asp-controller="StaffAdmin" asp-action="EditEmployee" method="get">
                             <input type="hidden" name="id" value="@employee.Manv" />
                             <button type="submit" class="btn btn-primary btn-sm">
                                 <i class="fas fa-pen"></i>

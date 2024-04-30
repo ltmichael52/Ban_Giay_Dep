@@ -23,7 +23,7 @@ namespace ShoesStore.Controllers
 
 
             var banners = _context.Banners.Where(b => b.Hoatdong).ToList();
-			int checkKm = kmRepo.GetAllKhuyenMaiToday("","",0,0,0, -1) == null ? 0 : 1;
+			int checkKm = kmRepo.GetAllKhuyenMaiToday("","",0,0,0, -1).Count == 0 ? 0 : 1;
 
 			HttpContext.Session.SetInt32("Khuyenmai", checkKm);
 

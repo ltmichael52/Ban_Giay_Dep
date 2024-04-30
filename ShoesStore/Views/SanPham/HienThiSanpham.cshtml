@@ -117,8 +117,8 @@
 				<h1>Product Details Page</h1>
 				<nav class="d-flex align-items-center">
 					<a asp-action="Index" asp-controller="Home">Home<span class="lnr lnr-arrow-right"></span></a>
-					<a href="#">Mua sắm<span class="lnr lnr-arrow-right"></span></a>
-					<a href="single-product.html">Chi tiết sản phẩm</a>
+					<a href="#">Shopping<span class="lnr lnr-arrow-right"></span></a>
+					<a href="single-product.html">Product details</a>
 				</nav>
 			</div>
 		</div>
@@ -187,14 +187,14 @@
 
 					<div id="slton" style="display:none;">
 						<h5 style="color: #BA861E;">
-							<i class="fas fa-clock" style="color: #BA861E;"></i> Sắp hết hàng. Đặt hàng ngay!
+							<i class="fas fa-clock" style="color: #BA861E;"></i> Just a few left. Order soon!
 						</h5>
 					</div>
 
 
 					<div class="row" style="margin-top: 5px;margin-bottom:5px;">
 						<div class="col-12 ">
-							<h5 class="text-left">Bảng Size</h5>
+							<h5 class="text-left">Table Size</h5>
 						</div>
 						@for (int tkho = 0; tkho < Model.tenSize.Count(); ++tkho)
 						{
@@ -212,7 +212,7 @@
 
 						}
 						<div class="col-12 ">
-							<h5 class="text-left" id="sizeError" style="color:red;visibility:hidden">Vui lòng chọn size</h5>
+							<h5 class="text-left" id="sizeError" style="color:red;visibility:hidden">Please choose size</h5>
 						</div>
 					</div>
 
@@ -257,4 +257,4 @@
 	</div>
 </section>
 
-@await Component.InvokeAsync("HotDeal");
+@await Component.InvokeAsync("HomeProductSlider2",new {trangthai =4});

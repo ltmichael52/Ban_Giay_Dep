@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using ShoesStore.InterfaceRepositories;
 using ShoesStore.Models;
 using ShoesStore.ViewModels;
+using System;
 using System.Diagnostics;
 using X.PagedList;
 
@@ -75,32 +76,42 @@ namespace ShoesStore.Controllers
         [HttpPost]
         public IActionResult AddComment(int rating, string SanPhamComment)
         {
+            // Kiểm tra xem người dùng đã đăng nhập hay chưa
             if (HttpContext.Session.GetString("Email") == null)
             {
                 return RedirectToAction("Login", "Account");
             }
+
+            // Lấy mã sản phẩm từ session
             int Masp = HttpContext.Session.GetInt32("Masp") ?? 0;
+            // Lấy thông tin sản phẩm từ mã sản phẩm
             Sanpham sp = spRepo.Getsanpham(Masp);
+            // Lấy thông tin người dùng đang đăng nhập
             string userEmail = HttpContext.Session.GetString("Email");
-			var user = khRepo.GetCurrentKh(userEmail);
+            var user = khRepo.GetCurrentKh(userEmail);
 
             if (user == null)
             {
                 return NotFound();
             }
 
-			int makh = user.Makh;
+            // Lấy mã khách hàng
+            int makh = user.Makh;
 
+            // Kiểm tra độ dài của bình luận
+           
+            // Tạo đối tượng Binhluan từ thông tin đã lấy được
             Binhluan objComment = new Binhluan
             {
                 Madongsanpham = sp.Madongsanpham,
                 Noidungbl = SanPhamComment,
                 Ngaybl = DateTime.Now,
                 Makh = makh,
-				Rating = rating
-			};
+                Rating = rating
+            };
 
-			blRepo.AddBinhLuan(objComment);
+            // Thêm bình luận vào cơ sở dữ liệu
+            blRepo.AddBinhLuan(objComment);
 
             return RedirectToAction("HienThiSanpham", new { madongsanpham = sp.Madongsanpham, masp = Masp });
         }

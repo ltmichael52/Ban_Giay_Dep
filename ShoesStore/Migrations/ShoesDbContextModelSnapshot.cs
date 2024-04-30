@@ -129,6 +129,9 @@ namespace ShoesStore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Mablog"));
 
+                    b.Property<string>("Anhdaidien")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Manv")
                         .HasColumnType("int")
                         .HasColumnName("MANV");
@@ -224,11 +227,6 @@ namespace ShoesStore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Makh"));
 
-                    b.Property<string>("Diachi")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("DIACHI");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -243,6 +241,10 @@ namespace ShoesStore.Migrations
                         .HasColumnType("datetime")
                         .HasColumnName("NGAYSINH");
 
+                    b.Property<DateTime?>("Ngayxephang")
+                        .HasColumnType("datetime")
+                        .HasColumnName("NGAYXEPHANG");
+
                     b.Property<string>("Sdt")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -254,6 +256,10 @@ namespace ShoesStore.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("TENKH");
+
+                    b.Property<int>("Xephang")
+                        .HasColumnType("int")
+                        .HasColumnName("XEPHANG");
 
                     b.HasKey("Makh")
                         .HasName("PK__KHACHHAN__B87DC1A73C57F8C5");
@@ -411,6 +417,10 @@ namespace ShoesStore.Migrations
                         .HasColumnType("int")
                         .HasColumnName("MAPTTT");
 
+                    b.Property<int?>("Mavoucher")
+                        .HasColumnType("int")
+                        .HasColumnName("MAVOUCHER");
+
                     b.Property<DateTime>("Ngaydat")
                         .HasColumnType("datetime")
                         .HasColumnName("NGAYDAT");
@@ -433,6 +443,8 @@ namespace ShoesStore.Migrations
                     b.HasIndex(new[] { "Manv" }, "IX_PHIEUMUA_MANV");
 
                     b.HasIndex(new[] { "Mapttt" }, "IX_PHIEUMUA_MAPTTT");
+
+                    b.HasIndex(new[] { "Mavoucher" }, "IX_PHIEUMUA_MAVOUCHER");
 
                     b.ToTable("PHIEUMUA", (string)null);
                 });
@@ -557,6 +569,68 @@ namespace ShoesStore.Migrations
                     b.ToTable("SIZE", (string)null);
                 });
 
+            modelBuilder.Entity("ShoesStore.Models.Sodiachi", b =>
+                {
+                    b.Property<int>("Masodiachi")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MASODIACHI");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Masodiachi"));
+
+                    b.Property<string>("Diachi")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
+                        .HasColumnName("DIACHI");
+
+                    b.Property<int>("Makh")
+                        .HasColumnType("int")
+                        .HasColumnName("MAKH");
+
+                    b.Property<string>("Sdtnguoinhan")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("SDTNGUOINHAN");
+
+                    b.Property<string>("Tennguoinhan")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
+                        .HasColumnName("TENNGUOINHAN");
+
+                    b.HasKey("Masodiachi");
+
+                    b.HasIndex(new[] { "Makh" }, "IX_SODIACHI_MAKH");
+
+                    b.ToTable("SODIACHI", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Soxu", b =>
+                {
+                    b.Property<int>("Masoxu")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MASOXU");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Masoxu"));
+
+                    b.Property<int>("Makh")
+                        .HasColumnType("int")
+                        .HasColumnName("MAKH");
+
+                    b.Property<decimal>("Tongxu")
+                        .HasColumnType("money")
+                        .HasColumnName("TONGXU");
+
+                    b.HasKey("Masoxu");
+
+                    b.HasIndex(new[] { "Makh" }, "IX_SOXU_MAKH");
+
+                    b.ToTable("SOXU", (string)null);
+                });
+
             modelBuilder.Entity("ShoesStore.Models.Taikhoan", b =>
                 {
                     b.Property<string>("Email")
@@ -578,6 +652,44 @@ namespace ShoesStore.Migrations
                         .HasName("PK__TAIKHOAN__161CF7258466B7F4");
 
                     b.ToTable("TAIKHOAN", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Voucher", b =>
+                {
+                    b.Property<int>("Mavoucher")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MAVOUCHER");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Mavoucher"));
+
+                    b.Property<decimal>("Giamtoida")
+                        .HasColumnType("money")
+                        .HasColumnName("GIAMTOIDA");
+
+                    b.Property<decimal>("Giatoithieu")
+                        .HasColumnType("money")
+                        .HasColumnName("GIATOITHIEU");
+
+                    b.Property<DateTime>("Ngayhethan")
+                        .HasColumnType("datetime")
+                        .HasColumnName("NGAYHETHAN");
+
+                    b.Property<DateTime>("Ngaytao")
+                        .HasColumnType("datetime")
+                        .HasColumnName("NGAYTAO");
+
+                    b.Property<int>("Phantramgiam")
+                        .HasColumnType("int")
+                        .HasColumnName("PHANTRAMGIAM");
+
+                    b.Property<int>("Soluong")
+                        .HasColumnType("int")
+                        .HasColumnName("SOLUONG");
+
+                    b.HasKey("Mavoucher");
+
+                    b.ToTable("VOUCHER", (string)null);
                 });
 
             modelBuilder.Entity("Chitietkhuyenmai", b =>
@@ -695,11 +807,18 @@ namespace ShoesStore.Migrations
                         .IsRequired()
                         .HasConstraintName("FK_PHIEUMUA_PHUONGTHUCTHANHTOAN");
 
+                    b.HasOne("ShoesStore.Models.Voucher", "MavoucherNavigation")
+                        .WithMany("Phieumuas")
+                        .HasForeignKey("Mavoucher")
+                        .HasConstraintName("FK_PHIEUMUA_VOUCHER");
+
                     b.Navigation("MakhNavigation");
 
                     b.Navigation("ManvNavigation");
 
                     b.Navigation("MaptttNavigation");
+
+                    b.Navigation("MavoucherNavigation");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Sanpham", b =>
@@ -740,6 +859,28 @@ namespace ShoesStore.Migrations
                     b.Navigation("MaspNavigation");
                 });
 
+            modelBuilder.Entity("ShoesStore.Models.Sodiachi", b =>
+                {
+                    b.HasOne("ShoesStore.Models.Khachhang", "MakhNavigation")
+                        .WithMany("Sodiachis")
+                        .HasForeignKey("Makh")
+                        .IsRequired()
+                        .HasConstraintName("FK__KHACHHAG__SODIACHI__123213");
+
+                    b.Navigation("MakhNavigation");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Soxu", b =>
+                {
+                    b.HasOne("ShoesStore.Models.Khachhang", "MakhNavigation")
+                        .WithMany("Soxus")
+                        .HasForeignKey("Makh")
+                        .IsRequired()
+                        .HasConstraintName("FK__KHACHHAG__SOXU__123213");
+
+                    b.Navigation("MakhNavigation");
+                });
+
             modelBuilder.Entity("ShoesStore.Models.Dongsanpham", b =>
                 {
                     b.Navigation("Binhluans");
@@ -752,6 +893,10 @@ namespace ShoesStore.Migrations
                     b.Navigation("Binhluans");
 
                     b.Navigation("Phieumuas");
+
+                    b.Navigation("Sodiachis");
+
+                    b.Navigation("Soxus");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Loai", b =>
@@ -801,6 +946,11 @@ namespace ShoesStore.Migrations
                     b.Navigation("Khachhang");
 
                     b.Navigation("Nhanvien");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Voucher", b =>
+                {
+                    b.Navigation("Phieumuas");
                 });
 #pragma warning restore 612, 618
         }

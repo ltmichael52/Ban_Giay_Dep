@@ -8,27 +8,27 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Danh sách dòng sản phẩm</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Danh sách chi tiết sản phẩm</li>
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dongsanpham">Shoes List</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Shoes Detail List</li>
     </ol>
 </nav>
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">Danh sách chi tiết sản phẩm</h4>
+        <h4 class="card-title">Shoes List</h4>
         <div class="row">
             <div class="col-md-6">
-                <h3>Giày: @TempData["Tendongsp"]</h3>
+                <h3>Shoes Name: @TempData["Tendongsp"]</h3>
             </div>
             <div class="col-md-6 text-right">
-                <h3>Loại giày: @TempData["TenLoai"]</h3>
+                <h3>Shoes Category: @TempData["TenLoai"]</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <a asp-action="Index" asp-controller="Dongsanpham" class="btn btn-secondary">Quay lại danh sách sản phẩm</a>
+                <a asp-action="Index" asp-controller="Dongsanpham" class="btn btn-secondary">Back to Shoes List</a>
             </div>
             <div class="col-md-6 text-right">
-                <a asp-action="AddSanPham" asp-controller="SanPhamAdmin" asp-route-madongsp="@TempData["madongsp"]" class="btn btn-primary mb-3">Thêm sản phẩm</a>
+                <a asp-action="AddSanPham" asp-controller="SanPhamAdmin" asp-route-madongsp="@TempData["madongsp"]" class="btn btn-primary mb-3">Create shoes detail</a>
             </div>
         </div>
 
@@ -36,14 +36,14 @@
         <table class="table text-center">
             <thead>
                 <tr>
-                    <th>Stt</th>
-                    <th>Ảnh</th>
-                    <th>Tên</th>
-                    <th>Màu</th>
-                    <th>Tên màu</th>
-                    <th>Trạng thái</th>
-                    <th>Tổng tồn</th>
-                    <th>Thao tác</th>
+                    <th>Index</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Color</th>
+                    <th>Color Name</th>
+                    <th>State</th>
+                    <th>Total Quantity</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>

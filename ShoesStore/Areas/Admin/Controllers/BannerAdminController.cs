@@ -51,7 +51,9 @@ namespace ShoesStore.Areas.Admin.Controllers
                     Tenbanner = bannerViewModel.Tenbanner,
                     Vitri = fileName,
                     Link = bannerViewModel.Link,
-                    Hoatdong = bannerViewModel.Hoatdong
+                    Hoatdong = bannerViewModel.Hoatdong,
+                    Slogan = bannerViewModel.Slogan
+
                 };
 
                 _bannerRepository.AddBanner(banner);
@@ -79,7 +81,9 @@ namespace ShoesStore.Areas.Admin.Controllers
                 Mabanner = banner.Mabanner,
                 Tenbanner = banner.Tenbanner,
                 Link = banner.Link,
-                Hoatdong = banner.Hoatdong
+                Hoatdong = banner.Hoatdong,
+                Slogan = banner.Slogan
+
             };
 
             return View(bannerViewModel);
@@ -108,7 +112,9 @@ namespace ShoesStore.Areas.Admin.Controllers
                     Tenbanner = bannerViewModel.Tenbanner,
                     Vitri = fileName,
                     Link = bannerViewModel.Link,
-                    Hoatdong = bannerViewModel.Hoatdong
+                    Hoatdong = bannerViewModel.Hoatdong,
+                    Slogan = bannerViewModel.Slogan
+
                 };
 
                 _bannerRepository.UpdateBanner(banner);

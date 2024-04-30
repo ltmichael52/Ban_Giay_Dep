@@ -1,4 +1,4 @@
-﻿@model ShoesStore.ViewModels.RegisterViewModel
+﻿@* @model ShoesStore.ViewModels.RegisterViewModel
 
 <!-- End Header Area -->
 <!-- Start Banner Area -->
@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="login_box_img">
-                    <img class="img-fluid" src="img/login.jpg" alt="">
+                    <img class="img-fluid" src="~/karma-master/img/login.jpg" alt="">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -61,7 +61,7 @@
                             <span class="text-danger" style="position: absolute; left: 0; margin-top: -3px; margin-left: 30px;">@Html.ValidationMessageFor(model => model.Khachhang.Ngaysinh)</span>
                         </div>
                         <div class="col-md-12 form-group">
-                            <button type="submit" value="submit" class="primary-btn">Đăng ký</button>
+                            <button type="submit" value="submit" class="primary-btn">Regist</button>
                         </div>
                     </form>
 
@@ -72,3 +72,4 @@
 </section>
 <!--================End Login Box Area =================-->
 <!-- start footer Area -->
+ *@

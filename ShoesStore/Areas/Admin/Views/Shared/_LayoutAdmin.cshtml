@@ -33,7 +33,7 @@
     }
     @RenderSection("Scripts",required:false)
 </style>
- <script src="https://cdn.tiny.cloud/1/xt41z86n6166tecebsanh7xemvx039uvpo07rhk6ldko0v8w/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/9ln64zhofl4jjb04f6c3ux451qncnpbd0p1piax2i29zw0uv/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
             selector: 'textarea#Noidung',
@@ -97,34 +97,34 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                            <span class="menu-title">Quản lý sản phẩm</span>
+                        <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic1">
+                            <span class="menu-title">Manage Shoes</span>
                             <i class="menu-arrow"></i>
                             <i class="mdi mdi-crosshairs-gps menu-icon"></i>
                         </a>
-                        <div class="collapse" id="ui-basic">
+                        <div class="collapse" id="ui-basic1">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> 
                                     <a class="nav-link" asp-action="Index" asp-controller="Dongsanpham">
-                                        <span class="menu-title">Dòng sản phẩm</span>
+                                        <span class="menu-title">Shoes</span>
                                         <i class="mdi mdi-home menu-icon"></i>
                                     </a>
                                 </li>
                                  <li class="nav-item"> 
                                     <a class="nav-link" asp-action="Index" asp-controller="Mau">
-                                        <span class="menu-title">Màu giày</span>
+                                        <span class="menu-title">Color</span>
                                         <i class="mdi mdi-home menu-icon"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" asp-action="Index" asp-controller="Size">
-                                        <span class="menu-title">Size giày</span>
+                                        <span class="menu-title">Size</span>
                                         <i class="mdi mdi-home menu-icon"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" asp-action="Index" asp-controller="Loai">
-                                        <span class="menu-title">Loại giày</span>
+                                        <span class="menu-title">Shoes Category</span>
                                         <i class="mdi mdi-home menu-icon"></i>
                                     </a>
                                 </li>
@@ -134,7 +134,7 @@
 
                     <li class="nav-item">
                          <a class="nav-link" asp-action="Index" asp-controller="PhieuMuaAdmin">
-                                        <span class="menu-title">Phiếu Mua</span>
+                                        <span class="menu-title">Order</span>
                                         <i class="mdi mdi-home menu-icon"></i>
                                     </a>
                         
@@ -143,22 +143,22 @@
                     @if (HttpContextAccessor.HttpContext.Session.GetString("Loaitk") == "2")
                     {
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                                <span class="menu-title">Quản lý người dùng</span>
+                            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic9" aria-expanded="false" aria-controls="ui-basic9">
+                                <span class="menu-title">Manage User</span>
                                 <i class="menu-arrow"></i>
                                 <i class="mdi mdi-crosshairs-gps menu-icon"></i>
                             </a>
-                            <div class="collapse" id="ui-basic">
+                            <div class="collapse" id="ui-basic9">
                                 <ul class="nav flex-column sub-menu">
                                     <li class="nav-item">
                                         <a class="nav-link" asp-action="ListEmployees" asp-controller="StaffAdmin">
-                                            <span class="menu-title">Nhân viên</span>
+                                            <span class="menu-title">Employee</span>
                                             <i class="mdi mdi-home menu-icon"></i>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" asp-action="ListCustomers" asp-controller="CustomerAdmin">
-                                            <span class="menu-title">Khách hàng</span>
+                                            <span class="menu-title">Customer</span>
                                             <i class="mdi mdi-home menu-icon"></i>
                                         </a>
                                     </li>
@@ -166,44 +166,30 @@
                             </div>
                         </li>
                     }
-
-
-
                     <li class="nav-item">
-                        <a class="nav-link" href="../../pages/forms/basic_elements.html">
-                            <span class="menu-title">Hóa đơn</span>
-                            <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-                        </a>
-                    </li>
-                    @if (HttpContextAccessor.HttpContext.Session.GetString("Loaitk") == "2")
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../pages/charts/chartjs.html">
-                                <span class="menu-title">Doanh thu</span>
-                                <i class="mdi mdi-chart-bar menu-icon"></i>
-                            </a>
-                        </li>
-                    }
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../pages/tables/basic-table.html">
-                            <span class="menu-title">Báo cáo</span>
-                            <i class="mdi mdi-table-large menu-icon"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
-                            <span class="menu-title">Hóa đơn</span>
-                            <i class="menu-arrow"></i>
-                            <i class="mdi mdi-medical-bag menu-icon"></i>
-                        </a>
-                    </li>
-                      <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                                <span class="menu-title">Quản lý bài viết</span>
+                            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic7" aria-expanded="false" aria-controls="ui-basic7">
+                                <span class="menu-title">Report</span>
                                 <i class="menu-arrow"></i>
                                 <i class="mdi mdi-crosshairs-gps menu-icon"></i>
                             </a>
-                            <div class="collapse" id="ui-basic">
+                            <div class="collapse" id="ui-basic7">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-controller="Report" asp-action="Index">
+                                            <span class="menu-title">Revenue</span>
+                                            <i class="mdi mdi-home menu-icon"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                      <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic2">
+                                <span class="menu-title">Manage Blog & Banner</span>
+                                <i class="menu-arrow"></i>
+                                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                            </a>
+                            <div class="collapse" id="ui-basic2">
                                 <ul class="nav flex-column sub-menu">
                                     <li class="nav-item">
                                         <a class="nav-link" asp-action="ListBlogs" asp-controller="BlogAdmin">

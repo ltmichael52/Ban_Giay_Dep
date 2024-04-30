@@ -9,14 +9,14 @@
 <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css" />
 
 <div class="text-center">
-    <h2 class="display-4">DANH SÁCH DÒNG SẢN PHẨM</h2>
+    <h2 class="display-4">SHOES LIST</h2>
 </div>
 
 @section searchArea{
     <form id="searchForm" asp-controller="Dongsanpham" asp-action="Index" method="get" class="d-flex" style="width:468px">
         <div class="input-group">
             <!-- Search bar -->
-            <input name="searchString" id="searchString" type="search" placeholder="tìm kiếm dòng sản phẩm..." class="form-control rounded" aria-label="Search" style="width:100px">
+            <input name="searchString" id="searchString" type="search" placeholder="searching shoes..." class="form-control rounded" aria-label="Search" style="width:100px">
             <button class="btn btn-info rounded" type="submit" style="width: 40px; height: 40px;">
                 <i class="fas fa-search"></i>
             </button>
@@ -32,13 +32,13 @@
     <table class="table table-striped table-bordered text-center">
         <thead>
             <tr>
-                <th scope="col">Stt</th>
-                <th scope="col">Ảnh</th>
-                <th scope="col">Tên Dòng</th>
-                <th scope="col">Loại Giày</th>
-                <th scope="col">Giá Gốc</th>
-                <th scope="col">Trạng Thái</th>
-                <th scope="col">Thao Tác</th>
+                <th scope="col">Index</th>
+                <th scope="col">Image</th>
+                <th scope="col">Shoes Name</th>
+                <th scope="col">Shoes Category</th>
+                <th scope="col">Price</th>
+                <th scope="col">State</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>

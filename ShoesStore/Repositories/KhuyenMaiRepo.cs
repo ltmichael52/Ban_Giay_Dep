@@ -31,7 +31,7 @@ namespace ShoesStore.Repositories
 				.Where(x => x.Ngaybd <= today && today < x.Ngaykt)
 				.ToList();
 
-			if (maMau != null)
+			if (!string.IsNullOrEmpty(maMau))
 			{
 				kmList = kmList.Select(x => new Khuyenmai
 				{

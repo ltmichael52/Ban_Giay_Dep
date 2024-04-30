@@ -13,6 +13,8 @@ namespace ShoesStore.Areas.Admin.ViewModels
         public string Link { get; set; } = null!;
 
         public bool Hoatdong { get; set; }
+
+        public string Slogan {  get; set; }
       
     }
 }

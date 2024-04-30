@@ -41,7 +41,10 @@ namespace ShoesStore.Areas.Admin.Controllers
 				Loaitk = 1
 			};
 			rgAdmin.Taikhoan = newTk;
-			rgAdmin.Nhanvien.Diachi = rgAdmin.Nhanvien.Diachi == "123" ? "" : rgAdmin.Nhanvien.Diachi;
+			rgAdmin.Nhanvien.EmailNavigation.Email = rgAdmin.Nhanvien.Email;
+			rgAdmin.Nhanvien.EmailNavigation.Loaitk = 1;
+
+            rgAdmin.Nhanvien.Diachi = rgAdmin.Nhanvien.Diachi == "123" ? "" : rgAdmin.Nhanvien.Diachi;
 			//If use modelstate.isvalid need to make input for emailnavigation in create view
 			//But we have already use view model
 
@@ -59,7 +62,6 @@ namespace ShoesStore.Areas.Admin.Controllers
 				return View(rgAdmin);
 			}
 
-			_db.Taikhoans.Add(rgAdmin.Taikhoan);
 			_db.Nhanviens.Add(rgAdmin.Nhanvien);
 			_db.SaveChanges();
 
@@ -75,6 +77,7 @@ namespace ShoesStore.Areas.Admin.Controllers
 			//Chỉnh email bên nhân viên thì cũng chỉnh email bên tài khoản
 			// Tìm nhân viên cần cập nhật trong cơ sở dữ liệu
 			var employee = _db.Nhanviens.Find(id);
+			employee.EmailNavigation = _db.Taikhoans.Find(employee.Email);
 
 			if (employee == null)
 			{

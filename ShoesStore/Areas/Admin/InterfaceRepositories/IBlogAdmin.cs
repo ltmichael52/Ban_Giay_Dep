@@ -5,11 +5,11 @@ namespace ShoesStore.Areas.Admin.InterfaceRepositories
 {
     public interface IBlogAdmin
     {
-        Task<List<Blog>> GetBlogs(); 
-        Task<int> AddBlog(Blog blog);
-        Task<bool> UpdateBlog(Blog blog);
-        Task<bool> DeleteBlog(int Mablog);
-        Task<Blog> GetBlog(int Mablog);
+        List<Blog> GetBlogs();
+        int AddBlog(Blog blog);
+        bool UpdateBlog(Blog blog);
+        bool DeleteBlog(int blogId);
+        Blog GetBlog(int blogId);
 
     }
 }

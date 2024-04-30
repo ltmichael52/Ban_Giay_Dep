@@ -1,178 +1,172 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using ShoesStore.Areas.Admin.InterfaceRepositories;
+using ShoesStore.Areas.Admin.ViewModels;
 using ShoesStore.Models;
-using System.Diagnostics;
-using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace ShoesStore.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class BlogAdminController : Controller
     {
-        private readonly IBlogAdmin _blogAdmin;
+        private readonly IBlogAdmin _blogRepository; INhanvien nvRepo;
+        private readonly IWebHostEnvironment _hostingEnvironment;
 
-        public BlogAdminController(IBlogAdmin blogAdmin)
+        public BlogAdminController(IBlogAdmin blogRepository, IWebHostEnvironment hostingEnvironment, INhanvien nvRepo)
         {
-            _blogAdmin = blogAdmin;
+            _blogRepository = blogRepository;
+            _hostingEnvironment = hostingEnvironment;
+            this.nvRepo = nvRepo;
         }
 
         [HttpGet]
-        public async Task<IActionResult> DetailBlog(int Mablog)
+        public IActionResult DetailBlog(int Mablog)
         {
-            // Retrieve the blog details
-            Blog blog = await _blogAdmin.GetBlog(Mablog);
-
-            // Pass the blog details to the view
+            Blog blog = _blogRepository.GetBlog(Mablog);
             return View(blog);
         }
 
         [HttpGet]
-        public async Task<IActionResult> ListBlogs()
+        public IActionResult ListBlogs()
         {
-            // Retrieve list of blogs
-            List<Blog> blogs = await _blogAdmin.GetBlogs();
-
-            // Pass the list of blogs to the view
+            List<Blog> blogs = _blogRepository.GetBlogs();
             return View(blogs);
         }
 
         [HttpGet]
         public IActionResult AddBlog()
         {
-            
-            // Return the empty form for adding a new blog
-             return View();
-        }
-
-        //[HttpPost]
-        //[ValidateAntiForgeryToken] // This attribute helps prevent CSRF attacks
-        //public async Task<IActionResult> AddBlog(Blog blog)
-        //{
-        //    blog.ManvNavigation = null;
-        //    // Check if model state is valid
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            // Lấy giá trị Manv từ session và gán vào đối tượng Blog
-        //            int? manv = HttpContext.Session.GetInt32("Manv");
-        //            if (manv.HasValue)
-        //            {
-        //                blog.Manv = manv.Value;
-        //            }
-        //            else
-        //            {
-        //                // Handle the case where Manv is not available in session
-        //                ModelState.AddModelError("", "Mã nhân viên không tồn tại.");
-        //                return View(blog);
-        //            }
-
-        //            // Add the new blog to the database
-        //            int addedBlogId = await _blogAdmin.AddBlog(blog);
-        //            if (addedBlogId > 0)
-        //            {
-        //                // Blog added successfully, redirect to the list of blogs
-        //                return RedirectToAction(nameof(ListBlogs));
-        //            }
-        //            else
-        //            {
-        //                // Handle error if the blog was not added successfully
-        //                ModelState.AddModelError("", "Error occurred while adding the blog.");
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            // Log exception or handle it appropriately
-        //            ModelState.AddModelError("", "An error occurred: " + ex.Message);
-        //        }
-        //    }
-
-        //    // If we're here, there are validation errors or an exception occurred, return the AddBlog view with errors
-        //    return View(blog);
-        //}
-
-        [HttpPost]
-        [ValidateAntiForgeryToken] // This attribute helps prevent CSRF attacks
-        public async Task<IActionResult> AddBlog(Blog blog)
-        {
-            blog.ManvNavigation = null;
-            // Check if model state is valid
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    // Add the new blog to the database
-                    int addedBlogId = await _blogAdmin.AddBlog(blog);
-                    if (addedBlogId > 0)
-                    {
-                        // Blog added successfully, redirect to the list of blogs
-                        return RedirectToAction(nameof(ListBlogs));
-                    }
-                    else
-                    {
-                        // Handle error if the blog was not added successfully
-                        ModelState.AddModelError("", "Error occurred while adding the blog.");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    // Log exception or handle it appropriately
-                    ModelState.AddModelError("", "An error occurred: " + ex.Message);
-                }
-            }
-
-            // If we're here, there are validation errors or an exception occurred, return the AddBlog view with errors
-            return View(blog);
-        }
-
-
-        [HttpGet]
-        public async Task<IActionResult> UpdateBlog(int Mablog)
-        {
-            Blog blog = await _blogAdmin.GetBlog(Mablog);
-            if (blog == null)
-            {
-                return NotFound(); // Return 404 if blog not found
-            }
-            return View(blog);
+            return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateBlog(Blog blog)
+        public IActionResult AddBlog(BlogViewModel blogViewModels)
         {
-            blog.ManvNavigation = null;
-            if (ModelState.IsValid)
+
+            try
             {
-                bool isUpdated = await _blogAdmin.UpdateBlog(blog);
-                if (isUpdated)
+
+                int manv = nvRepo.getMaNVCurrent(HttpContext.Session.GetString("Email"));
+
+                blogViewModels.Manv = manv;
+
+
+                string fileName = "";
+
+                string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, "img", "blog");
+                fileName = Guid.NewGuid().ToString() + "_" + blogViewModels.BlogImage.FileName;
+                string filePath = Path.Combine(uploadsFolder, fileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    return RedirectToAction(nameof(ListBlogs)); // Redirect to ListBlogs action if updated successfully
+                    blogViewModels.BlogImage.CopyTo(fileStream);
+                }
+
+
+                Blog blog = new Blog
+                {
+                    Manv = blogViewModels.Manv,
+                    Noidung = blogViewModels.Noidung,
+                    Theloai = blogViewModels.Theloai,
+                    Anhdaidien = fileName
+                };
+
+                int addedBlogId = _blogRepository.AddBlog(blog);
+                if (addedBlogId > 0)
+                {
+                    return RedirectToAction(nameof(ListBlogs));
                 }
                 else
                 {
-                    return View("Error"); // Handle error
+                    ModelState.AddModelError("", "Error occurred while adding the blog.");
                 }
             }
-            return View(blog);
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "An error occurred: " + ex.Message);
+            }
+
+
+            return View(blogViewModels);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> DeleteBlog(int Mablog)
+        [HttpGet]
+        public IActionResult UpdateBlog(int Mablog)
         {
-            bool isDeleted = await _blogAdmin.DeleteBlog(Mablog);
+            Blog blog = _blogRepository.GetBlog(Mablog);
+            if (blog == null)
+            {
+                return NotFound();
+            }
+
+            // Map the Blog model to BlogViewModel
+            var blogViewModel = new BlogViewModel
+            {
+                Mablog = blog.Mablog,
+                Manv = blog.Manv,
+                Noidung = blog.Noidung,
+                Theloai = blog.Theloai
+                // You may need to map other properties if necessary
+            };
+
+            return View(blogViewModel);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateBlog(BlogViewModel blogViewModels)
+        {
+            if (ModelState.IsValid)
+            {
+                string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, "img", "blog");
+                string fileName = Guid.NewGuid().ToString() + "_" + blogViewModels.BlogImage.FileName;
+                string filePath = Path.Combine(uploadsFolder, fileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    blogViewModels.BlogImage.CopyTo(fileStream);
+                }
+
+
+                Blog blog = _blogRepository.GetBlog(blogViewModels.Mablog);
+                blog.Anhdaidien = fileName;
+                blog.Theloai= blogViewModels.Theloai;
+                blog.Noidung = blogViewModels.Noidung;
+
+                bool isUpdated = _blogRepository.UpdateBlog(blog);
+
+                if (isUpdated)
+                {
+                    return RedirectToAction(nameof(ListBlogs));
+                }
+                else
+                {
+                    return View("Error");
+                }
+            }
+
+            return View(blogViewModels);
+        }
+
+
+        [HttpPost]
+        public IActionResult DeleteBlog(int Mablog)
+        {
+            bool isDeleted = _blogRepository.DeleteBlog(Mablog);
             if (isDeleted)
             {
-                // Blog deleted successfully
-                return RedirectToAction(nameof(ListBlogs)); // Redirect to ListBlogs action
+                return RedirectToAction(nameof(ListBlogs));
             }
             else
             {
-                // Handle error
                 return View("Error");
             }
         }
 
-       
+
     }
 }

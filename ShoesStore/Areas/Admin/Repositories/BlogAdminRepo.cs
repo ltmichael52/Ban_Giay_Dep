@@ -1,7 +1,8 @@
-﻿using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ShoesStore.Areas.Admin.InterfaceRepositories;
 using ShoesStore.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ShoesStore.Areas.Admin.Repositories
 {
@@ -13,28 +14,25 @@ namespace ShoesStore.Areas.Admin.Repositories
         {
             _context = context;
         }
-        public async Task<Blog> GetBlog(int Mablog)
+
+        public List<Blog> GetBlogs()
         {
-            return await _context.Blogs.FindAsync(Mablog);
-        }
-        public async Task<List<Blog>> GetBlogs()
-        {
-            return await _context.Blogs.ToListAsync();
+            return _context.Blogs.ToList();
         }
 
-        public async Task<int> AddBlog(Blog blog)
+        public int AddBlog(Blog blog)
         {
             _context.Blogs.Add(blog);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
             return blog.Mablog; // Return the ID of the added blog
         }
 
-        public async Task<bool> UpdateBlog(Blog blog)
+        public bool UpdateBlog(Blog blog)
         {
             _context.Entry(blog).State = EntityState.Modified;
             try
             {
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -50,17 +48,22 @@ namespace ShoesStore.Areas.Admin.Repositories
             return true; // Updated successfully
         }
 
-        public async Task<bool> DeleteBlog(int Mablog)
+        public bool DeleteBlog(int blogId)
         {
-            var blog = await _context.Blogs.FindAsync(Mablog);
+            var blog = _context.Blogs.Find(blogId);
             if (blog == null)
             {
                 return false; // Blog not found
             }
 
             _context.Blogs.Remove(blog);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
             return true; // Deleted successfully
+        }
+
+        public Blog GetBlog(int blogId)
+        {
+            return _context.Blogs.Find(blogId);
         }
 
         private bool BlogExists(int id)

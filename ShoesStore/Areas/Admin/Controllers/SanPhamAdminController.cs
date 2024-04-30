@@ -124,6 +124,7 @@ namespace ShoesStore.Areas.Admin.Controllers
 				Anhdaidien = avatarImage,
 				Anhmattren = topImage,
 				Anhdegiay = bottomImage,
+				TrangThai = (Sanpham.TrangThaiEnum)pDetailView.TrangThai,
             };
 
 			prDetailAdmin.AddChitietSp(ctSp);
@@ -152,13 +153,14 @@ namespace ShoesStore.Areas.Admin.Controllers
 
 			CreateData(sp.Madongsanpham, sp);
 
-            SanPhamViewModel pDetailVM = new SanPhamViewModel
-            {
-                DongsanphamId = sp.Madongsanpham,
-                DongsanphamName = sp.MadongsanphamNavigation.Tendongsp,
-                TypeName = loaiAdmin.GetLoaiById(sp.MadongsanphamNavigation.Maloai).Tenloai,
-                tenSize = szName,
-                slton = sp.Sanphamsizes.Select(x=>x.Slton).ToList(),
+			SanPhamViewModel pDetailVM = new SanPhamViewModel
+			{
+				DongsanphamId = sp.Madongsanpham,
+				DongsanphamName = sp.MadongsanphamNavigation.Tendongsp,
+				TypeName = loaiAdmin.GetLoaiById(sp.MadongsanphamNavigation.Maloai).Tenloai,
+				tenSize = szName,
+				slton = sp.Sanphamsizes.Select(x => x.Slton).ToList(),
+				TrangThai = (SanPhamViewModel.TrangThaiEnum)sp.TrangThai
             };
 			
 
@@ -214,7 +216,7 @@ namespace ShoesStore.Areas.Admin.Controllers
 				DeleteImage(pDetailView.DongsanphamId, sp.Anhdegiay);
                 sp.Anhdegiay = bottomImg;
             }
-            
+			sp.TrangThai = (Sanpham.TrangThaiEnum)pDetailView.TrangThai;
 
             prDetailAdmin.UpdateChitietSp(sp);
 

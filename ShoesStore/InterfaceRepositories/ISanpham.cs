@@ -7,5 +7,6 @@ namespace ShoesStore.InterfaceRepositories
     {
         Sanpham Getsanpham(int masp);
         SanphamViewModel HienThiSanpham(int madongsanpham, int masp);
+        List<SanPhamHomeViewModel> HomeSanPham(int trangthai);
     }
 }

@@ -9,14 +9,14 @@
 <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css" />
 
 <div class="text-center">
-    <h2 class="display-4">DANH SÁCH LOẠI GIÀY</h2>
+    <h2 class="display-4">SHOES CATEGORY LIST</h2>
 </div>
 
 @section searchArea{
     <form id="searchForm" asp-controller="Loai" asp-action="Index" method="get" class="d-flex" style="width:468px">
         <div class="input-group">
             <!-- Search bar -->
-            <input name="searchString" id="searchString" type="search" placeholder="tìm kiếm loại sản phẩm..." class="form-control rounded" aria-label="Search" style="width:100px">
+            <input name="searchString" id="searchString" type="search" placeholder="search type shoes..." class="form-control rounded" aria-label="Search" style="width:100px">
             <button class="btn btn-info rounded" type="submit" style="width: 40px; height: 40px;">
                 <i class="fas fa-search"></i>
             </button>
@@ -32,9 +32,9 @@
     <table class="table table-striped table-bordered text-center">
         <thead>
             <tr>
-                <th scope="col">No</th>
-                <th scope="col">Tên Loại</th>
-                <th scope="col">Thao Tác</th>
+                <th scope="col">Index</th>
+                <th scope="col">Shoes Category Name</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
