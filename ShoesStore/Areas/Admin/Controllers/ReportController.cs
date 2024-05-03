@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Composition;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ShoesStore.Areas.Admin.InterfaceRepositories;
 using ShoesStore.Areas.Admin.ViewModels;
 
@@ -18,51 +20,83 @@ namespace ShoesStore.Controllers
             _reportRepository = reportRepository;
         }
 
-        public IActionResult Index(string sortOrder, int manager)
+        public IActionResult Index()
         {
-            TempData["Manager"] = manager;
-            ViewBag.Month = DateTime.Now.Month;
-
-            List<ReportViewModel> salerp = _reportRepository.GetSaleReportForMonthYear(ViewBag.Month);
-
-            // Sorting logic for 'Tỷ lệ'
-            ViewData["TyleSortParam"] = string.IsNullOrEmpty(sortOrder) ? "tyle_desc" : "";
-
-            switch (sortOrder)
-            {
-                case "tyle_desc":
-                    salerp = salerp.OrderByDescending(s => s.tyle).ToList();
-                    break;
-                default:
-                    salerp = salerp.OrderBy(s => s.tyle).ToList();
-                    break;
-            }
-
-            return View(salerp);
+            return View();
         }
 
-        [HttpPost]
-        public IActionResult Index(int month, string sortOrder, int manager)
+       public IActionResult ChangeMonth(int month)
         {
-            TempData["Manager"] = manager;
-            ViewBag.Month = month;
+            ReportViewModel report = new ReportViewModel();
+            report.saleByMonths = _reportRepository.GetSaleByMonth();
+            report.saleByProducts = _reportRepository.GetSaleByProduct(month);
 
-            List<ReportViewModel> salerp = _reportRepository.GetSaleReportForMonthYear(ViewBag.Month);
+            int maxMonth = report.saleByMonths.Select(x => x.month).Max();
 
-            // Sorting logic for 'Tỷ lệ'
-            ViewData["TyleSortParam"] = string.IsNullOrEmpty(sortOrder) ? "tyle_desc" : "";
-
-            switch (sortOrder)
+            List<SelectListItem> listMonth = new List<SelectListItem>();
+            for (int i = 1; i <= maxMonth; ++i)
             {
-                case "tyle_desc":
-                    salerp = salerp.OrderByDescending(s => s.tyle).ToList();
-                    break;
-                default:
-                    salerp = salerp.OrderBy(s => s.tyle).ToList();
-                    break;
+                listMonth.Add(new SelectListItem
+                {
+                    Value = i.ToString(),
+                    Text = MonthTransfer(i)
+                });
             }
 
-            return View(salerp);
+            ViewBag.MonthList = listMonth;
+            ViewBag.ChoosenMonth = month;
+
+            return PartialView("_PartialViewChart", report);
+        }
+
+        public string MonthTransfer(int month)
+        {
+            if (month == 1)
+            {
+                return "January";
+            }
+            if (month == 2)
+            {
+                return "February";
+            }
+            if (month == 3)
+            {
+                return "March";
+            }
+            if (month == 4)
+            {
+                return "April";
+            }
+            if (month == 5)
+            {
+                return "May";
+            }
+            if (month == 6)
+            {
+                return "June";
+            }
+            if (month == 7)
+            {
+                return "July";
+            }
+            if (month == 8)
+            {
+                return "August";
+            }
+            if (month == 9)
+            {
+                return "September";
+            }
+            if (month == 10)
+            {
+                return "October";
+            }
+            if (month == 11)
+            {
+                return "November";
+            }
+
+            return "December";
         }
     }
 }

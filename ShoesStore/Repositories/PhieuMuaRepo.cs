@@ -17,7 +17,14 @@ namespace ShoesStore.Repositories
             decimal tongtien = 0;
             foreach (ShoppingCartItem cartItem in phieuMua.listcartItem)
             {
-                tongtien += cartItem.Quantity * (cartItem.GiaGoc - cartItem.GiaGoc * cartItem.PhanTramGiam / 100);
+                if(cartItem.PhanTramGiam > 1)
+                {
+                    tongtien += cartItem.Quantity * (cartItem.GiaGoc - cartItem.GiaGoc * cartItem.PhanTramGiam / 100);
+                }
+                else
+                {
+                    tongtien += cartItem.Quantity * cartItem.GiaGoc;
+                }
             }
 
             Phieumua newpm = new Phieumua()
@@ -30,6 +37,7 @@ namespace ShoesStore.Repositories
                 MaptttNavigation = context.Phuongthucthanhtoans.Find(phieuMua.Mapttt),
                 Tongtien = tongtien
             };
+            
             context.Phieumuas.Add(newpm);
             context.SaveChanges();
 
@@ -41,7 +49,7 @@ namespace ShoesStore.Repositories
                     Mapm = newpm.Mapm,
                     Maspsize = cartItem.Maspsize,
                     Soluong = cartItem.Quantity,
-                    Dongia = cartItem.Quantity * (cartItem.GiaGoc - cartItem.GiaGoc * cartItem.PhanTramGiam / 100)
+                    Dongia = cartItem.PhanTramGiam > 1 ? (cartItem.GiaGoc - cartItem.GiaGoc * cartItem.PhanTramGiam / 100) : cartItem.GiaGoc,
                 });
             }
 

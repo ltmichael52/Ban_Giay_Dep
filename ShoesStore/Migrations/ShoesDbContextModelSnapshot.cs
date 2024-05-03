@@ -626,7 +626,11 @@ namespace ShoesStore.Migrations
 
                     b.HasKey("Masoxu");
 
-                    b.HasIndex(new[] { "Makh" }, "IX_SOXU_MAKH");
+                    b.HasIndex("Makh")
+                        .IsUnique();
+
+                    b.HasIndex(new[] { "Makh" }, "IX_SOXU_MAKH")
+                        .HasDatabaseName("IX_SOXU_MAKH1");
 
                     b.ToTable("SOXU", (string)null);
                 });
@@ -873,8 +877,8 @@ namespace ShoesStore.Migrations
             modelBuilder.Entity("ShoesStore.Models.Soxu", b =>
                 {
                     b.HasOne("ShoesStore.Models.Khachhang", "MakhNavigation")
-                        .WithMany("Soxus")
-                        .HasForeignKey("Makh")
+                        .WithOne("SoxuNavigation")
+                        .HasForeignKey("ShoesStore.Models.Soxu", "Makh")
                         .IsRequired()
                         .HasConstraintName("FK__KHACHHAG__SOXU__123213");
 
@@ -896,7 +900,7 @@ namespace ShoesStore.Migrations
 
                     b.Navigation("Sodiachis");
 
-                    b.Navigation("Soxus");
+                    b.Navigation("SoxuNavigation");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Loai", b =>

@@ -268,8 +268,8 @@ public partial class ShoesDbContext : DbContext
             entity.Property(e => e.Tongxu)
                .HasColumnType("money")
                .HasColumnName("TONGXU");
-            entity.HasOne(d => d.MakhNavigation).WithMany(p => p.Soxus)
-             .HasForeignKey(d => d.Makh)
+            entity.HasOne(d => d.MakhNavigation).WithOne(p => p.SoxuNavigation)
+             .HasForeignKey<Soxu>(d => d.Makh)
              .OnDelete(DeleteBehavior.ClientSetNull)
              .HasConstraintName("FK__KHACHHAG__SOXU__123213");
 

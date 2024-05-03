@@ -1,4 +1,4 @@
-﻿@* @model ShoesStore.ViewModels.RegisterViewModel
+﻿@model ShoesStore.ViewModels.RegisterViewModel
 
 <!-- End Header Area -->
 <!-- Start Banner Area -->
@@ -32,7 +32,6 @@
                         <input asp-for="@Model.Taikhoan.Email" value="123" hidden />
                         <input asp-for="@Model.Khachhang.EmailNavigation.Email" value="123" hidden />
                         <input asp-for="@Model.Khachhang.EmailNavigation.Matkhau" value="123" hidden />
-                        <input asp-for="@Model.Khachhang.Diachi" value="123" hidden />
                         <div class="col-md-12 form-group">
                             <input asp-for="@Model.Khachhang.Tenkh" type="text" class="form-control" placeholder="Họ và Tên" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tên tài khoản'">
                             <span class="text-danger" style="position: absolute; left: 0; margin-top: -3px; margin-left: 30px;">@Html.ValidationMessageFor(model => model.Khachhang.Tenkh)</span>
@@ -72,4 +71,3 @@
 </section>
 <!--================End Login Box Area =================-->
 <!-- start footer Area -->
- *@
