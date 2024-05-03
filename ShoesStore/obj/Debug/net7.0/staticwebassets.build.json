@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q3xTrwMxiU5DGI8JgvIHf98F82YY8TKENGuny3PE1do=",
+  "Hash": "ud6/P5nJM47RdmytxAzI6D2uv+kMTeKE75WK3PVDd/o=",
   "Source": "ShoesStore",
   "BasePath": "_content/ShoesStore",
   "Mode": "Default",
@@ -10506,6 +10506,23 @@
       "OriginalItemSpec": "wwwroot\\img\\banner\\0751cf62-826b-43ba-93b3-678a10a81cb3_2a5f1129-c7c0-47e8-9d49-4dd39d993fbc_abd78516-d585-4306-91dd-85e9fb76641b_30dd4eb6-53a1-41fd-b2b9-f943db9ddf2d.jpg"
     },
     {
+      "Identity": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\banner\\265958f0-b850-4569-a892-86a316d6d912_banner-img.png",
+      "SourceId": "ShoesStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\",
+      "BasePath": "_content/ShoesStore",
+      "RelativePath": "img/banner/265958f0-b850-4569-a892-86a316d6d912_banner-img.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\banner\\265958f0-b850-4569-a892-86a316d6d912_banner-img.png"
+    },
+    {
       "Identity": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\banner\\2daaff1d-1447-44ef-b625-2f4cce0deac1_banner-img.png",
       "SourceId": "ShoesStore",
       "SourceType": "Discovered",
@@ -10963,6 +10980,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\blog\\c450d7fb-a745-44b9-8bdc-4eff215e477e_c4.jpg"
+    },
+    {
+      "Identity": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\blog\\df67ca30-999c-47c1-b820-cb3d162707c1_p1.jpg",
+      "SourceId": "ShoesStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\",
+      "BasePath": "_content/ShoesStore",
+      "RelativePath": "img/blog/df67ca30-999c-47c1-b820-cb3d162707c1_p1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\blog\\df67ca30-999c-47c1-b820-cb3d162707c1_p1.jpg"
     },
     {
       "Identity": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\blog\\eb961262-8891-4492-be13-ef13cf2cf359_images.jpg",
