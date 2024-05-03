@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kq4Htmx5W7hOefWDapaubnZ71hccvOgsYgnKAlJQmb0=",
+  "Hash": "Q3xTrwMxiU5DGI8JgvIHf98F82YY8TKENGuny3PE1do=",
   "Source": "ShoesStore",
   "BasePath": "_content/ShoesStore",
   "Mode": "Default",
@@ -10521,6 +10521,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\banner\\2daaff1d-1447-44ef-b625-2f4cce0deac1_banner-img.png"
+    },
+    {
+      "Identity": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\banner\\45dd50f1-3423-4881-a317-ad6d11c1e7dc_68113c29-6fb8-4cca-b337-6ef9e1cbe99a.jpg",
+      "SourceId": "ShoesStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\",
+      "BasePath": "_content/ShoesStore",
+      "RelativePath": "img/banner/45dd50f1-3423-4881-a317-ad6d11c1e7dc_68113c29-6fb8-4cca-b337-6ef9e1cbe99a.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\banner\\45dd50f1-3423-4881-a317-ad6d11c1e7dc_68113c29-6fb8-4cca-b337-6ef9e1cbe99a.jpg"
     },
     {
       "Identity": "D:\\Uni\\ShoesStore\\ShoesStore\\wwwroot\\img\\banner\\4a0439f8-e002-4461-9b2b-d9a3ae4f2fcd_0fdde7bc-6d59-489a-9348-eba8a8299778_5ca62323-3e1e-4626-98bf-c6b6ddf512eb_TurfCopaPink.jpg",

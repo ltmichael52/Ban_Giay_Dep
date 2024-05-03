@@ -2,8 +2,7 @@
 {
     public class ReportViewModel
     {
-        public string Tendongsp { get; set; }
-        public decimal doanhThu { get; set; }
-        public decimal tyle { get; set; }
+        public List<SalesByMonthViewModel> saleByMonths { get; set; }
+        public List<SaleByProductViewModel> saleByProducts { get; set;}
     }
 }

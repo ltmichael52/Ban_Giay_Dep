@@ -106,9 +106,9 @@
 			});
 
 
-			$('#searchForm').submit(function (e) {
-				e.preventDefault();
+			$('#search_input').change(function () {
 				var inputValue = $(this).val();
+				console.log("Sale Index search: "+inputValue);
 				if (inputValue) {
 					searchString1 = inputValue;
 					$('#search_input').val(searchString1);
@@ -157,7 +157,7 @@
 
 			function getToController() {
 				$.ajax({
-					url: 'SaleIndex/KhuyenMai',
+					url: '/KhuyenMai/SaleIndex',
 					type: 'Get',
 					data: {
 						searchString: searchString1,
@@ -168,7 +168,8 @@
 						phantramgiam: phantramgiam1
 					},
 					success: function (response) {
-						$('.lattest-product-area .row').html(response);
+						$('#partialSanPhamKm').html(response);
+						console.log("Success km");
 					},
 				});
 			}
@@ -286,7 +287,7 @@
 			<!-- Start Best Seller -->
 
 			<section class="lattest-product-area pb-40 category-list">
-				<div class="row">
+				<div class="row" id="partialSanPhamKm">
 					<partial name="_PartialSanPhamTheoLoai" model="@Model" />
 				</div>
 			</section>

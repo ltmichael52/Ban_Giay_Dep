@@ -105,6 +105,11 @@ namespace ShoesStore.Repositories
 						x.dongsp.Giagoc - (x.dongsp.Giagoc * x.Phantramgiam / 100) <= maxPrice).ToList();
 			}
 
+			if (!string.IsNullOrEmpty(searchString))
+			{
+				dspView = dspView.Where(x => x.dongsp.Tendongsp.ToLower().Contains(searchString.ToLower())).ToList();
+			}
+
 			return dspView;
 		}
 	}
