@@ -25,8 +25,8 @@ namespace ShoesStore.Repositories
             DateTime datenow = DateTime.Now;
             for (int i = 1; i <= largestMonth; ++i)
             {
-                decimal moneyInMonth = _context.Phieumuas.Where(x => x.Tinhtrang== "Đã duyệt" && x.Ngaydat.Month == i && x.Ngaydat.Year == datenow.Year).Sum(x => x.Tongtien) ?? 0;
-                
+                decimal moneyInMonth = _context.Phieumuas.Where(x => x.Tinhtrang == "Đã duyệt" && x.Ngaydat.Month == i && x.Ngaydat.Year == datenow.Year).Sum(x => x.Tongtien) ?? 0;
+
                 salebyMonth.Add(new SalesByMonthViewModel
                 {
                     month = i,
@@ -37,7 +37,8 @@ namespace ShoesStore.Repositories
             return salebyMonth;
         }
 
-        public List<SaleByProductViewModel> GetSaleByProduct(int month=0) {
+        public List<SaleByProductViewModel> GetSaleByProduct(int month = 0)
+        {
             DateTime datenow = DateTime.Now;
             if (month == 0)
             {
@@ -47,10 +48,10 @@ namespace ShoesStore.Repositories
             List<int> madspInMonth = _context.Chitietphieumuas.Where(x => x.MapmNavigation.Ngaydat.Month == month && x.MapmNavigation.Ngaydat.Year == datenow.Year)
                                                    .Select(x => x.MaspsizeNavigation.MaspNavigation.Madongsanpham)
                                                    .Distinct().ToList();
-            foreach(int madongsp in madspInMonth)
+            foreach (int madongsp in madspInMonth)
             {
                 decimal money = _context.Chitietphieumuas.Where(x => x.MapmNavigation.Ngaydat.Month == month && x.MapmNavigation.Ngaydat.Year == datenow.Year
-                                                    && x.MaspsizeNavigation.MaspNavigation.Madongsanpham == madongsp).Sum(x => x.Dongia*x.Soluong);
+                                                    && x.MaspsizeNavigation.MaspNavigation.Madongsanpham == madongsp).Sum(x => x.Dongia * x.Soluong);
 
                 Dongsanpham dsp = _context.Dongsanphams.Find(madongsp);
                 Sanpham sp = _context.Sanphams.FirstOrDefault(x => x.Madongsanpham == madongsp);
@@ -59,12 +60,32 @@ namespace ShoesStore.Repositories
                 {
                     ProductName = dsp.Tendongsp,
                     Sales = money,
-                }) ;
-                                                                        
+                });
+
             }
             salebyProduct = salebyProduct.OrderByDescending(x => x.Sales).Take(5).ToList();
             return salebyProduct;
 
+        }
+        public decimal GetTotalRevenue(int month)
+        {
+            // Implement logic to calculate total revenue for the given month
+            // For example:
+            var totalRevenue = _context.Phieumuas
+                .Where(pm => pm.Ngaydat.Month == month && pm.Tinhtrang == "Đã duyệt")
+                .Sum(pm => (decimal?)pm.Tongtien) ?? 0; // Provide default value if null
+            return totalRevenue;
+        }
+
+
+        public int GetTotalProductsSold(int month)
+        {
+            // Implement logic to calculate total products sold for the given month
+            // For example:
+            var totalProductsSold = _context.Chitietphieumuas
+                .Where(ctpm => ctpm.MapmNavigation.Ngaydat.Month == month)
+                .Sum(ctpm => ctpm.Soluong);
+            return totalProductsSold;
         }
 
 

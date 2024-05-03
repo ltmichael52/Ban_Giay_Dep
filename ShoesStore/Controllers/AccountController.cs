@@ -131,5 +131,91 @@ namespace ShoesStore.Controllers
             // Chuyển hướng đến trang Login
             return RedirectToAction("Login", "Account");
         }
+
+        public IActionResult UserProfile()
+        {
+            // Kiểm tra xem người dùng đã đăng nhập hay chưa
+            if (HttpContext.Session.GetString("Email") == null)
+            {
+                // Nếu chưa đăng nhập, chuyển hướng đến trang Login
+                return RedirectToAction("Login", "Account");
+            }
+
+            // Lấy thông tin tài khoản khách hàng từ Session
+            string userEmail = HttpContext.Session.GetString("Email");
+            var user = _db.Taikhoans
+                            .Include(t => t.Khachhang)
+                            .FirstOrDefault(x => x.Email == userEmail);
+
+            if (user != null)
+            {
+                return View(user.Khachhang);
+            }
+
+            // Nếu không tìm thấy thông tin, chuyển hướng về trang Home
+            return RedirectToAction("Index", "Home");
+        }
+
+        // GET: /Account/ChangeProfile
+        public IActionResult ChangeProfile()
+        {
+            // Kiểm tra xem người dùng đã đăng nhập hay chưa
+            if (HttpContext.Session.GetString("Email") == null)
+            {
+                // Nếu chưa đăng nhập, chuyển hướng đến trang Login
+                return RedirectToAction("Login", "Account");
+            }
+
+            // Lấy thông tin tài khoản khách hàng từ Session
+            string userEmail = HttpContext.Session.GetString("Email");
+            var user = _db.Taikhoans
+                            .Include(t => t.Khachhang)
+                            .FirstOrDefault(x => x.Email == userEmail);
+
+            if (user != null)
+            {
+                return View(user.Khachhang);
+            }
+
+            // Nếu không tìm thấy thông tin, chuyển hướng về trang Home
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ChangeProfile(string tenkh, string sdt, bool gioitinh, DateTime? ngaysinh)
+        {
+            // Kiểm tra xem người dùng đã đăng nhập hay chưa
+            if (HttpContext.Session.GetString("Email") == null)
+            {
+                // Nếu chưa đăng nhập, chuyển hướng đến trang Login
+                return RedirectToAction("Login", "Account");
+            }
+
+            // Lấy email của người dùng từ Session
+            string userEmail = HttpContext.Session.GetString("Email");
+
+            // Tìm thông tin khách hàng dựa trên email
+            var customer = _db.Khachhangs.FirstOrDefault(kh => kh.Email == userEmail);
+
+            if (customer != null)
+            {
+                // Cập nhật thông tin khách hàng
+                customer.Tenkh = tenkh;
+                customer.Sdt = sdt;
+                customer.Gioitinh = gioitinh;
+                customer.Ngaysinh = ngaysinh;
+
+                _db.SaveChanges();
+
+                // Trả về JSON hoặc thông báo thành công
+                return Json(new { success = true });
+            }
+
+            // Nếu không tìm thấy thông tin, trả về thông báo lỗi
+            return Json(new { success = false });
+        }
+
+
     }
 }

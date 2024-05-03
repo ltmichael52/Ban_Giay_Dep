@@ -109,6 +109,7 @@
 									}
 									else
 									{
+										<li class="nav-item"><a class="nav-link" asp-action="UserProfile" asp-controller="Account">Account</a></li>
 										<li class="nav-item"><a class="nav-link" asp-action="Logout" asp-controller="Account">Log Out</a></li>
 									}
 								</ul>
@@ -126,11 +127,14 @@
 		</div>
 		<div class="search_input" id="search_input_box">
 			<div class="container">
+				<div id="kmToggle">
 				<form class="d-flex justify-content-between" asp-action="SanPhamTheoLoai" asp-controller="SanPham" id="searchForm">
 					<input type="text" name="searchString" class="form-control" id="search_input" placeholder="Tìm kiếm sản phẩm">
 					<button type="submit" class="btn"></button>
 					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
 				</form>
+				</div>
+				@RenderSection("searchProductSales",required:false);
 			</div>
 		</div>
 	</header>

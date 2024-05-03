@@ -22,6 +22,7 @@ builder.Services.AddDbContext<ShoesDbContext>(options =>
 });
 builder.Services.AddScoped<IPhieuMuaAdmin, PhieuMuaAdminRepo>();
 builder.Services.AddScoped<IDongsanphamAdmin, DongsanphamAdminRepo>();
+builder.Services.AddScoped<IKhuyenMaiAdmin, KhuyenMaiAdminRepo>();
 builder.Services.AddScoped<INhanvien, NhanvienAdminRepo>();
 builder.Services.AddScoped<IBlogAdmin, BlogAdminRepo>();
 builder.Services.AddScoped<ILoaiAdmin, LoaiAdminRepo>();
@@ -61,7 +62,7 @@ app.UseAuthorization();
 app.MapAreaControllerRoute(
     name: "Admin",
     areaName: "Admin",
-    pattern: "Admin/{controller=Report}/{action=Index}/{id?}");
+    pattern: "Admin/{controller=HomeAdmin}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",

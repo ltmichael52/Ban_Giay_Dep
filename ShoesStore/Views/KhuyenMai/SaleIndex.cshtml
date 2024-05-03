@@ -70,7 +70,9 @@
 		var minPrice1 = '@ViewBag.minPrice1';
 		var maxPrice1 = '@ViewBag.maxPrice1';
 
+
 		$(document).ready(function () {
+
 			$('#sortGia').change(function () {
 				var selectedValue = $(this).val();
 
@@ -105,8 +107,8 @@
 				getToController();
 			});
 
-
-			$('#search_input').change(function () {
+			$('#kmToggle').css({ display: 'none' });
+			$('#search_inputKm').change(function () {
 				var inputValue = $(this).val();
 				console.log("Sale Index search: "+inputValue);
 				if (inputValue) {
@@ -157,7 +159,7 @@
 
 			function getToController() {
 				$.ajax({
-					url: '/KhuyenMai/SaleIndex',
+					url: '/KhuyenMai/FindSaleProduct',
 					type: 'Get',
 					data: {
 						searchString: searchString1,
@@ -183,6 +185,14 @@
 		}
 	</script>
  }
+
+@section searchProductSales{
+	<form class="d-flex justify-content-between" id="searchFormKm">
+		<input type="text" name="searchStringKm" class="form-control" id="search_inputKm" placeholder="Tìm kiếm sản phẩm">
+		<button type="submit" class="btn"></button>
+		<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+	</form>
+}
 
 <section class="banner-area organic-breadcrumb mb-3">
 	<div class="container">

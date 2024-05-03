@@ -7,6 +7,8 @@ namespace ShoesStore.Areas.Admin.InterfaceRepositories
     public interface IReportRepository
     {
         List<SalesByMonthViewModel> GetSaleByMonth();
-        List<SaleByProductViewModel> GetSaleByProduct(int month=0);
+        List<SaleByProductViewModel> GetSaleByProduct(int month = 0);
+        decimal GetTotalRevenue(int month);
+        int GetTotalProductsSold(int month);
     }
 }

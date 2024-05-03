@@ -1,13 +1,57 @@
-﻿@{
+﻿@* Bth là có model , là chung view -->tạo viewmodel, Chung controller
+    - Dùng view component , thì mình tách ra 2 cái viewmodel riêng được 
+*@
+@{
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Index";
 }
-@inject IHttpContextAccessor HttpContextAccessor
-@if (HttpContextAccessor.HttpContext.Session.GetString("Loaitk") == "2")
-{
-    <h1>Hello admin</h1>
-}
-else
-{
-    <h1> Hello Staff</h1>
-}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tổng doanh thu (tháng hiện tại)</h5>
+                    <p class="card-text">@ViewBag.TotalRevenue</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tổng sản phẩm đã bán (tháng hiện tại)</h5>
+                    <p class="card-text">@ViewBag.TotalProductsSold</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tổng đơn hàng (tháng hiện tại)</h5>
+                    <p class="card-text">@ViewBag.TotalOrders</p>
+                </div>
+            </div>
+        </div>
+        @if (ViewBag.TotalEmployees > 0)
+        {
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Số lượng nhân viên</h5>
+                        <p class="card-text">@ViewBag.TotalEmployees</p>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Số lượng khách hàng (tổng)</h5>
+                    <p class="card-text">@ViewBag.TotalCustomers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Component.InvokeAsync("SaleChart")

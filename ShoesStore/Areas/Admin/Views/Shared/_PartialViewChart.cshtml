@@ -45,7 +45,7 @@
 
     var ctx = document.getElementById('dynamic-chart').getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'bar', // dùng chartjs
         data: {
             labels: labelsSaleByMonth,
             datasets: [{
@@ -131,18 +131,21 @@
         selectMonth.style.display = 'block';
         $('#chartSelect').val(chartSelectValue);
     };
-        $('#chartSelect').change(function () {
-            chartSelectValue = $(this).val();
+        $('#chartSelect').change(function () { //event listener  sự kiện khi mà nó thay đổi 
+            //Mỗi thẻ nó có mỗi sự kiện khác nhau, select thì nó có change
+            //#chartSelect là element select ở trên 
+            chartSelectValue = $(this).val(); //Lấy giá trị
             console.log("Get to change month ajax");
-            $.ajax({
-                url: '/admin/Report/ChangeMonth',
+            $.ajax({ //Dùng ajax
+                url: '/admin/Report/ChangeMonth', //Đi đến hàm nào 
                 type: 'Get',
                 data: {
-                    month: chartSelectValue
+                    month: chartSelectValue //Truyền dữ liệu
                 },
-                success: function (response) {
-                    $('#ChartDiv').html(response);
-                    changeBar();
+            success: function (response) { //Nhận dữ liệu , response là cái report
+                    $('#ChartDiv').html(response); 
+                    // Chọn cái div nào sẽ refresh  là cái chartdiv nó bao hết partial view xong rồi chạy lại script
+                    changeBar(); //Cái này thì P muốn chuyển sang bar (nó ko có trog format)
                 }
 
             });
