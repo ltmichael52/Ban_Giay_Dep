@@ -70,7 +70,9 @@
 		var minPrice1 = '@ViewBag.minPrice1';
 		var maxPrice1 = '@ViewBag.maxPrice1';
 
+
 		$(document).ready(function () {
+
 			$('#sortGia').change(function () {
 				var selectedValue = $(this).val();
 
@@ -105,10 +107,10 @@
 				getToController();
 			});
 
-
-			$('#searchForm').submit(function (e) {
-				e.preventDefault();
+			$('#kmToggle').css({ display: 'none' });
+			$('#search_inputKm').change(function () {
 				var inputValue = $(this).val();
+				console.log("Sale Index search: "+inputValue);
 				if (inputValue) {
 					searchString1 = inputValue;
 					$('#search_input').val(searchString1);
@@ -157,7 +159,7 @@
 
 			function getToController() {
 				$.ajax({
-					url: 'SaleIndex/KhuyenMai',
+					url: '/KhuyenMai/FindSaleProduct',
 					type: 'Get',
 					data: {
 						searchString: searchString1,
@@ -168,7 +170,8 @@
 						phantramgiam: phantramgiam1
 					},
 					success: function (response) {
-						$('.lattest-product-area .row').html(response);
+						$('#partialSanPhamKm').html(response);
+						console.log("Success km");
 					},
 				});
 			}
@@ -182,6 +185,14 @@
 		}
 	</script>
  }
+
+@section searchProductSales{
+	<form class="d-flex justify-content-between" id="searchFormKm">
+		<input type="text" name="searchStringKm" class="form-control" id="search_inputKm" placeholder="Tìm kiếm sản phẩm">
+		<button type="submit" class="btn"></button>
+		<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+	</form>
+}
 
 <section class="banner-area organic-breadcrumb mb-3">
 	<div class="container">
@@ -286,7 +297,7 @@
 			<!-- Start Best Seller -->
 
 			<section class="lattest-product-area pb-40 category-list">
-				<div class="row">
+				<div class="row" id="partialSanPhamKm">
 					<partial name="_PartialSanPhamTheoLoai" model="@Model" />
 				</div>
 			</section>

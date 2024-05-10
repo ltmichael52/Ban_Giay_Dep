@@ -396,6 +396,18 @@ namespace ShoesStore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Mapm"));
 
+                    b.Property<string>("Diachinguoinhan")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("DIACHINGUOINHAN");
+
+                    b.Property<string>("Emailnguoinhan")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("EMAILNGUOINHAN");
+
                     b.Property<string>("Ghichu")
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("GHICHU");
@@ -425,6 +437,18 @@ namespace ShoesStore.Migrations
                         .HasColumnType("datetime")
                         .HasColumnName("NGAYDAT");
 
+                    b.Property<string>("Sdtnguoinhan")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("SDTNGUOINHAN");
+
+                    b.Property<string>("Tennguoinhan")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("TENNGUOINHAN");
+
                     b.Property<string>("Tinhtrang")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -449,6 +473,29 @@ namespace ShoesStore.Migrations
                     b.ToTable("PHIEUMUA", (string)null);
                 });
 
+            modelBuilder.Entity("ShoesStore.Models.Phuong", b =>
+                {
+                    b.Property<int>("Maphuong")
+                        .HasColumnType("int")
+                        .HasColumnName("MAPHUONG");
+
+                    b.Property<int>("Maquan")
+                        .HasColumnType("int")
+                        .HasColumnName("MAQUAN");
+
+                    b.Property<string>("Tenphuong")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
+                        .HasColumnName("TENPHUONG");
+
+                    b.HasKey("Maphuong");
+
+                    b.HasIndex("Maquan");
+
+                    b.ToTable("PHUONG", (string)null);
+                });
+
             modelBuilder.Entity("ShoesStore.Models.Phuongthucthanhtoan", b =>
                 {
                     b.Property<int>("Mapttt")
@@ -467,6 +514,29 @@ namespace ShoesStore.Migrations
                     b.HasKey("Mapttt");
 
                     b.ToTable("PHUONGTHUCTHANHTOAN", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Quan", b =>
+                {
+                    b.Property<int>("Maquan")
+                        .HasColumnType("int")
+                        .HasColumnName("MAQUAN");
+
+                    b.Property<int>("Matinh")
+                        .HasColumnType("int")
+                        .HasColumnName("MATINH");
+
+                    b.Property<string>("Tenquan")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
+                        .HasColumnName("TENQUAN");
+
+                    b.HasKey("Maquan");
+
+                    b.HasIndex("Matinh");
+
+                    b.ToTable("QUAN", (string)null);
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Sanpham", b =>
@@ -626,7 +696,11 @@ namespace ShoesStore.Migrations
 
                     b.HasKey("Masoxu");
 
-                    b.HasIndex(new[] { "Makh" }, "IX_SOXU_MAKH");
+                    b.HasIndex("Makh")
+                        .IsUnique();
+
+                    b.HasIndex(new[] { "Makh" }, "IX_SOXU_MAKH")
+                        .HasDatabaseName("IX_SOXU_MAKH1");
 
                     b.ToTable("SOXU", (string)null);
                 });
@@ -652,6 +726,23 @@ namespace ShoesStore.Migrations
                         .HasName("PK__TAIKHOAN__161CF7258466B7F4");
 
                     b.ToTable("TAIKHOAN", (string)null);
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Tinh", b =>
+                {
+                    b.Property<int>("Matinh")
+                        .HasColumnType("int")
+                        .HasColumnName("MATINH");
+
+                    b.Property<string>("Tentinh")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
+                        .HasColumnName("TENTINH");
+
+                    b.HasKey("Matinh");
+
+                    b.ToTable("TINH", (string)null);
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Voucher", b =>
@@ -821,6 +912,28 @@ namespace ShoesStore.Migrations
                     b.Navigation("MavoucherNavigation");
                 });
 
+            modelBuilder.Entity("ShoesStore.Models.Phuong", b =>
+                {
+                    b.HasOne("ShoesStore.Models.Quan", "MaquanNavigation")
+                        .WithMany("Phuongs")
+                        .HasForeignKey("Maquan")
+                        .IsRequired()
+                        .HasConstraintName("FK_QUAN_PHUONG");
+
+                    b.Navigation("MaquanNavigation");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Quan", b =>
+                {
+                    b.HasOne("ShoesStore.Models.Tinh", "MatinhNavigation")
+                        .WithMany("Quans")
+                        .HasForeignKey("Matinh")
+                        .IsRequired()
+                        .HasConstraintName("FK_QUAN_TINH");
+
+                    b.Navigation("MatinhNavigation");
+                });
+
             modelBuilder.Entity("ShoesStore.Models.Sanpham", b =>
                 {
                     b.HasOne("ShoesStore.Models.Dongsanpham", "MadongsanphamNavigation")
@@ -873,8 +986,8 @@ namespace ShoesStore.Migrations
             modelBuilder.Entity("ShoesStore.Models.Soxu", b =>
                 {
                     b.HasOne("ShoesStore.Models.Khachhang", "MakhNavigation")
-                        .WithMany("Soxus")
-                        .HasForeignKey("Makh")
+                        .WithOne("SoxuNavigation")
+                        .HasForeignKey("ShoesStore.Models.Soxu", "Makh")
                         .IsRequired()
                         .HasConstraintName("FK__KHACHHAG__SOXU__123213");
 
@@ -896,7 +1009,7 @@ namespace ShoesStore.Migrations
 
                     b.Navigation("Sodiachis");
 
-                    b.Navigation("Soxus");
+                    b.Navigation("SoxuNavigation");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Loai", b =>
@@ -926,6 +1039,11 @@ namespace ShoesStore.Migrations
                     b.Navigation("Phieumuas");
                 });
 
+            modelBuilder.Entity("ShoesStore.Models.Quan", b =>
+                {
+                    b.Navigation("Phuongs");
+                });
+
             modelBuilder.Entity("ShoesStore.Models.Sanpham", b =>
                 {
                     b.Navigation("Sanphamsizes");
@@ -946,6 +1064,11 @@ namespace ShoesStore.Migrations
                     b.Navigation("Khachhang");
 
                     b.Navigation("Nhanvien");
+                });
+
+            modelBuilder.Entity("ShoesStore.Models.Tinh", b =>
+                {
+                    b.Navigation("Quans");
                 });
 
             modelBuilder.Entity("ShoesStore.Models.Voucher", b =>

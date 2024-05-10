@@ -10,127 +10,125 @@ using ShoesStore.ViewModels;
 
 namespace ShoesStore.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class KhuyenMaiAdminController : Controller
-    {
-        private readonly IKhuyenMaiAdmin _kmrepo;
-        private readonly ShoesDbContext _context;
-        public KhuyenMaiAdminController(IKhuyenMaiAdmin kmrepo, ShoesDbContext context)
-        {
-            _kmrepo = kmrepo;
-            _context = context;
-        }
+	[Area("Admin")]
+	public class KhuyenMaiAdminController : Controller
+	{
+		private readonly IKhuyenMaiAdmin _kmrepo;
+		private readonly ShoesDbContext _context;
+		public KhuyenMaiAdminController(IKhuyenMaiAdmin kmrepo, ShoesDbContext context)
+		{
+			_kmrepo = kmrepo;
+			_context = context;
+		}
 
-        public IActionResult Index()
-        {
-            return View(_kmrepo.GetAllKhuyenmai().ToList());
-        }
-        public IActionResult Details()
-        {
-            return View();
-        }
-        public IActionResult Create()
-        {
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(Khuyenmai km)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(km);
-            }
+		public IActionResult Index()
+		{
+			return View(_kmrepo.GetAllKhuyenmai().ToList());
+		}
 
-            _kmrepo.AddKhuyenmai(km);
-            return RedirectToAction("Index");           
-        }
+		public IActionResult Create()
+		{
+			return View();
+		}
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult Create(Khuyenmai km)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View(km);
+			}
 
-        public IActionResult Delete(int id)
-        {
-            _kmrepo.DeleteKhuyenmai(id);
-            return RedirectToAction("Index");
-        }
+			_kmrepo.AddKhuyenmai(km);
+			return RedirectToAction("Index");
+		}
+
+		public IActionResult Delete(int id)
+		{
+			_kmrepo.DeleteKhuyenmai(id);
+			return RedirectToAction("Index");
+		}
 
 
-        public IActionResult AddDongSanPham(int makm)
-        {
-            var khuyenmai = _context.Khuyenmais
-                                    .Include(k => k.Madongsanphams)
-                                    .FirstOrDefault(k => k.Makm == makm);
+		public IActionResult AddDongSanPham(int makm)
+		{
+			var khuyenmai = _context.Khuyenmais
+									.Include(k => k.Madongsanphams).ThenInclude(x => x.MaloaiNavigation)
+									.FirstOrDefault(k => k.Makm == makm);
 
-            if (khuyenmai == null)
-            {
-                // Handle the case where khuyenmai is not found
-                return NotFound("Khuyenmai not found.");
-            }
+			if (khuyenmai == null)
+			{
+				// Handle the case where khuyenmai is not found
+				return NotFound("Khuyenmai not found.");
+			}
 
-            var availableDongsanphams = _context.Dongsanphams
-                .Select(d => new SelectListItem
-                {
-                    Value = d.Madongsanpham.ToString(),
-                    Text = d.Tendongsp
-                });
+			var availableDongsanphams = _context.Dongsanphams
+				.Select(d => new SelectListItem
+				{
+					Value = d.Madongsanpham.ToString(),
+					Text = d.Tendongsp
+				});
 
-            var model = new KhuyenMaiViewModel
-            {
-                Makm = khuyenmai.Makm,
-                Ngaybd = khuyenmai.Ngaybd,
-                Ngaykt = khuyenmai.Ngaykt,
-                Phantramgiam = khuyenmai.Phantramgiam,
-                AvailableDongsanphams = availableDongsanphams
-            };
+			var model = new KhuyenMaiViewModel
+			{
+				Makm = khuyenmai.Makm,
+				Ngaybd = khuyenmai.Ngaybd,
+				Ngaykt = khuyenmai.Ngaykt,
+				Phantramgiam = khuyenmai.Phantramgiam,
+				AvailableDongsanphams = availableDongsanphams
+			};
 
-            return View(model);
-        }
+			return View(model);
+		}
 
 
 
-        // POST: KhuyenMai/Create
-        [HttpPost]
-        public IActionResult AddDongSanPham(KhuyenMaiViewModel model)
-        {
-            var khuyenmai = _context.Khuyenmais
-                                    .Include(k => k.Madongsanphams)
-                                    .FirstOrDefault(k => k.Makm == model.Makm);
+		// POST: KhuyenMai/Create
+		[HttpPost]
+		public IActionResult AddDongSanPham(KhuyenMaiViewModel model)
+		{
+			var khuyenmai = _context.Khuyenmais
+									.Include(k => k.Madongsanphams)
+									.ThenInclude(x => x.MaloaiNavigation)
+									.FirstOrDefault(k => k.Makm == model.Makm);
 
-            if (khuyenmai == null)
-            {
-                return NotFound();
-            }
+			if (khuyenmai == null)
+			{
+				return NotFound();
+			}
 
-            var selectedDongsanphams = _context.Dongsanphams
-                                               .Where(d => model.SelectedDongsanphams.Contains(d.Madongsanpham))
-                                               .ToList();
+			var selectedDongsanphams = _context.Dongsanphams
+											   .Where(d => model.SelectedDongsanphams.Contains(d.Madongsanpham))
+											   .ToList();
 
-            foreach (var dongsanpham in selectedDongsanphams)
-            {
-                if (!khuyenmai.Madongsanphams.Contains(dongsanpham))
-                {
-                    khuyenmai.Madongsanphams.Add(dongsanpham);
-                }
-            }
+			foreach (var dongsanpham in selectedDongsanphams)
+			{
+				if (!khuyenmai.Madongsanphams.Contains(dongsanpham))
+				{
+					khuyenmai.Madongsanphams.Add(dongsanpham);
+				}
+			}
 
-            _context.SaveChanges();
+			_context.SaveChanges();
 
-            return RedirectToAction("Details", new { makm = model.Makm });
-        }
+			return RedirectToAction("ListDongSanPham", new { makm = model.Makm });
+		}
 
-        public IActionResult ListDongSanPham(int makm)
-        {
+		public IActionResult ListDongSanPham(int makm)
+		{
 
-            var khuyenmai = _context.Khuyenmais
-                                    .Include(k => k.Madongsanphams)
-                                    .ThenInclude(m => m.MaloaiNavigation) 
-                                    .FirstOrDefault(k => k.Makm == makm);
+			var khuyenmai = _context.Khuyenmais
+									.Include(k => k.Madongsanphams)
+									.ThenInclude(m => m.MaloaiNavigation)
+									.FirstOrDefault(k => k.Makm == makm);
 
-            if (khuyenmai == null)
-            {
-                return NotFound(); 
-            }
+			if (khuyenmai == null)
+			{
+				return NotFound();
+			}
 
-            return View(khuyenmai);
-        }
+			return View(khuyenmai);
+		}
 
-    }
+	}
 }

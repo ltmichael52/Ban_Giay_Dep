@@ -1,4 +1,4 @@
-﻿@* @using ShoesStore.Models
+﻿@using ShoesStore.Models
 @model List<Khachhang>
 
 <div class="container">
@@ -8,7 +8,6 @@
             <tr>
                 <th>Email</th>
                 <th>Customer Name</th>
-                <th>Address</th>
                 <th>Phone Number</th>
                 <th>Gender</th>
                 <th>Birth</th>
@@ -20,7 +19,6 @@
                 <tr>
                     <td>@customer.Email</td>
                     <td>@customer.Tenkh</td>
-                    <td>@customer.Diachi</td>
                     <td>@customer.Sdt</td>
                     <td>@(customer.Gioitinh.HasValue ? (customer.Gioitinh.Value ? "Nam" : "Nữ") : "Unknown")</td>
                     <td>@customer.Ngaysinh</td>
@@ -29,4 +27,3 @@
         </tbody>
     </table>
 </div>
- *@

@@ -1,0 +1,36 @@
+﻿@model ShoesStore.Models.Khachhang
+
+<style>
+    /* Style for the navigation menu */
+    .user-menu {
+        list-style: none;
+        padding: 0;
+    }
+
+        .user-menu li {
+            margin-bottom: 10px;
+        }
+
+        .user-menu a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+            .user-menu a:hover {
+                background-color: #f4f4f4;
+            }
+
+        .user-menu i {
+            margin-right: 10px;
+        }
+</style>
+
+<ul class="user-menu" style="margin-top: 150px;>
+    <li><a href="@Url.Action("UserProfile", "Account")"><i class="fas fa-user"></i> Thông tin tài khoản khách hàng</a></li>
+    <li><a href="#"><i class="fas fa-address-book"></i> Sổ địa chỉ</a></li>
+    <li><a href="#"><i class="fas fa-history"></i> Lịch sử đơn hàng</a></li>
+</ul>

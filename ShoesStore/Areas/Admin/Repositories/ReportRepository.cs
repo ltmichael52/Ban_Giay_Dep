@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using ShoesStore.Areas.Admin.InterfaceRepositories;
+using ShoesStore.Areas.Admin.ViewComponents;
 using ShoesStore.Areas.Admin.ViewModels;
 using ShoesStore.Models;
 
@@ -16,40 +18,76 @@ namespace ShoesStore.Repositories
             _context = context;
         }
 
-        public List<ReportViewModel> GetSaleReportForMonthYear(int month)
+        public List<SalesByMonthViewModel> GetSaleByMonth()
         {
-            var saleReports = _context.Phieumuas
-             .Where(pm => pm.Ngaydat.Month == month && pm.Ngaydat.Year == DateTime.Now.Year)
-             .SelectMany(pm => pm.Chitietphieumuas)
-             .Select(ct => new {
-                 Tendongsp = ct.MaspsizeNavigation.MaspNavigation.MadongsanphamNavigation.Tendongsp, // Assuming Tendongsp is the property representing the product name
-                 ct.Dongia,
-                 ct.Soluong
-             })
-             .ToList();
-
-
-            var aggregatedSaleReports = saleReports
-                .GroupBy(sr => sr.Tendongsp)
-                .Select(group => new ReportViewModel
-                {
-                    Tendongsp = group.Key,
-                    doanhThu = group.Sum(item => item.Dongia * item.Soluong)
-                })
-                .ToList();
-
-            var totalRevenue = aggregatedSaleReports.Sum(sr => sr.doanhThu);
-
-            // Calculate percentages
-            // Calculate percentages
-            foreach (var saleReport in aggregatedSaleReports)
+            List<SalesByMonthViewModel> salebyMonth = new List<SalesByMonthViewModel>();
+            int largestMonth = _context.Phieumuas.Select(x => x.Ngaydat.Month).Max();
+            DateTime datenow = DateTime.Now;
+            for (int i = 1; i <= largestMonth; ++i)
             {
-                saleReport.tyle = totalRevenue != 0 ? (decimal)saleReport.doanhThu / totalRevenue : 0;
+                decimal moneyInMonth = _context.Phieumuas.Where(x => x.Tinhtrang == "Đã duyệt" && x.Ngaydat.Month == i && x.Ngaydat.Year == datenow.Year).Sum(x => x.Tongtien) ?? 0;
+
+                salebyMonth.Add(new SalesByMonthViewModel
+                {
+                    month = i,
+                    sale = moneyInMonth
+                });
             }
 
-
-
-            return aggregatedSaleReports;
+            return salebyMonth;
         }
+
+        public List<SaleByProductViewModel> GetSaleByProduct(int month = 0)
+        {
+            DateTime datenow = DateTime.Now;
+            if (month == 0)
+            {
+                month = _context.Phieumuas.Select(x => x.Ngaydat.Month).Max();
+            }
+            List<SaleByProductViewModel> salebyProduct = new List<SaleByProductViewModel>();
+            List<int> madspInMonth = _context.Chitietphieumuas.Where(x => x.MapmNavigation.Ngaydat.Month == month && x.MapmNavigation.Ngaydat.Year == datenow.Year)
+                                                   .Select(x => x.MaspsizeNavigation.MaspNavigation.Madongsanpham)
+                                                   .Distinct().ToList();
+            foreach (int madongsp in madspInMonth)
+            {
+                decimal money = _context.Chitietphieumuas.Where(x => x.MapmNavigation.Ngaydat.Month == month && x.MapmNavigation.Ngaydat.Year == datenow.Year
+                                                    && x.MaspsizeNavigation.MaspNavigation.Madongsanpham == madongsp).Sum(x => x.Dongia * x.Soluong);
+
+                Dongsanpham dsp = _context.Dongsanphams.Find(madongsp);
+                Sanpham sp = _context.Sanphams.FirstOrDefault(x => x.Madongsanpham == madongsp);
+
+                salebyProduct.Add(new SaleByProductViewModel
+                {
+                    ProductName = dsp.Tendongsp,
+                    Sales = money,
+                });
+
+            }
+            salebyProduct = salebyProduct.OrderByDescending(x => x.Sales).Take(5).ToList();
+            return salebyProduct;
+
+        }
+        public decimal GetTotalRevenue(int month)
+        {
+            // Implement logic to calculate total revenue for the given month
+            // For example:
+            var totalRevenue = _context.Phieumuas
+                .Where(pm => pm.Ngaydat.Month == month && pm.Tinhtrang == "Đã duyệt")
+                .Sum(pm => (decimal?)pm.Tongtien) ?? 0; // Provide default value if null
+            return totalRevenue;
+        }
+
+
+        public int GetTotalProductsSold(int month)
+        {
+            // Implement logic to calculate total products sold for the given month
+            // For example:
+            var totalProductsSold = _context.Chitietphieumuas
+                .Where(ctpm => ctpm.MapmNavigation.Ngaydat.Month == month)
+                .Sum(ctpm => ctpm.Soluong);
+            return totalProductsSold;
+        }
+
+
     }
 }
