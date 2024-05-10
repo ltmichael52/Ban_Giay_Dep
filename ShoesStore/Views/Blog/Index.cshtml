@@ -82,9 +82,7 @@
                         <h5 class="card-title">@blog.Theloai</h5>
                         <p class="card-text">@Html.Raw(blog.Noidung.Substring(0, Math.Min(blog.Noidung.Length, 100)))...</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
                                 <a href="@Url.Action("Detail", "Blog", new { id = blog.Mablog })" class="btn btn-sm btn-outline-secondary">View More</a>
-                            </div>
                         </div>
                     </div>
                 </div>

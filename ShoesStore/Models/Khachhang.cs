@@ -27,7 +27,7 @@ public partial class Khachhang
 
     public virtual ICollection<Sodiachi> Sodiachis {  get; set; }
 
-    public virtual ICollection<Soxu> Soxus { get; set; }
+    public virtual Soxu? SoxuNavigation { get; set; }
 
     public virtual ICollection<Phieumua> Phieumuas { get; set; } = new List<Phieumua>();
 }

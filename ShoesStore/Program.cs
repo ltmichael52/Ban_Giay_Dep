@@ -22,6 +22,7 @@ builder.Services.AddDbContext<ShoesDbContext>(options =>
 });
 builder.Services.AddScoped<IPhieuMuaAdmin, PhieuMuaAdminRepo>();
 builder.Services.AddScoped<IDongsanphamAdmin, DongsanphamAdminRepo>();
+builder.Services.AddScoped<IKhuyenMaiAdmin, KhuyenMaiAdminRepo>();
 builder.Services.AddScoped<INhanvien, NhanvienAdminRepo>();
 builder.Services.AddScoped<IBlogAdmin, BlogAdminRepo>();
 builder.Services.AddScoped<ILoaiAdmin, LoaiAdminRepo>();
@@ -41,6 +42,7 @@ builder.Services.AddScoped<IKhuyenMai, KhuyenMaiRepo>();
 builder.Services.AddScoped<IBannerRepository, BannerRepository>();
 builder.Services.AddScoped<IBinhLuan, BinhLuanRepository>();
 builder.Services.AddScoped<IReportRepository, ReportRepository>();
+builder.Services.AddScoped<IAddressNoteBook, AddressNoteBookRepo>();
 var app = builder.Build();
 app.UseSession();
 
@@ -61,10 +63,10 @@ app.UseAuthorization();
 app.MapAreaControllerRoute(
     name: "Admin",
     areaName: "Admin",
-    pattern: "Admin/{controller=PhieuMuaAdmin}/{action=Index}/{id?}");
+    pattern: "Admin/{controller=HomeAdmin}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=PhieuMua}/{action=ThanhToan}/{id?}");
 
 app.Run();

@@ -11,7 +11,6 @@ using System.Security.Claims;
 namespace ShoesStore.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AuthenticationM_S]
     public class PhieuMuaAdminController : Controller
     {
         private readonly IPhieuMuaAdmin _pmrepo;

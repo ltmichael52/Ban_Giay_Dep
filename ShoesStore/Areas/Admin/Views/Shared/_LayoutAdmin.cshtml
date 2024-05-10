@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="@Url.Content("~/LayoutAdmin/assets/css/style.css")">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="@Url.Content("~/karma-master/img/logo.png")"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
     .nav-profile-text {
@@ -33,7 +34,8 @@
     }
     @RenderSection("Scripts",required:false)
 </style>
-<script src="https://cdn.tiny.cloud/1/9ln64zhofl4jjb04f6c3ux451qncnpbd0p1piax2i29zw0uv/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/ip5r97bymexx4rzxftm3j243xzfue1jewjos0nyinkij7z9g/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tinymce.init({
             selector: 'textarea#Noidung',
@@ -52,7 +54,7 @@
     <div class="container-scroller">
         <!-- partial:../../partials/_navbar.html -->
         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-            <a class="navbar-brand logo_h"><img src="~/karma-master/img/logo.png" alt=""></a>
+            <a class="navbar-brand logo_h" asp-controller="HomeAdmin" asp-action="Index"><img src="~/karma-master/img/logo.png" alt=""></a>
             <div class="navbar-menu-wrapper d-flex align-items-stretch">
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                     <span class="mdi mdi-menu"></span>
@@ -135,6 +137,13 @@
                     <li class="nav-item">
                          <a class="nav-link" asp-action="Index" asp-controller="PhieuMuaAdmin">
                                         <span class="menu-title">Order</span>
+                                        <i class="mdi mdi-home menu-icon"></i>
+                                    </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" asp-action="Index" asp-controller="KhuyenMaiAdmin">
+                                        <span class="menu-title">Promotion</span>
                                         <i class="mdi mdi-home menu-icon"></i>
                                     </a>
                         

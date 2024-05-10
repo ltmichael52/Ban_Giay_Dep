@@ -17,6 +17,14 @@ public partial class Phieumua
 
     public string Tinhtrang { get; set; } = null!;
 
+    public string Tennguoinhan { get; set; } = null!;
+
+    public string Sdtnguoinhan { get; set; } = null!;
+
+    public string Emailnguoinhan { get; set; } = null!;
+
+    public string Diachinguoinhan { get; set; }
+
     public int Mapttt { get; set; }
 
     public string? Ghichu { get; set; }

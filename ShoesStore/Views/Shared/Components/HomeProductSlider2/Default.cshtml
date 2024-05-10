@@ -86,7 +86,7 @@
 
     /* Hide scrollbar */
     #productSlider_2 {
-        scrollbar-width: none; /* Firefox */
+        scrollbar-width: auto; /* Firefox */
         -ms-overflow-style: none; /* IE and Edge */
     }
 
@@ -102,11 +102,11 @@
         @foreach (var spHomeView in Model)
         {
             <div class="product-card_2" >
+                
                 <div class="product-image_2">
                      <a asp-controller="SanPham" asp-action="HienThiSanpham"
                        asp-route-madongsanpham="@spHomeView.sp.Madongsanpham" asp-route-masp="@spHomeView.sp.Masp">
                     <img src="~/img/@spHomeView.sp.Madongsanpham/@spHomeView.sp.Anhdaidien" alt="Product Image">
-                    <!-- Text in the top right corner -->
                     <p class="text-top-right"><strong>NEW</strong></p>
                     </a>
                 </div>
@@ -114,7 +114,6 @@
                     <h5 style="text-align:left" class=" mt-2">@spHomeView.sp.MadongsanphamNavigation.Tendongsp @spHomeView.sp.MamauNavigation.Tenmau</h5>
                     <h5 style="text-align:left">@spHomeView.sp.MadongsanphamNavigation.Giagoc.ToString("#,##0")đ</h5>
                 </div>
-                <!-- View Details Button -->
                 <a class="btn btn-primary view-details-btn"
                    asp-controller="SanPham" asp-action="HienThiSanpham"
                    asp-route-madongsanpham="@spHomeView.sp.Madongsanpham" asp-route-masp="@spHomeView.sp.Masp">View Details</a>

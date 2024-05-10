@@ -1,0 +1,52 @@
+﻿@using ShoesStore.ViewModels;
+<style>
+    /* Custom CSS for Product Slider */
+    .product-card_2 {
+        position: relative; /* Required for absolute positioning of button */
+        flex: 0 0 auto;
+        height: 80px;
+    }
+
+    #productSlider_2:hover {
+        scrollbar-width: auto;
+    }
+
+    /* Hide scrollbar */
+    #productSlider_2 {
+        overflow-x: hidden; /* Hide the horizontal scrollbar */
+        overflow-y: auto;
+        scrollbar-width: none; /* Hide the scrollbar */
+    }
+
+    .voucher-details {
+        border: solid 1px #ccc;
+        padding:10px;
+        color: black; /* Set default text color */
+        transition: background-color 0.3s; /* Smooth transition for background color change */
+        border-radius:20px;
+    }
+
+        .voucher-details:hover {
+            background-color: black; /* Change background color on hover */
+            color: white; /* Change text color on hover */
+        }
+
+            .voucher-details:hover h3 {
+                color: white; /* Change h3 text color on hover */
+            }
+</style>
+
+<section class="container position-relative mt-2 mb-2">
+    <!-- Adjusted margin-top here -->
+    <div id="productSlider_2" class="row flex-row flex-nowrap overflow-auto" style="border-top: solid 1px #ccc;padding-top:15px">
+        @for (int i = 0; i < 5; ++i)
+        {
+            <div class="product-card_2">
+                <div class="voucher-details">
+                    <h3 style="padding-bottom:0px;margin-bottom:0px;border:none">KARS05</h3>
+                    <p style="margin-bottom:0px">Discount 50K for order from 590K</p>
+                </div>
+            </div>
+        }
+    </div>
+</section>
