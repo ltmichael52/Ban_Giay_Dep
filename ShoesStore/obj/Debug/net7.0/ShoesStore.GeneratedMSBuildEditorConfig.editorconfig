@@ -216,12 +216,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2h1eWVuTWFpXFNhbGVJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Uni/ShoesStore/ShoesStore/Views/PhieuMua/AddressNoteBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhpZXVNdWFcQWRkcmVzc05vdGVCb29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Uni/ShoesStore/ShoesStore/Views/PhieuMua/Confirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhpZXVNdWFcQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Uni/ShoesStore/ShoesStore/Views/PhieuMua/MethodPurchase.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhpZXVNdWFcTWV0aG9kUHVyY2hhc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Uni/ShoesStore/ShoesStore/Views/PhieuMua/ThanhToan.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhpZXVNdWFcVGhhbmhUb2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Uni/ShoesStore/ShoesStore/Views/PhieuMua/_PartialViewOrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhpZXVNdWFcX1BhcnRpYWxWaWV3T3JkZXJEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Uni/ShoesStore/ShoesStore/Views/SanPham/HienThiSanpham.cshtml]
@@ -268,6 +280,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2hvd0NvbW1lbnRcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Uni/ShoesStore/ShoesStore/Views/Shared/Components/Voucher/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVm91Y2hlclxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Uni/ShoesStore/ShoesStore/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -286,6 +302,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Uni/ShoesStore/ShoesStore/Views/ShoppingCart/ViewCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0XFZpZXdDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Uni/ShoesStore/ShoesStore/Views/TrackingOrder/Tracking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tpbmdPcmRlclxUcmFja2luZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Uni/ShoesStore/ShoesStore/Views/_ViewImports.cshtml]

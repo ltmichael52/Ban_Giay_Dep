@@ -9,5 +9,8 @@ namespace ShoesStore.ViewModels
         public string? GhiChu {  get; set; }
         public int Mapttt {  get; set; }
 
+         public string HoTen {  get; set; }
+        public string Sdt {  get; set; }
+        public List<Sodiachi> sodiachis {  get; set; }
     }
 }

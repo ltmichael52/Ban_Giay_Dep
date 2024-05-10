@@ -35,7 +35,6 @@
 	<link rel="stylesheet" href="~/karma-master/css/magnific-popup.css">
 	<link rel="stylesheet" href="~/karma-master/css/main.css">
 	<link rel="stylesheet" href="~/css/site.css">
-
 	<script src="~/js/site.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="~/karma-master/js/vendor/jquery-2.2.4.min.js"></script>
@@ -54,6 +53,7 @@
 	<script src="~/karma-master/js/gmaps.min.js"></script>
 	<script src="~/karma-master/js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 	@{
 		ViewBag.Index = 0;
 	}
@@ -95,6 +95,10 @@
 							@await Component.InvokeAsync("LoaiSP")
 							<li class="nav-item submenu dropdown">
 								<a class="nav-link dropdown-toggle" asp-action="Index" asp-controller="Blog">Blog</a>
+
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a class="nav-link dropdown-toggle" asp-action="Tracking" asp-controller="TrackingOrder">Tracking</a>
 
 							</li>
 							<li class="nav-item submenu dropdown">
