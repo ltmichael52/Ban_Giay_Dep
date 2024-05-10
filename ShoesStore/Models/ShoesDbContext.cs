@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Logging;
 
 namespace ShoesStore.Models;
 
@@ -53,12 +54,55 @@ public partial class ShoesDbContext : DbContext
 
     public virtual DbSet<Taikhoan> Taikhoans { get; set; }
 
+    public virtual DbSet<Tinh> Tinhs { get; set; }
+
+    public virtual DbSet<Quan> Quans { get; set; }
+
+    public virtual DbSet<Phuong> Phuongs { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Data Source=MICHAEL;Initial Catalog=ShoesStore2;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Tinh>(entity =>
+        {
+            entity.HasKey(e => e.Matinh);
+            entity.ToTable("TINH");
+            entity.Property(e => e.Matinh).HasColumnName("MATINH").ValueGeneratedNever();
+            entity.Property(e => e.Tentinh).HasMaxLength(500)
+                    .HasColumnName("TENTINH");
+        });
+
+        modelBuilder.Entity<Quan>(entity =>
+        {
+            entity.HasKey(e => e.Maquan);
+            entity.ToTable("QUAN");
+            entity.Property(e => e.Maquan).HasColumnName("MAQUAN").ValueGeneratedNever();
+            entity.Property(e => e.Tenquan).HasMaxLength(500)
+                    .HasColumnName("TENQUAN");
+            entity.Property(e => e.Matinh).HasColumnName("MATINH");
+            entity.HasOne(e => e.MatinhNavigation).WithMany(d => d.Quans)
+                .HasForeignKey(e => e.Matinh)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_QUAN_TINH");
+        });
+
+        modelBuilder.Entity<Phuong>(entity =>
+        {
+            entity.HasKey(e => e.Maphuong);
+            entity.ToTable("PHUONG");
+            entity.Property(e => e.Maphuong).HasColumnName("MAPHUONG").ValueGeneratedNever();
+            entity.Property(e => e.Tenphuong).HasMaxLength(500)
+                .HasColumnName("TENPHUONG");
+            entity.Property(e => e.Maquan).HasColumnName("MAQUAN");
+            entity.HasOne(e => e.MaquanNavigation).WithMany(d => d.Phuongs)
+                .HasForeignKey(e => e.Maquan)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_QUAN_PHUONG");
+        });
+
         modelBuilder.Entity<Banner>(entity =>
         {
             entity.HasKey(e => e.Mabanner);
@@ -392,6 +436,18 @@ public partial class ShoesDbContext : DbContext
             entity.Property(e => e.Lydohuydon)
                 .HasMaxLength(255)
                 .HasColumnName("LYDOHUYDON");
+            entity.Property(e => e.Tennguoinhan)
+                .HasMaxLength(255)
+                .HasColumnName("TENNGUOINHAN");
+            entity.Property(e => e.Sdtnguoinhan)
+                .HasMaxLength(255)
+                .HasColumnName("SDTNGUOINHAN");
+            entity.Property(e => e.Emailnguoinhan)
+                .HasMaxLength(255)
+                .HasColumnName("EMAILNGUOINHAN");
+            entity.Property(e => e.Diachinguoinhan)
+                .HasMaxLength(255)
+                .HasColumnName("DIACHINGUOINHAN");
             entity.Property(e => e.Makh).HasColumnName("MAKH");
             entity.Property(e => e.Manv).HasColumnName("MANV");
             entity.Property(e => e.Mapttt).HasColumnName("MAPTTT");

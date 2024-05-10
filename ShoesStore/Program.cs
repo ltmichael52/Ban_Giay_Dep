@@ -42,6 +42,7 @@ builder.Services.AddScoped<IKhuyenMai, KhuyenMaiRepo>();
 builder.Services.AddScoped<IBannerRepository, BannerRepository>();
 builder.Services.AddScoped<IBinhLuan, BinhLuanRepository>();
 builder.Services.AddScoped<IReportRepository, ReportRepository>();
+builder.Services.AddScoped<IAddressNoteBook, AddressNoteBookRepo>();
 var app = builder.Build();
 app.UseSession();
 
@@ -66,6 +67,6 @@ app.MapAreaControllerRoute(
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=PhieuMua}/{action=ThanhToan}/{id?}");
 
 app.Run();

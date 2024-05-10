@@ -1,53 +1,63 @@
-﻿@* Bth là có model , là chung view -->tạo viewmodel, Chung controller
-    - Dùng view component , thì mình tách ra 2 cái viewmodel riêng được 
-*@
-@{
+﻿@{
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Index";
 }
 
+<style>
+    .custom-card {
+        height: 200px; 
+    }
+</style>
+
 <div class="container">
     <div class="row">
-        <div class="col">
-            <div class="card">
+        <div class="col-md-2 p-3 mx-2">
+            <div class="card bg-gradient-danger card-img-holder text-white custom-card w-100">
                 <div class="card-body">
-                    <h5 class="card-title">Tổng doanh thu (tháng hiện tại)</h5>
-                    <p class="card-text">@ViewBag.TotalRevenue</p>
+                    <h4 class="font-weight-normal mb-3">
+                        Total Sales (Current Month) <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5">@(ViewBag.TotalRevenue.ToString("#,##0"))₫</h2>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card">
+        <div class="col-md-2 p-3 mx-2">
+            <div class="card bg-gradient-info card-img-holder text-white custom-card w-100">
                 <div class="card-body">
-                    <h5 class="card-title">Tổng sản phẩm đã bán (tháng hiện tại)</h5>
-                    <p class="card-text">@ViewBag.TotalProductsSold</p>
+                    <h4 class="font-weight-normal mb-3">
+                        Total Orders (Current Month) <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5">@ViewBag.TotalProductsSold</h2>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card">
+        <div class="col-md-2 p-3 mx-2">
+            <div class="card bg-gradient-success card-img-holder text-white custom-card w-100">
                 <div class="card-body">
-                    <h5 class="card-title">Tổng đơn hàng (tháng hiện tại)</h5>
-                    <p class="card-text">@ViewBag.TotalOrders</p>
+                    <h4 class="font-weight-normal mb-3">
+                        Total Orders (Current Month) <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5">@ViewBag.TotalOrders</h2>
                 </div>
             </div>
         </div>
-        @if (ViewBag.TotalEmployees > 0)
-        {
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Số lượng nhân viên</h5>
-                        <p class="card-text">@ViewBag.TotalEmployees</p>
-                    </div>
+        <div class="col-md-2 p-3 mx-2">
+            <div class="card bg-gradient-primary card-img-holder text-white custom-card w-100">
+                <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">
+                        Total employee amount <i class="mdi mdi-account mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5">@ViewBag.TotalEmployees</h2>
                 </div>
             </div>
-        }
-        <div class="col">
-            <div class="card">
+        </div>
+        <div class="col-md-2 p-3 mx-2">
+            <div class="card bg-gradient-warning card-img-holder text-white custom-card w-100">
                 <div class="card-body">
-                    <h5 class="card-title">Số lượng khách hàng (tổng)</h5>
-                    <p class="card-text">@ViewBag.TotalCustomers</p>
+                    <h4 class="font-weight-normal mb-3">
+                        Total customer amount <i class="mdi mdi-account mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5">@ViewBag.TotalCustomers</h2>
                 </div>
             </div>
         </div>
@@ -55,3 +65,4 @@
 </div>
 
 @await Component.InvokeAsync("SaleChart")
+

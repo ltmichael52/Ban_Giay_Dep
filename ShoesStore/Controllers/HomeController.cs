@@ -6,12 +6,14 @@ using System.Diagnostics;
 using System.Net.Mail;
 using System.Net;
 using System.Diagnostics.Eventing.Reader;
+using ShoesStore.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ShoesStore.Controllers
 {
 	public class HomeController : Controller
 	{
-		ShoesDbContext _context; IKhuyenMai kmRepo;
+		ShoesDbContext _context; IKhuyenMai kmRepo; 
 		public HomeController(ShoesDbContext context, IKhuyenMai km)
 		{
 			_context = context;
@@ -29,6 +31,8 @@ namespace ShoesStore.Controllers
 
 			return View(banners);
 		}
+
+	
 		public IActionResult Zalo()
 		{
 			return View();

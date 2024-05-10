@@ -1,0 +1,47 @@
+﻿@using ShoesStore.ViewModels
+@model PhieuMuaViewModel
+
+<div class="col-md-6 form-group p_star">
+    <label for="exampleFormControlInput1" class="form-label" asp-for="@Model.khInfo.Tenkh"><strong>Customer name</strong></label>
+    <input readonly type="text" class="form-control" id="exampleFormControlInput1" placeholder="Customer name" asp-for="@Model.khInfo.Tenkh">
+    <span asp-validation-for="@Model.khInfo.Tenkh" class="text-danger"></span>
+</div>
+<div class="col-md-6 form-group p_star">
+    <label for="exampleFormControlInput1" class="form-label" asp-for="@Model.khInfo.Gioitinh"><strong>Gender</strong></label>
+    <input readonly type="text" class="form-control" id="exampleFormControlInput1" asp-for="@Model.khInfo.Gioitinh"
+           value="@(Model.khInfo.Gioitinh == true ? "Male" : "Female")">
+</div>
+<div class="col-md-6 form-group p_star">
+    <label for="exampleFormControlInput1" class="form-label" asp-for="@Model.khInfo.Sdt"><strong>Phone number</strong></label>
+    <input readonly type="number" class="form-control" id="exampleFormControlInput1" placeholder="Phone number" asp-for="@Model.khInfo.Sdt">
+    <span asp-validation-for="@Model.khInfo.Sdt" class="text-danger"></span>
+</div>
+<div class="col-md-6 form-group p_star">
+    <label for="exampleFormControlInput1" class="form-label" asp-for="@Model.khInfo.Email"><strong>Email</strong></label>
+    <input readonly type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" asp-for="@Model.khInfo.Email">
+    <span asp-validation-for="@Model.khInfo.Email" class="text-danger"></span>
+</div>
+<div class="col-md-12 form-group p_star">
+    <label for="exampleFormControlInput1" class="form-label"><strong>Address</strong></label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Address">
+    @* <span asp-validation-for="@Model.khInfo.Diachi" class="text-danger"></span> *@
+</div>
+<div class="col-md-12 form-group p_star">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-select">
+                <option value="">Choose Province</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-select">
+                <option value="">Choose District</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-select">
+                <option value="">Choose Ward</option>
+            </select>
+        </div>
+    </div>
+</div>
