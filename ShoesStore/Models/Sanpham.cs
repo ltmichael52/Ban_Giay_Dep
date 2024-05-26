@@ -18,11 +18,13 @@ public partial class Sanpham
 
     public string Anhdegiay { get; set; } = null!;
 
-	[JsonIgnore]
-    public virtual Dongsanpham MadongsanphamNavigation { get; set; } = null!;
-	[JsonIgnore]
+    public string? Video { get; set; }
 
-	public virtual Mau MamauNavigation { get; set; } = null!;
+    [JsonIgnore]
+    public virtual Dongsanpham MadongsanphamNavigation { get; set; } = null!;
+    [JsonIgnore]
+
+    public virtual Mau MamauNavigation { get; set; } = null!;
 
     public virtual ICollection<Sanphamsize> Sanphamsizes { get; set; } = new List<Sanphamsize>();
     public enum TrangThaiEnum
@@ -33,6 +35,5 @@ public partial class Sanpham
         New = 4
     }
 
-	public TrangThaiEnum TrangThai { get; set; }
+    public TrangThaiEnum TrangThai { get; set; }
 }
-

@@ -21,9 +21,6 @@ namespace ShoesStore.Controllers
 		}
 		public IActionResult Index()
 		{
-            
-
-
             var banners = _context.Banners.Where(b => b.Hoatdong).ToList();
 			int checkKm = kmRepo.GetAllKhuyenMaiToday("","",0,0,0, -1).Count == 0 ? 0 : 1;
 

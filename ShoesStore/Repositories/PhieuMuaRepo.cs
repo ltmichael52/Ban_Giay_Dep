@@ -1,4 +1,5 @@
-﻿using ShoesStore.InterfaceRepositories;
+﻿using Microsoft.EntityFrameworkCore;
+using ShoesStore.InterfaceRepositories;
 using ShoesStore.Models;
 using ShoesStore.ViewModels;
 
@@ -14,19 +15,23 @@ namespace ShoesStore.Repositories
 
         public void AddPhieuMua(PhieuMuaViewModel phieuMua)
         {
-            decimal tongtien = 0;
-            foreach (ShoppingCartItem cartItem in phieuMua.listcartItem)
-            {
-                if(cartItem.PhanTramGiam > 1)
-                {
-                    tongtien += cartItem.Quantity * (cartItem.GiaGoc - cartItem.GiaGoc * cartItem.PhanTramGiam / 100);
-                }
-                else
-                {
-                    tongtien += cartItem.Quantity * cartItem.GiaGoc;
-                }
-            }
+            //decimal tongtien = 0;
+            //foreach (ShoppingCartItem cartItem in phieuMua.listcartItem)
+            //{
+            //    if(cartItem.PhanTramGiam > 1)
+            //    {
+            //        tongtien += cartItem.Quantity * (cartItem.GiaGoc - cartItem.GiaGoc * cartItem.PhanTramGiam / 100);
+            //    }
+            //    else
+            //    {
+            //        tongtien += cartItem.Quantity * cartItem.GiaGoc;
+            //    }
+            //}
+            string tentinh = context.Tinhs.FirstOrDefault(x => x.Matinh == phieuMua.maTinh).Tentinh;
+            string tenquan = context.Quans.FirstOrDefault(x => x.Maquan == phieuMua.maQuan).Tenquan; 
+            string tenphuong = context.Phuongs.FirstOrDefault(x => x.Maphuong == phieuMua.maPhuong).Tenphuong;
 
+            string Diachi = phieuMua.Diachi + ", "+tentinh +", "+tenquan+", "+tenphuong;
             Phieumua newpm = new Phieumua()
             {
                 Ghichu = phieuMua.GhiChu,
@@ -35,7 +40,12 @@ namespace ShoesStore.Repositories
                 Tinhtrang = "Chưa duyệt",
                 Mapttt = phieuMua.Mapttt,
                 MaptttNavigation = context.Phuongthucthanhtoans.Find(phieuMua.Mapttt),
-                Tongtien = tongtien
+                Tongtien = phieuMua.totalCost,
+                Tennguoinhan = phieuMua.HoTen,
+                Sdtnguoinhan = phieuMua.Sdt,
+                Emailnguoinhan = phieuMua.Email,
+                Diachinguoinhan = Diachi,
+                Mavoucher = phieuMua.Choosenvoucher.Mavoucher
             };
             
             context.Phieumuas.Add(newpm);
@@ -55,6 +65,41 @@ namespace ShoesStore.Repositories
 
             context.Chitietphieumuas.AddRange(ctpmList);
             context.SaveChanges();
+
+        }
+
+        public List<Phieumua> GetOrderHistoryByEmail(string email)
+        {
+            var khachhang = context.Khachhangs.FirstOrDefault(kh => kh.Email == email);
+            if (khachhang == null) return new List<Phieumua>();
+            return context.Phieumuas.Where(pm => pm.Makh == khachhang.Makh)
+                .Include(p => p.Chitietphieumuas)
+                .ThenInclude(c => c.MaspsizeNavigation)
+                .ThenInclude(s => s.MaspNavigation)
+                .ThenInclude(s => s.MadongsanphamNavigation)
+                .Include(p => p.Chitietphieumuas)
+                .ThenInclude(c => c.MaspsizeNavigation)
+                .ThenInclude(s => s.MasizeNavigation)
+                .Include(p => p.Chitietphieumuas)
+                .ThenInclude(c => c.MaspsizeNavigation)
+                .ThenInclude(s => s.MaspNavigation)
+                .ThenInclude(s => s.MamauNavigation).ToList();
+        }
+        public Phieumua GetOrderById(int id)
+        {
+            return context.Phieumuas
+                .Include(p => p.Chitietphieumuas)
+                .ThenInclude(c => c.MaspsizeNavigation)
+                .ThenInclude(s => s.MaspNavigation)
+                .ThenInclude(s => s.MadongsanphamNavigation)
+                .Include(p => p.Chitietphieumuas)
+                .ThenInclude(c => c.MaspsizeNavigation)
+                .ThenInclude(s => s.MasizeNavigation)
+                .Include(p => p.Chitietphieumuas)
+                .ThenInclude(c => c.MaspsizeNavigation)
+                .ThenInclude(s => s.MaspNavigation)
+                .ThenInclude(s => s.MamauNavigation)
+                .FirstOrDefault(p => p.Mapm == id);
 
         }
     }

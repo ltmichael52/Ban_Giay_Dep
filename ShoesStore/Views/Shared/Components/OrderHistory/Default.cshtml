@@ -1,0 +1,109 @@
+﻿@model List<ShoesStore.Models.Phieumua>
+
+<h3 style="text-align: center;">Order History</h3>
+@if (Model.Count > 0)
+{
+    <table class="table table-striped" style="text-align: center;">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Date Placed</th>
+                <th>Status</th>
+                <th>Total Amount</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Mapm</td>
+                    <td>@order.Ngaydat.ToString("dd/MM/yyyy")</td>
+                    <td>@order.Tinhtrang</td>
+                    <td>@order.Tongtien?.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                    <td>
+                        @* <a href="@Url.Action("OrderDetail", "PhieuMua", new { id = order.Mapm })" class="btn btn-primary">Detail</a> *@
+                        <!-- Button trigger modal -->
+                        <button type="button" class="genric-btn info radius" data-toggle="modal" data-target="#exampleModal_@order.Mapm">
+                            Detail
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal_@order.Mapm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document" style="max-width:60%">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Order Detail</h5>  <p>Status: @order.Tinhtrang</p>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                       
+                                        <h4 >Order ID: @order.Mapm</h4>
+                                        <div>
+                                            <div class="row ">
+                                                <div class="col-6" style="text-align:left">
+                                                    <p>Date Placed: @order.Ngaydat</p>
+                                                </div>
+                                                <div class="col-6 d-flex justify-content-end">
+                                                    <p>Total Amount: @order.Tongtien?.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</p>
+                                                </div>
+                                            </div>
+                                            <div style="text-align:left">
+                                                <p style="margin-bottom:0px">Receiver name:    @order.Tennguoinhan</p>
+                                                <p style="margin-bottom:0px">Phone number:     @order.Sdtnguoinhan</p>
+                                                <p style="margin-bottom:0px">Receiver address: @order.Diachinguoinhan</p>
+                                                <p>Note: @order.Ghichu</p>
+                                            </div>
+                                            
+
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Product Name</th>
+                                                        <th>Image</th>
+                                                        <th>Quantity</th>
+                                                        <th>Size</th>
+                                                        <th>Color</th>
+                                                        <th>Unit Price</th>
+                                                        <th>Total Price</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var item in order.Chitietphieumuas)
+                                                    {
+                                                        var totalPrice = item.Soluong * item.Dongia;
+                                                        <tr>
+                                                            <td>@item.MaspsizeNavigation.MaspNavigation.MadongsanphamNavigation.Tendongsp</td>
+                                                            <td>
+                                                                <img src="~/img/@item.MaspsizeNavigation.MaspNavigation.Madongsanpham/@item.MaspsizeNavigation.MaspNavigation.Anhdaidien"
+                                                                     style="width:60px;height:60px;border-radius:3px;" />
+                                                            </td>
+                                                            <td>@item.Soluong</td>
+                                                            <td>@item.MaspsizeNavigation.MasizeNavigation.Tensize</td>
+                                                            <td>@item.MaspsizeNavigation.MaspNavigation.MamauNavigation.Tenmau</td>
+                                                            <td>@item.Dongia.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                                                            <td>@totalPrice.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="genric-btn default radius" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>You have no orders yet!</p>
+}

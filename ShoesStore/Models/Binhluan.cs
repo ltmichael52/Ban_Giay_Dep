@@ -14,7 +14,9 @@ public partial class Binhluan
     public int Madongsanpham { get; set; }
 
     public int Makh { get; set; }
+
     public int Rating { get; set; }
+
     public virtual Dongsanpham MadongsanphamNavigation { get; set; } = null!;
 
     public virtual Khachhang MakhNavigation { get; set; } = null!;

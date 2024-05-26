@@ -3,6 +3,7 @@ using ShoesStore.InterfaceRepositories;
 using ShoesStore.Models;
 using ShoesStore.ViewModels;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ShoesStore.Repositories
 {
@@ -92,6 +93,25 @@ namespace ShoesStore.Repositories
 
 			return spViewHome;
 
+		}
+
+		public FavouriteProductsItem GetFavProById(int id)
+		{
+			Sanpham sp = _context.Sanphams.FirstOrDefault(x => x.Masp == id);
+			Dongsanpham dsp = _context.Dongsanphams.FirstOrDefault(x => x.Madongsanpham == sp.Madongsanpham);
+			DateTime today = DateTime.Now;
+			int phantramgiam = _context.Khuyenmais.FirstOrDefault(x => x.Madongsanphams.Contains(dsp) && x.Ngaybd <= today && x.Ngaykt >= today)?.Phantramgiam ?? 0;
+			FavouriteProductsItem favPro = new FavouriteProductsItem
+			{
+				Id= id,
+				Madongsp = dsp.Madongsanpham,
+				Tensp =dsp.Tendongsp,
+				Hinhanh = sp.Anhdaidien,
+				Gia = dsp.Giagoc,
+				Phantramgiam = phantramgiam
+			};
+
+			return favPro;
 		}
 	}
 }

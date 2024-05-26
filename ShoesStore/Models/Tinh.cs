@@ -1,10 +1,13 @@
-﻿namespace ShoesStore.Models
-{
-    public class Tinh
-    {
-        public int Matinh {  get; set; }
-        public string Tentinh { get; set; }
+﻿using System;
+using System.Collections.Generic;
 
-        public virtual ICollection<Quan> Quans { get; set; }
-    }
+namespace ShoesStore.Models;
+
+public partial class Tinh
+{
+    public int Matinh { get; set; }
+
+    public string Tentinh { get; set; } = null!;
+
+    public virtual ICollection<Quan> Quans { get; set; } = new List<Quan>();
 }

@@ -16,7 +16,7 @@ namespace ShoesStore.Controllers
         ISize _size;
         ISanphamSize _tkho;
         IMau _mau; IKhuyenMai kmRepo;
-        public ShoppingCartController(ISanpham productDetail, IDongSanpham product, ISize sz, ISanphamSize tkho, IMau mau,IKhuyenMai kmRepo)
+        public ShoppingCartController(ISanpham productDetail, IDongSanpham product, ISize sz, ISanphamSize tkho, IMau mau, IKhuyenMai kmRepo)
         {
             sanphamrepo = productDetail;
             _product = product;
@@ -87,7 +87,7 @@ namespace ShoesStore.Controllers
             }
 
             HttpContext.Session.Set("Cart", cartItems);
-            return RedirectToAction("ViewCart");
+            return PartialView("PartialCartList",cartItems);
         }
 
 
@@ -104,7 +104,7 @@ namespace ShoesStore.Controllers
             }
             HttpContext.Session.Set("Cart", cartItems);
 
-            return RedirectToAction("ViewCart");
+            return PartialView("PartialCartList", cartItems);
         }
 
         public IActionResult Delete(int Masp, string tenSize)
@@ -121,11 +121,11 @@ namespace ShoesStore.Controllers
 
             HttpContext.Session.Set("Cart", cartItems);
 
-            return RedirectToAction("ViewCart");
+            return PartialView("PartialCartList", cartItems);
 
         }
 
 
-       
+
     }
 }

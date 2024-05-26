@@ -4,17 +4,21 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using ShoesStore.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using ShoesStore.InterfaceRepositories;
+using ShoesStore.Repositories;
 
 namespace ShoesStore.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly ShoesDbContext _db;
+        private readonly ShoesDbContext _db;IAddressNoteBook addressRepo; IKhachhang khRepo;
 
         // Constructor injection để inject ShoesDbContext vào Controller
-        public AccountController(ShoesDbContext db)
+        public AccountController(ShoesDbContext db,IAddressNoteBook addressRepo,IKhachhang khRepo)
         {
             _db = db;
+            this.addressRepo = addressRepo;
+            this.khRepo = khRepo;
         }
 
         public IActionResult Register()
@@ -79,7 +83,14 @@ namespace ShoesStore.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
-
+        public IActionResult AddAddress(int province, int district, int ward, string address, string tennguoinhan, string sdtnguoinhan)
+        {
+            string email = HttpContext.Session.GetString("Email") ?? "lephat@gmail.com";
+            Khachhang kh = khRepo.GetCurrentKh(email);
+            addressRepo.AddAddressNote(province, district, ward, address, kh.Makh, tennguoinhan, sdtnguoinhan);
+            List<Sodiachi> sdc = addressRepo.GetAllAddressNote();
+            return PartialView("AddressBookPartialView",sdc);
+        }
         // POST: /Account/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -135,14 +146,14 @@ namespace ShoesStore.Controllers
         public IActionResult UserProfile()
         {
             // Kiểm tra xem người dùng đã đăng nhập hay chưa
-            if (HttpContext.Session.GetString("Email") == null)
-            {
-                // Nếu chưa đăng nhập, chuyển hướng đến trang Login
-                return RedirectToAction("Login", "Account");
-            }
+            //if (HttpContext.Session.GetString("Email") == null)
+            //{
+            //    // Nếu chưa đăng nhập, chuyển hướng đến trang Login
+            //    return RedirectToAction("Login", "Account");
+            //}
 
             // Lấy thông tin tài khoản khách hàng từ Session
-            string userEmail = HttpContext.Session.GetString("Email");
+            string userEmail = /*HttpContext.Session.GetString("Email")*/ "lephat@gmail.com";
             var user = _db.Taikhoans
                             .Include(t => t.Khachhang)
                             .FirstOrDefault(x => x.Email == userEmail);
@@ -154,20 +165,31 @@ namespace ShoesStore.Controllers
 
             // Nếu không tìm thấy thông tin, chuyển hướng về trang Home
             return RedirectToAction("Index", "Home");
+        }
+
+
+        public IActionResult Getuserprofile()
+        {
+            return ViewComponent("UserProfile");
+        }
+
+        public IActionResult AddressBook()
+        {
+            return ViewComponent("AddressBook");
         }
 
         // GET: /Account/ChangeProfile
         public IActionResult ChangeProfile()
         {
             // Kiểm tra xem người dùng đã đăng nhập hay chưa
-            if (HttpContext.Session.GetString("Email") == null)
-            {
-                // Nếu chưa đăng nhập, chuyển hướng đến trang Login
-                return RedirectToAction("Login", "Account");
-            }
+            ////if (HttpContext.Session.GetString("Email") == null)
+            ////{
+            ////    // Nếu chưa đăng nhập, chuyển hướng đến trang Login
+            ////    return RedirectToAction("Login", "Account");
+            ////}
 
             // Lấy thông tin tài khoản khách hàng từ Session
-            string userEmail = HttpContext.Session.GetString("Email");
+            string userEmail = /*HttpContext.Session.GetString("Email") ??*/ "lephat@gmail.com";
             var user = _db.Taikhoans
                             .Include(t => t.Khachhang)
                             .FirstOrDefault(x => x.Email == userEmail);
@@ -181,19 +203,18 @@ namespace ShoesStore.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult ChangeProfile(string tenkh, string sdt, bool gioitinh, DateTime? ngaysinh)
+        //[ValidateAntiForgeryToken]
+        public IActionResult ChangeProfileUpdate(string tenkh, string sdt, bool gioitinh, DateTime? ngaysinh)
         {
             // Kiểm tra xem người dùng đã đăng nhập hay chưa
-            if (HttpContext.Session.GetString("Email") == null)
-            {
-                // Nếu chưa đăng nhập, chuyển hướng đến trang Login
-                return RedirectToAction("Login", "Account");
-            }
+            //if (HttpContext.Session.GetString("Email") == null)
+            //{
+            //    // Nếu chưa đăng nhập, chuyển hướng đến trang Login
+            //    return RedirectToAction("Login", "Account");
+            //}
 
             // Lấy email của người dùng từ Session
-            string userEmail = HttpContext.Session.GetString("Email");
+            string userEmail = /*HttpContext.Session.GetString("Email")*/ "lephat@gmail.com";
 
             // Tìm thông tin khách hàng dựa trên email
             var customer = _db.Khachhangs.FirstOrDefault(kh => kh.Email == userEmail);
@@ -206,16 +227,20 @@ namespace ShoesStore.Controllers
                 customer.Gioitinh = gioitinh;
                 customer.Ngaysinh = ngaysinh;
 
+                _db.Khachhangs.Update(customer);
                 _db.SaveChanges();
 
                 // Trả về JSON hoặc thông báo thành công
-                return Json(new { success = true });
+                return PartialView("PartialViewProfileInfo", customer);
             }
 
             // Nếu không tìm thấy thông tin, trả về thông báo lỗi
             return Json(new { success = false });
         }
 
-
+        public IActionResult OrderHistory()
+        {
+            return ViewComponent("OrderHistory");
+        }
     }
 }

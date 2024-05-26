@@ -100,16 +100,50 @@
         document.getElementById('MaptttHidden').value = mapttt;
     }
 
-
     $(document).ready(function () {
-        $('#checkUseCoin').change(function () {
-            console.log("In check ");
-            if ($(this).prop('checked') == true) {
-                $('#useKarCoin').removeAttr('hidden');
-            }
-            else {
-                $('#useKarCoin').attr('hidden', true);
-            }
+        $('.changeAddress').click(function () {
+            var masodiachiView = $(this).attr('value');
+            $.ajax({
+                url: '/PhieuMua/ChangeAddressPhieuMua',
+                type: 'Get',
+                data: {
+                    masodiachi: masodiachiView
+                },
+                success:function(response){
+                    console.log("Hotten : " + response);
+                    console.dir(response);
+                    $('#HoTenInput').val(response.hoTen);
+                    $('#SdtInput').val(response.sdt);
+                    $('#DiachiInput').val(response.diachi);
+                    $('#selectTinh').val(response.maTinh);
+                    
+
+                    var selectQuan = $('#selectQuan');
+                    var selectWard = $('#selectPhuong');
+
+                    selectQuan.empty();
+                    selectQuan.append('<option value="">Choose District</option>');
+
+                    selectWard.empty();
+                    selectWard.append('<option value="">Choose Ward/Commune</option>');
+                    $.each(response.selectQuan, function (index, item) {
+                        selectQuan.append($('<option>', {
+                            value: item.value,
+                            text: item.text
+                        }));
+                    });
+
+                    $.each(response.selectPhuong, function (index, item) {
+                        selectWard.append($('<option>', {
+                            value: item.value,
+                            text: item.text
+                        }));
+                    });
+
+                    $('#selectQuan').val(response.maQuan);
+                    $('#selectPhuong').val(response.maPhuong);
+                }
+            });
         });
     });
 
@@ -142,14 +176,14 @@
                     <input asp-for="@Model.khInfo.Ngaysinh" value="@Model.khInfo.Ngaysinh" hidden />
                     <div class="col-lg-7">
                         <div class="coinWelcome" >
-                            <h1>Hi, Le Michael</h1>
+                            <h1>Hi, @Model.khInfo.Tenkh</h1>
                             <h3 style="border: none;
                                     margin: 0;font-size:16px;">
-                                Order (1 products) <strong style="color:#2F5ACF">134.000₫</strong>
+                                Order (@Model.listcartItem.Count() products) <strong style="color:#2F5ACF">@Model.totalCost.ToString("#,##0")₫</strong>
                             </h3>
                             <h3 style="border: none;
                                     margin: 0;padding-bottom:0;font-size:16px;">
-                                Get coin <strong style="color:#2F5ACF"><i class="bi bi-coin"></i> 2.000 Karma Coin</strong>
+                                Get coin <strong style="color:#2F5ACF"><i class="bi bi-coin"></i> <span id="coinWelcomeNum">@Model.coinGet.ToString("#,##0") Karma Coin</span></strong>
                             </h3>
                         </div>
                         <div class="row" style="border-bottom:solid 1px #ccc;display:flex;align-items:center">
@@ -247,6 +281,7 @@
                             <button class="primary-btn text-center" type="submit" style="width:100%">Confirm checkout</button>
                     </div>
                     <div class="col-lg-5">
+
                         <div class="order_box">
                             <h2>YOUR ORDER</h2>
                             <ul class="list">
@@ -280,48 +315,9 @@
                                     </li>
                                 }
                             </ul>
-                            @await Component.InvokeAsync("Voucher")
 
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Discount code" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-primary" type="button">Apply</button>
-                                </div>
-                            </div>
-                            
-                            <div class="form-check" style="border-top:solid 1px #ccc;padding-top:15px">
-                                <input class="form-check-input" type="checkbox" value="" id="checkUseCoin">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    <strong>Use karma coin</strong> <span style="font-size:12px">(Coin use has: 0)
-                                    </span> 
+                            <partial name="_PartialViewPriceDetail" model="Model" />
 
-                                </label>
-                            </div>
-
-                            <div class="input-group mb-3 mt-3" id="useKarCoin" hidden>
-                                <div style="display:flex; align-items:center;" class="mr-2">
-                                    <a class="btn btn-light btn-sm mr-1" style="order: 1;">
-                                        <i class="bi bi-dash" style="font-size:20px"></i>
-                                    </a>
-                                    <input disabled type="text" maxlength="8" title="Quantity:" value="0"
-                                    style="width:241px;text-align:center; order: 2;">
-                                    <a class="btn btn-light btn-sm ml-1" style="order: 3;">
-                                        <i class="bi bi-plus" style="font-size:20px"></i>
-                                    </a>
-                                </div>
-
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-primary" type="button">Apply</button>
-                                </div>
-                            </div>
-
-                            <ul class="list list_2 mt-3" style="border-top:solid 1px #ccc;padding-top:5px">
-                                <li ><a style="border:none;font-size:12px" href="#">Temp<span>@tongtien.ToString("#,##0")₫</span></a></li>
-                                <li><a style="border:none;font-size:12px" href="#">Discount<span>0₫</span></a></li>
-                                <li><a style="border:none;font-size:12px" href="#">Shipping fee<span>Free</span></a></li>
-                                <li style="border-top:solid 1px #ccc;padding-top:15px">
-                                    <a style="border-bottom:none;" href=" #">Total bill<span>@tongtien.ToString("#,##0")₫</span></a></li>
-                            </ul>
                         </div>
                     </div>
 

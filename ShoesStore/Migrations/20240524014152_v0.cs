@@ -20,7 +20,8 @@ namespace ShoesStore.Migrations
                     TENBANNER = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     VITRI = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LINK = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    HOATDONG = table.Column<bool>(type: "bit", nullable: false)
+                    HOATDONG = table.Column<bool>(type: "bit", nullable: false),
+                    SLOGAN = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false, defaultValueSql: "(N'')")
                 },
                 constraints: table =>
                 {
@@ -107,6 +108,34 @@ namespace ShoesStore.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "TINH",
+                columns: table => new
+                {
+                    MATINH = table.Column<int>(type: "int", nullable: false),
+                    TENTINH = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TINH", x => x.MATINH);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "VOUCHER",
+                columns: table => new
+                {
+                    MAVOUCHER = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    SOLUONG = table.Column<int>(type: "int", nullable: false),
+                    GIATOITHIEU = table.Column<decimal>(type: "money", nullable: false),
+                    GIAMTOIDA = table.Column<decimal>(type: "money", nullable: false),
+                    NGAYTAO = table.Column<DateTime>(type: "datetime", nullable: false),
+                    NGAYHETHAN = table.Column<DateTime>(type: "datetime", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VOUCHER", x => x.MAVOUCHER);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "DONGSANPHAM",
                 columns: table => new
                 {
@@ -136,10 +165,12 @@ namespace ShoesStore.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TENKH = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     EMAIL = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    DIACHI = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     SDT = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     GIOITINH = table.Column<bool>(type: "bit", nullable: true),
-                    NGAYSINH = table.Column<DateTime>(type: "datetime", nullable: true)
+                    NGAYSINH = table.Column<DateTime>(type: "datetime", nullable: true),
+                    NGAYXEPHANG = table.Column<DateTime>(type: "datetime", nullable: true),
+                    XEPHANG = table.Column<int>(type: "int", nullable: false),
+                    TONGXU = table.Column<decimal>(type: "money", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -175,6 +206,24 @@ namespace ShoesStore.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "QUAN",
+                columns: table => new
+                {
+                    MAQUAN = table.Column<int>(type: "int", nullable: false),
+                    TENQUAN = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    MATINH = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_QUAN", x => x.MAQUAN);
+                    table.ForeignKey(
+                        name: "FK_QUAN_TINH",
+                        column: x => x.MATINH,
+                        principalTable: "TINH",
+                        principalColumn: "MATINH");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "CHITIETKHUYENMAI",
                 columns: table => new
                 {
@@ -206,7 +255,9 @@ namespace ShoesStore.Migrations
                     MAMAU = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     ANHDAIDIEN = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ANHMATTREN = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ANHDEGIAY = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ANHDEGIAY = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    VIDEO = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TRANGTHAI = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -232,7 +283,8 @@ namespace ShoesStore.Migrations
                     NOIDUNGBL = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NGAYBL = table.Column<DateTime>(type: "datetime", nullable: false),
                     MADONGSANPHAM = table.Column<int>(type: "int", nullable: false),
-                    MAKH = table.Column<int>(type: "int", nullable: false)
+                    MAKH = table.Column<int>(type: "int", nullable: false),
+                    RATING = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -250,6 +302,27 @@ namespace ShoesStore.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "SODIACHI",
+                columns: table => new
+                {
+                    MASODIACHI = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MAKH = table.Column<int>(type: "int", nullable: false),
+                    TENNGUOINHAN = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    SDTNGUOINHAN = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    DIACHI = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SODIACHI", x => x.MASODIACHI);
+                    table.ForeignKey(
+                        name: "FK__KHACHHAG__SODIACHI__123213",
+                        column: x => x.MAKH,
+                        principalTable: "KHACHHANG",
+                        principalColumn: "MAKH");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "BLOG",
                 columns: table => new
                 {
@@ -257,7 +330,8 @@ namespace ShoesStore.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MANV = table.Column<int>(type: "int", nullable: false),
                     NOIDUNG = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    THELOAI = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                    THELOAI = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    Anhdaidien = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -278,11 +352,16 @@ namespace ShoesStore.Migrations
                     NGAYDAT = table.Column<DateTime>(type: "datetime", nullable: false),
                     MAKH = table.Column<int>(type: "int", nullable: true),
                     MANV = table.Column<int>(type: "int", nullable: true),
+                    MAVOUCHER = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     TINHTRANG = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     MAPTTT = table.Column<int>(type: "int", nullable: false),
                     GHICHU = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LYDOHUYDON = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    TONGTIEN = table.Column<decimal>(type: "money", nullable: true)
+                    TONGTIEN = table.Column<decimal>(type: "money", nullable: true),
+                    DIACHINGUOINHAN = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false, defaultValueSql: "(N'')"),
+                    EMAILNGUOINHAN = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false, defaultValueSql: "(N'')"),
+                    SDTNGUOINHAN = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false, defaultValueSql: "(N'')"),
+                    TENNGUOINHAN = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false, defaultValueSql: "(N'')")
                 },
                 constraints: table =>
                 {
@@ -298,10 +377,33 @@ namespace ShoesStore.Migrations
                         principalTable: "PHUONGTHUCTHANHTOAN",
                         principalColumn: "MAPTTT");
                     table.ForeignKey(
+                        name: "FK_PHIEUMUA_VOUCHER",
+                        column: x => x.MAVOUCHER,
+                        principalTable: "VOUCHER",
+                        principalColumn: "MAVOUCHER");
+                    table.ForeignKey(
                         name: "FK__PHIEUDAT__IDNV__5441852A",
                         column: x => x.MANV,
                         principalTable: "NHANVIEN",
                         principalColumn: "MANV");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PHUONG",
+                columns: table => new
+                {
+                    MAPHUONG = table.Column<int>(type: "int", nullable: false),
+                    TENPHUONG = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    MAQUAN = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PHUONG", x => x.MAPHUONG);
+                    table.ForeignKey(
+                        name: "FK_QUAN_PHUONG",
+                        column: x => x.MAQUAN,
+                        principalTable: "QUAN",
+                        principalColumn: "MAQUAN");
                 });
 
             migrationBuilder.CreateTable(
@@ -422,6 +524,21 @@ namespace ShoesStore.Migrations
                 column: "MAPTTT");
 
             migrationBuilder.CreateIndex(
+                name: "IX_PHIEUMUA_MAVOUCHER",
+                table: "PHIEUMUA",
+                column: "MAVOUCHER");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PHUONG_MAQUAN",
+                table: "PHUONG",
+                column: "MAQUAN");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_QUAN_MATINH",
+                table: "QUAN",
+                column: "MATINH");
+
+            migrationBuilder.CreateIndex(
                 name: "idx_unique_DongSp_Mau",
                 table: "SANPHAM",
                 columns: new[] { "MADONGSANPHAM", "MAMAU" },
@@ -442,6 +559,11 @@ namespace ShoesStore.Migrations
                 name: "IX_SANPHAMSIZE_MASIZE",
                 table: "SANPHAMSIZE",
                 column: "MASIZE");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SODIACHI_MAKH",
+                table: "SODIACHI",
+                column: "MAKH");
         }
 
         /// <inheritdoc />
@@ -463,6 +585,12 @@ namespace ShoesStore.Migrations
                 name: "CHITIETPHIEUMUA");
 
             migrationBuilder.DropTable(
+                name: "PHUONG");
+
+            migrationBuilder.DropTable(
+                name: "SODIACHI");
+
+            migrationBuilder.DropTable(
                 name: "KHUYENMAI");
 
             migrationBuilder.DropTable(
@@ -472,10 +600,16 @@ namespace ShoesStore.Migrations
                 name: "SANPHAMSIZE");
 
             migrationBuilder.DropTable(
+                name: "QUAN");
+
+            migrationBuilder.DropTable(
                 name: "KHACHHANG");
 
             migrationBuilder.DropTable(
                 name: "PHUONGTHUCTHANHTOAN");
+
+            migrationBuilder.DropTable(
+                name: "VOUCHER");
 
             migrationBuilder.DropTable(
                 name: "NHANVIEN");
@@ -485,6 +619,9 @@ namespace ShoesStore.Migrations
 
             migrationBuilder.DropTable(
                 name: "SIZE");
+
+            migrationBuilder.DropTable(
+                name: "TINH");
 
             migrationBuilder.DropTable(
                 name: "TAIKHOAN");

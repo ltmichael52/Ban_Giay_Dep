@@ -107,6 +107,17 @@
                 <img src ="~/img/@Model.DongsanphamId/@ViewBag.Anhdegiay" id="BottomImagePrv" src="#" width="150" height="150" style="border: 1px solid; margin: 20px auto;" />
             </div>
         </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label asp-for="VideoFile" class="control-label">Video File</label>
+                <div class="custom-file">
+                    <input type="file" asp-for="VideoFile" class="custom-file-input" id="FLVideo" onchange="previewVideo(this)" />
+                    <label class="custom-file-label" for="FLVideo">Choose file</label>
+                    <span asp-validation-for="VideoFile" class="text-danger"></span>
+                </div>
+                <video src ="~/videos/@Model.DongsanphamId/@ViewBag.Video" controls width="150" height="150" id="VideoPrv" src="#" style="border: 1px solid; margin: 20px auto;"></video>
+            </div>
+        </div>
     </div>
 
     <div class="row">
@@ -160,6 +171,42 @@
         var fileName = input.files[0].name;
         $(input).siblings(".custom-file-label").addClass("selected").html(fileName);
     }
+    // function previewVideo(input) {
+    //     var video = document.getElementById('VideoPrv');
+    //     var source = document.createElement('source');
+    //     source.setAttribute('src', URL.createObjectURL(input.files[0]));
+    //     source.setAttribute('type', 'video/mp4');
+    //     video.appendChild(source);
+
+    //     var fileName = input.files[0].name;
+    //     $(input).siblings(".custom-file-label").addClass("selected").html(fileName);
+    // }
+    function previewVideo(input) {
+        var file = input.files[0];
+        var type = file.type;
+        var videoNode = document.getElementById('VideoPrv');
+        var canPlay = videoNode.canPlayType(type);
+
+        if (canPlay === '') canPlay = 'no';
+        // Tạo một message thông báo nếu định dạng video không được hỗ trợ
+        var message = canPlay === 'no' ? 'Cannot play file type: ' + type : '';
+
+        var isError = canPlay === 'no';
+
+        if (isError) {
+            console.error(message);
+            alert(message);
+            return;
+        }
+
+        var fileURL = URL.createObjectURL(file);
+        videoNode.src = fileURL;
+
+        // Cập nhật label của input file để hiển thị tên file đã chọn
+        var fileName = file.name;
+        $(input).siblings(".custom-file-label").addClass("selected").html(fileName);
+    }
+
 </script>
 
 
