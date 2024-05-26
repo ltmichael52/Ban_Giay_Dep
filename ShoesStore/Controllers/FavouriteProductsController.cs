@@ -28,103 +28,43 @@ namespace ShoesStore.Controllers
 
 		public IActionResult ViewFavouriteProducts()
 		{
-			var FavouriteItems = HttpContext.Session.Get<List<FavouriteProductsItem>>("Favourite") ?? new List<FavouriteProductsItem>();
+			var favouriteItems = HttpContext.Session.Get<List<FavouriteProductsItem>>("Favourite") ?? new List<FavouriteProductsItem>();
 
-			return View(FavouriteItems);
+			return View(favouriteItems);
 		}
 
-		[Route("FavouriteProducts/AddFavouriteProducts/{id}/{tenSize}/{slton}")]
-		public IActionResult AddFavouriteProducts(int id, string tenSize, int slton)
+		public IActionResult AddFavouriteProducts(int id)
 		{
-			Sanpham sp = sanphamrepo.Getsanpham(id);
+			var favouriteItems = HttpContext.Session.Get<List<FavouriteProductsItem>>("Favourite") ?? new List<FavouriteProductsItem>();
+			var existingFavouriteItem = favouriteItems.FirstOrDefault(item => item.Id == id);
 
-			var FavouriteItems = HttpContext.Session.Get<List<FavouriteProductsItem>>("Favourite") ?? new List<FavouriteProductsItem>();
-			var existingFavouriteItems = FavouriteItems.FirstOrDefault(item => item.sanpham.Masp == id && item.Size == tenSize);
-
-			if (existingFavouriteItems != null)
+			if (existingFavouriteItem == null)
 			{
-				if (existingFavouriteItems.Quantity <= slton - 1)
-				{
-                    existingFavouriteItems.Quantity += 1;
-				}
-				else
-				{
-					return RedirectToAction("HienThiSanPham", "SanPham", new { madongsanpham = sp.Madongsanpham, masp = sp.Masp });
-				}
+				favouriteItems.Add(sanphamrepo.GetFavProById(id));
 			}
-			else
-			{
-				Dongsanpham dongSanPham = _product.GetDongSanpham(sp.Madongsanpham);
-				Mau mau = _mau.GetMau(sp.Mamau);
 
-                FavouriteItems.Add(new FavouriteProductsItem()
-				{
-					sanpham = sp,
-					Name = dongSanPham.Tendongsp,
-					TenMau = mau.Tenmau,
-					Quantity = 1,
-					tonkho = slton,
-					GiaGoc = dongSanPham.Giagoc,
-					PhanTramGiam = kmRepo.GetKmProductToday(dongSanPham),
-					Size = tenSize,
-					Maspsize = _tkho.GetMaspsize(sp.Masp, tenSize)
-				});
-			}
-			HttpContext.Session.Set("Favourite", FavouriteItems); 
+			HttpContext.Session.Set("Favourite", favouriteItems);
 
-			return RedirectToAction("ViewFavouriteProducts");
+			return RedirectToAction(nameof(ViewFavouriteProducts));
 		}
+        public IActionResult RemoveFavouriteProduct(int id)
+        {
+            var favouriteItems = HttpContext.Session.Get<List<FavouriteProductsItem>>("Favourite") ?? new List<FavouriteProductsItem>();
+            var itemToRemove = favouriteItems.FirstOrDefault(item => item.Id == id);
 
-		public IActionResult IncreaseFP(int Masp, string size) 
-		{
-			var FavouriteItems = HttpContext.Session.Get<List<FavouriteProductsItem>>("Favourite");
-			FavouriteProductsItem shopFPIncrease = FavouriteItems
-                .FirstOrDefault(x => x.sanpham.Masp == Masp && x.Size == size);
+            if (itemToRemove != null)
+            {
+                favouriteItems.Remove(itemToRemove);
+                HttpContext.Session.Set("Favourite", favouriteItems);
+                TempData["Message"] = "Product was successfully removed from your favourites.";
+            }
+            else
+            {
+                TempData["Message"] = "Product not found in your favourites.";
+            }
 
-			if (shopFPIncrease.tonkho >= shopFPIncrease.Quantity + 1)
-			{
-                shopFPIncrease.Quantity += 1;
-			}
+            return RedirectToAction(nameof(ViewFavouriteProducts));
+        }
 
-			HttpContext.Session.Set("Favourite", FavouriteItems);
-			return RedirectToAction("ViewFavouriteProducts");
-		}
-
-
-		public IActionResult DecreaseFP(int Masp, string size)
-		{
-			var FavouriteItems = HttpContext.Session.Get<List<FavouriteProductsItem>>("Favourite");
-			FavouriteProductsItem shopFPDecrease = FavouriteItems
-				.FirstOrDefault(x => x.sanpham.Masp == Masp && x.Size == size);
-
-            shopFPDecrease.Quantity -= 1;
-			if (shopFPDecrease.Quantity == 0)
-			{
-                FavouriteItems.Remove(shopFPDecrease);
-			}
-			HttpContext.Session.Set("Favourite", FavouriteItems);
-
-			return RedirectToAction("ViewFavouriteProducts");
-		}
-
-		public IActionResult DeleteFP(int Masp, string tenSize)
-		{
-
-			var FavouriteItems = HttpContext.Session.Get<List<FavouriteProductsItem>>("Favourite");
-			FavouriteProductsItem shopFPDelete = FavouriteItems
-                .FirstOrDefault(x => x.sanpham.Masp == Masp && x.Size == tenSize);
-
-			if (shopFPDelete != null)
-			{
-                FavouriteItems.Remove(shopFPDelete);
-			}
-
-			HttpContext.Session.Set("Favourite ", FavouriteItems);
-
-			return RedirectToAction("ViewFavouriteProducts");
-
-		}
-
-
-	}
+    }
 }

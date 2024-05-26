@@ -1,11 +1,15 @@
-﻿namespace ShoesStore.Models
-{
-    public class Soxu
-    {
-        public int Masoxu { get; set; }
-        public int Makh {  get; set; }
-        public decimal Tongxu {  get; set; }
+﻿//using System;
+//using System.Collections.Generic;
 
-        public virtual Khachhang MakhNavigation {  get; set; }
-    }
-}
+//namespace ShoesStore.Models;
+
+//public partial class Soxu
+//{
+//    public int Masoxu { get; set; }
+
+//    public int Makh { get; set; }
+
+//    public decimal Tongxu { get; set; }
+
+//    public virtual Khachhang MakhNavigation { get; set; } = null!;
+//}

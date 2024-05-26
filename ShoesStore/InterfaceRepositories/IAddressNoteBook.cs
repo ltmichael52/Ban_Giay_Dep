@@ -9,5 +9,11 @@ namespace ShoesStore.InterfaceRepositories
         public List<Phuong> GetPhuongList(int districts);
         public List<Sodiachi> GetAllAddressNote();
         public void AddAddressNote(int proviceId, int districtId, int wardId, string address,int makh, string tennguoinhan, string sdt);
+        public Sodiachi GetSodiachi(int masodiachi);
+        public int GetMaTinh(string TenTinh);
+        public int GetMaQuan(string TenQuan);
+        public int GetMaPhuong(string TenPhuong);
+        public void UpdateSDC(int masdc, string hoten, string sdt, string diachi, int matinh, int maquan, int maphuong);
+        public void DeleteSDC(int masdc);
     }
 }

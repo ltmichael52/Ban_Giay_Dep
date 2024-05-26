@@ -1,4 +1,5 @@
-﻿using ShoesStore.InterfaceRepositories;
+﻿using Microsoft.EntityFrameworkCore;
+using ShoesStore.InterfaceRepositories;
 using ShoesStore.Models;
 
 namespace ShoesStore.Repositories
@@ -27,7 +28,18 @@ namespace ShoesStore.Repositories
         {
             return context.Sodiachis.ToList();
         }
-
+        public int GetMaTinh(string TenTinh)
+        {
+            return context.Tinhs.FirstOrDefault(x=>x.Tentinh == TenTinh).Matinh;
+        }
+        public int GetMaQuan(string TenQuan)
+        {
+            return context.Quans.FirstOrDefault(x => x.Tenquan == TenQuan).Maquan;
+        }
+        public int GetMaPhuong(string TenPhuong)
+        {
+            return context.Phuongs.FirstOrDefault(x => x.Tenphuong == TenPhuong).Maphuong;
+        }
         public void AddAddressNote(int proviceId, int districtId, int wardId,string address,int makh,string tennguoinhan,string sdt)
         {
             Tinh province = context.Tinhs.Find(proviceId);
@@ -45,6 +57,34 @@ namespace ShoesStore.Repositories
             };
 
             context.Sodiachis.Add(sdc);
+            context.SaveChanges();
+        }
+        
+
+        public Sodiachi GetSodiachi(int masodiachi)
+        {
+            return context.Sodiachis.FirstOrDefault(x => x.Masodiachi == masodiachi);
+        }
+
+        public void UpdateSDC(int masdc, string hoten, string sdt, string diachi, int matinh, int maquan, int maphuong)
+        {
+            Sodiachi sdc = context.Sodiachis.FirstOrDefault(x => x.Masodiachi == masdc);
+            string tentinh = context.Tinhs.FirstOrDefault(x => x.Matinh == matinh).Tentinh;
+            string tenquan = context.Quans.FirstOrDefault(x => x.Maquan == maquan).Tenquan;
+            string tenphuong = context.Phuongs.FirstOrDefault(x => x.Maphuong == maphuong).Tenphuong;
+            string diachiFinal = diachi +", "+tentinh+", "+tenquan+", "+tenphuong;
+
+            sdc.Tennguoinhan = hoten;
+            sdc.Sdtnguoinhan = sdt;
+            sdc.Diachi = diachiFinal;
+            context.Sodiachis.Update(sdc);
+            context.SaveChanges();
+        }
+
+        public void DeleteSDC(int masdc)
+        {
+            Sodiachi sdc = context.Sodiachis.FirstOrDefault(x => x.Masodiachi == masdc);
+            context.Sodiachis.Remove(sdc);
             context.SaveChanges();
         }
     }

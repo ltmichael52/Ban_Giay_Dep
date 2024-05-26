@@ -5,14 +5,10 @@ namespace ShoesStore.ViewModels
 	public class FavouriteProductsItem
 	{
 		public int Id { get; set; }
-		public string Name { get; set; }
-		public string TenMau { get; set; }
-		public Sanpham sanpham { get; set; }
-		public string Size { get; set; }
-		public int Maspsize { get; set; }
-		public int Quantity { get; set; }
-		public decimal GiaGoc { get; set; }
-		public int PhanTramGiam { get; set; }
-		public int tonkho { get; set; }
+		public int Madongsp {  get; set; }
+		public string Tensp {  get; set; }
+		public string Hinhanh { get; set; }
+		public decimal Gia {  get; set; }
+		public int Phantramgiam {  get; set; }
 	}
 }

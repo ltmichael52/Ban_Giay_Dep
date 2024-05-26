@@ -43,5 +43,6 @@ namespace ShoesStore.Areas.Admin.ViewModels
         [Display(Name = "Ảnh mặt đế giày")]
         [NotMapped]
         public IFormFile BottomImage { get; set; }
+        public IFormFile VideoFile { get; set; }
     }
 }

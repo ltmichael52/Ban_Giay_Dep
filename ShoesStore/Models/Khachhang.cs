@@ -17,17 +17,17 @@ public partial class Khachhang
 
     public DateTime? Ngaysinh { get; set; }
 
-    public int Xephang {  get; set; }
+    public DateTime? Ngayxephang { get; set; }
 
-    public DateTime? Ngayxephang {  get; set; }
+    public int Xephang { get; set; }
+
+    public decimal Tongxu { get; set; }
 
     public virtual ICollection<Binhluan> Binhluans { get; set; } = new List<Binhluan>();
 
     public virtual Taikhoan EmailNavigation { get; set; } = null!;
 
-    public virtual ICollection<Sodiachi> Sodiachis {  get; set; }
-
-    public virtual Soxu? SoxuNavigation { get; set; }
-
     public virtual ICollection<Phieumua> Phieumuas { get; set; } = new List<Phieumua>();
+
+    public virtual ICollection<Sodiachi> Sodiachis { get; set; } = new List<Sodiachi>();
 }

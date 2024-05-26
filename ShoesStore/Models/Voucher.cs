@@ -1,15 +1,21 @@
-﻿namespace ShoesStore.Models
-{
-    public class Voucher
-    {
-        public int Mavoucher {  get; set; }
-        public int Soluong {  get; set; }
-        public int Phantramgiam { get; set; }
-        public decimal Giatoithieu {  get; set; }
-        public decimal Giamtoida {  get; set; }
-        public DateTime Ngaytao { get; set; }
-        public DateTime Ngayhethan {  get; set; }
+﻿using System;
+using System.Collections.Generic;
 
-        public virtual ICollection<Phieumua> Phieumuas { get; set; }
-    }
+namespace ShoesStore.Models;
+
+public partial class Voucher
+{
+    public string Mavoucher { get; set; } = null!;
+
+    public int Soluong { get; set; }
+
+    public decimal Giatoithieu { get; set; }
+
+    public decimal Giamtoida { get; set; }
+
+    public DateTime Ngaytao { get; set; }
+
+    public DateTime Ngayhethan { get; set; }
+
+    public virtual ICollection<Phieumua> Phieumuas { get; set; } = new List<Phieumua>();
 }

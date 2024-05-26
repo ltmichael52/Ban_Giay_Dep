@@ -12,6 +12,7 @@ public partial class Blog
     public string? Noidung { get; set; }
 
     public string? Theloai { get; set; }
+
     public string? Anhdaidien { get; set; }
 
     public virtual Nhanvien ManvNavigation { get; set; } = null!;

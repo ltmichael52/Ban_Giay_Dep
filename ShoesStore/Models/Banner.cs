@@ -13,7 +13,7 @@ public partial class Banner
 
     public string Link { get; set; } = null!;
 
-    public string Slogan { get; set; } = null!;
-
     public bool Hoatdong { get; set; }
+
+    public string Slogan { get; set; } = null!;
 }

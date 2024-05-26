@@ -60,7 +60,9 @@ namespace ShoesStore.Controllers
 		{
 			SanphamViewModel pDetail = spRepo.HienThiSanpham(madongsanpham, masp);
             HttpContext.Session.SetInt32("Masp",masp);
-            return View(pDetail);
+			ViewBag.masp = masp;
+
+			return View(pDetail);
 		}
 
 		public void CreateData()
