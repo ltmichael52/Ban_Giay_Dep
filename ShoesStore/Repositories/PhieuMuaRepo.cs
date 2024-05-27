@@ -30,6 +30,22 @@ namespace ShoesStore.Repositories
             string tentinh = context.Tinhs.FirstOrDefault(x => x.Matinh == phieuMua.maTinh).Tentinh;
             string tenquan = context.Quans.FirstOrDefault(x => x.Maquan == phieuMua.maQuan).Tenquan; 
             string tenphuong = context.Phuongs.FirstOrDefault(x => x.Maphuong == phieuMua.maPhuong).Tenphuong;
+            Khachhang kh = context.Khachhangs.FirstOrDefault(x => x.Makh == phieuMua.khInfo.Makh);
+            if (kh != null)
+            {
+                kh.Tongxu -= phieuMua.coinApply;
+                kh.Tongxu += phieuMua.coinGet;
+                context.Khachhangs.Update(kh);
+                context.SaveChanges();
+            }
+
+            Voucher vc = context.Vouchers.FirstOrDefault(x => x.Mavoucher == phieuMua.Choosenvoucher.Mavoucher);
+            if (vc != null)
+            {
+                vc.Soluong -= 1;
+                context.Vouchers.Update(vc);
+                context.SaveChanges();
+            }
 
             string Diachi = phieuMua.Diachi + ", "+tentinh +", "+tenquan+", "+tenphuong;
             Phieumua newpm = new Phieumua()
@@ -37,7 +53,7 @@ namespace ShoesStore.Repositories
                 Ghichu = phieuMua.GhiChu,
                 Makh = phieuMua.khInfo.Makh,
                 Ngaydat = DateTime.Now,
-                Tinhtrang = "Chưa duyệt",
+                Tinhtrang = "Pending",
                 Mapttt = phieuMua.Mapttt,
                 MaptttNavigation = context.Phuongthucthanhtoans.Find(phieuMua.Mapttt),
                 Tongtien = phieuMua.totalCost,
@@ -73,6 +89,7 @@ namespace ShoesStore.Repositories
             var khachhang = context.Khachhangs.FirstOrDefault(kh => kh.Email == email);
             if (khachhang == null) return new List<Phieumua>();
             return context.Phieumuas.Where(pm => pm.Makh == khachhang.Makh)
+                .Include(x=>x.MavoucherNavigation)
                 .Include(p => p.Chitietphieumuas)
                 .ThenInclude(c => c.MaspsizeNavigation)
                 .ThenInclude(s => s.MaspNavigation)
@@ -83,7 +100,7 @@ namespace ShoesStore.Repositories
                 .Include(p => p.Chitietphieumuas)
                 .ThenInclude(c => c.MaspsizeNavigation)
                 .ThenInclude(s => s.MaspNavigation)
-                .ThenInclude(s => s.MamauNavigation).ToList();
+                .ThenInclude(s => s.MamauNavigation).OrderByDescending(x=>x.Mapm).ToList();
         }
         public Phieumua GetOrderById(int id)
         {

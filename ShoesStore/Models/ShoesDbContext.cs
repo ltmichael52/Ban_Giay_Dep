@@ -59,7 +59,7 @@ public partial class ShoesDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=TWS2702\\SQLEXPRESS;Initial Catalog=ShoesStore7;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        => optionsBuilder.UseSqlServer("Data Source=MICHAEL;Initial Catalog=ShoesStore2;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -198,9 +198,6 @@ public partial class ShoesDbContext : DbContext
             entity.Property(e => e.Ngaysinh)
                 .HasColumnType("datetime")
                 .HasColumnName("NGAYSINH");
-            entity.Property(e => e.Ngayxephang)
-                .HasColumnType("datetime")
-                .HasColumnName("NGAYXEPHANG");
             entity.Property(e => e.Sdt)
                 .HasMaxLength(255)
                 .HasColumnName("SDT");
@@ -210,8 +207,6 @@ public partial class ShoesDbContext : DbContext
             entity.Property(e => e.Tongxu)
                 .HasColumnType("money")
                 .HasColumnName("TONGXU");
-            entity.Property(e => e.Xephang).HasColumnName("XEPHANG");
-
             entity.HasOne(d => d.EmailNavigation).WithOne(p => p.Khachhang)
                 .HasForeignKey<Khachhang>(d => d.Email)
                 .OnDelete(DeleteBehavior.ClientSetNull)

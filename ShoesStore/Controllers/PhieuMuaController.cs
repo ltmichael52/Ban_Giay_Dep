@@ -46,37 +46,10 @@ namespace ShoesStore.Controllers
             //    TempData["ThanhToan"] = "Please login before checkout";
             //    return RedirectToAction("Login", "Account");
             //}
-            string emailkh = HttpContext.Session.GetString("Email") ?? "lephat@gmail.com";
+            string emailkh = HttpContext.Session.GetString("Email") ?? "";
             Khachhang kh = khRepo.GetCurrentKh(emailkh);
             List<ShoppingCartItem> cartItem = HttpContext.Session.Get<List<ShoppingCartItem>>("Cart") ?? new List<ShoppingCartItem>();
-            //Sanpham sp = sanphamrepo.Getsanpham(43);
-            //Dongsanpham dongSanPham = _product.GetDongSanpham(sp.Madongsanpham);
-            //Mau mau = _mau.GetMau(sp.Mamau);
-            //cartItem.Add(new ShoppingCartItem()
-            //{
-            //    sanpham = sp,
-            //    Name = dongSanPham.Tendongsp,
-            //    TenMau = mau.Tenmau,
-            //    Quantity = 1,
-            //    tonkho = 1,
-            //    GiaGoc = dongSanPham.Giagoc,
-            //    PhanTramGiam = kmRepo.GetKmProductToday(dongSanPham),
-            //    Size = "39",
-            //    Maspsize = _tkho.GetMaspsize(sp.Masp, "39")
-            //});
-            //cartItem.Add(new ShoppingCartItem()
-            //{
-            //    sanpham = sp,
-            //    Name = dongSanPham.Tendongsp,
-            //    TenMau = mau.Tenmau,
-            //    Quantity = 1,
-            //    tonkho = 1,
-            //    GiaGoc = dongSanPham.Giagoc,
-            //    PhanTramGiam = kmRepo.GetKmProductToday(dongSanPham),
-            //    Size = "41",
-            //    Maspsize = _tkho.GetMaspsize(sp.Masp, "41")
-            //});
-            //HttpContext.Session.Set("Cart", cartItem);
+           
             decimal total = 0;
             foreach (ShoppingCartItem shopcartItem in cartItem)
             {
@@ -91,15 +64,15 @@ namespace ShoesStore.Controllers
                 }
                 total += tiensp;
             }
-            decimal coin = Math.Round(total / 100000);
+            decimal coin = Math.Ceiling(total / 100000);
             coin = coin * 1000;
             PhieuMuaViewModel phieuMua = new PhieuMuaViewModel()
             {
                 listcartItem = cartItem,
                 khInfo = kh,
-                HoTen = kh.Tenkh,
-                Sdt = kh.Sdt,
-                Email = kh.Email,
+                HoTen = kh?.Tenkh ?? "",
+                Sdt = kh?.Sdt ?? "",
+                Email = kh?.Email ?? "",
                 Mapttt = 0,
                 voucherList = voucherRepo.getAllVoucherToday(),
                 sodiachis = addressRepo.GetAllAddressNote(),
@@ -119,7 +92,7 @@ namespace ShoesStore.Controllers
 
         public IActionResult ChooseVoucherAndApplyXu(string? mavoucher, bool? Boolcheck, decimal? AmountXu, int? changeAmount, bool? Apply,decimal? AmountApply)
         {
-            string emailkh = HttpContext.Session.GetString("Email") ?? "lephat@gmail.com";
+            string emailkh = HttpContext.Session.GetString("Email") ;
             decimal voucherApplyCode = 0, maxDiscount = 0;
             List<Voucher> voucherList = voucherRepo.getAllVoucherToday();
             Khachhang kh = khRepo.GetCurrentKh(emailkh);
@@ -155,7 +128,7 @@ namespace ShoesStore.Controllers
                 }
                 else
                 {
-                    string messageError = "Discount code " + mavoucher + " apply for order from " + voucher.Giatoithieu.ToString("#,##0") + "₫";
+                    string messageError = "Discount code " + mavoucher + " apply for order from " + voucher.Giatoithieu.ToString("#,##0") + " VND";
                     ViewBag.voucherError = messageError;
                 }
             }
@@ -184,7 +157,7 @@ namespace ShoesStore.Controllers
             total -= AmountApply ?? 0;
             maxDiscount += AmountApply ?? 0;
             ViewBag.voucherDiscount = maxDiscount;
-            decimal coin = Math.Round(total / 100000);
+            decimal coin = Math.Ceiling(total / 100000);
             coin = coin * 1000;
             PhieuMuaViewModel phieuMua = new PhieuMuaViewModel()
             {
@@ -214,7 +187,7 @@ namespace ShoesStore.Controllers
 
             phieuMua.listcartItem = HttpContext.Session.Get<List<ShoppingCartItem>>("Cart") ?? new List<ShoppingCartItem>();
             ViewBag.MethodPurchase = pttt.GetAllPttt();
-            string emailkh = HttpContext.Session.GetString("Email") ?? "lephat@gmail.com";
+            string emailkh = HttpContext.Session.GetString("Email");
             Khachhang kh = khRepo.GetCurrentKh(emailkh);
 
             CreateSelectAddress();

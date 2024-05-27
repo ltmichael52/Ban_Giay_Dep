@@ -17,10 +17,6 @@ public partial class Khachhang
 
     public DateTime? Ngaysinh { get; set; }
 
-    public DateTime? Ngayxephang { get; set; }
-
-    public int Xephang { get; set; }
-
     public decimal Tongxu { get; set; }
 
     public virtual ICollection<Binhluan> Binhluans { get; set; } = new List<Binhluan>();

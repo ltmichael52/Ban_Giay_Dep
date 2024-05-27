@@ -7,7 +7,7 @@
 </a>
 <style>
     .addressBlock {
-        width: 550px;
+        width: 570px;
         height: 75px;
         border-radius: 3px;
         border: solid 1px #ccc;
@@ -34,7 +34,7 @@
 <!-- Modal -->
 <form asp-action="AddAddress" asp-controller="PhieuMua">
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document" style="max-width:575px">
+        <div class="modal-dialog" role="document"  id="modalPopup"
             <div class="modal-content">
                 <div class="modal-header text-center">
                     <h5 class="modal-title" id="exampleModalLabel">Address Notebook</h5>
@@ -47,7 +47,7 @@
                     {
                         <div class="addressBlock">
                             <h3 style="font-size:14px">@address.Tennguoinhan @address.Sdtnguoinhan</h3>
-                            <h3 style="font-size:14px">@address.Diachi</h3>
+                            <p>@address.Diachi</p>
                             <a href="#" class="btn btn-info btn-choose">Choose</a>
                         </div>
                     }
@@ -55,7 +55,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Add</button>
                 </div>
             </div>
         </div>

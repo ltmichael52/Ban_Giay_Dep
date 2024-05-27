@@ -44,6 +44,7 @@ builder.Services.AddScoped<IBinhLuan, BinhLuanRepository>();
 builder.Services.AddScoped<IReportRepository, ReportRepository>();
 builder.Services.AddScoped<IAddressNoteBook, AddressNoteBookRepo>();
 builder.Services.AddScoped<IVoucher, VoucherRepo>();
+builder.Services.AddScoped<IVoucherAdmin, VoucherAdminRepo>();
 var app = builder.Build();
 app.UseSession();
 
