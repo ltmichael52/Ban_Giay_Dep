@@ -172,20 +172,28 @@
         <div class="billing_details">
             <div class="row">
                 <form class="row contact_form" asp-action="ThanhToan" method="post" novalidate="novalidate">
-                    <input asp-for="@Model.khInfo.Makh" value="@Model.khInfo.Makh" hidden/>
-                    <input asp-for="@Model.khInfo.Ngaysinh" value="@Model.khInfo.Ngaysinh" hidden />
+                    <input asp-for="@Model.khInfo.Makh" value="@Model.khInfo?.Makh" hidden/>
+                    <input asp-for="@Model.khInfo.Ngaysinh" value="@Model.khInfo?.Ngaysinh" hidden />
                     <div class="col-lg-7">
-                        <div class="coinWelcome" >
-                            <h1>Hi, @Model.khInfo.Tenkh</h1>
+                        
+                            <div class="coinWelcome">
+                            @if(Model.khInfo != null)
+                            {
+                                <h1>Hi, @Model.khInfo?.Tenkh</h1>
+                            }
+                            else
+                            {
+                                <h1>Login to receive coin</h1>
+                            }
                             <h3 style="border: none;
                                     margin: 0;font-size:16px;">
-                                Order (@Model.listcartItem.Count() products) <strong style="color:#2F5ACF">@Model.totalCost.ToString("#,##0")₫</strong>
-                            </h3>
-                            <h3 style="border: none;
+                                    Order (@Model.listcartItem.Count() products) <strong style="color:#2F5ACF">@Model.totalCost.ToString("#,##0")₫</strong>
+                                </h3>
+                                <h3 style="border: none;
                                     margin: 0;padding-bottom:0;font-size:16px;">
-                                Get coin <strong style="color:#2F5ACF"><i class="bi bi-coin"></i> <span id="coinWelcomeNum">@Model.coinGet.ToString("#,##0") Karma Coin</span></strong>
-                            </h3>
-                        </div>
+                                    Get coin <strong style="color:#2F5ACF"><i class="bi bi-coin"></i> <span id="coinWelcomeNum">@Model.coinGet.ToString("#,##0") Karma Coin</span></strong>
+                                </h3>
+                            </div>
                         <div class="row" style="border-bottom:solid 1px #ccc;display:flex;align-items:center">
                             <div class="col-6">
                                 <h2 >Shipping info</h2>

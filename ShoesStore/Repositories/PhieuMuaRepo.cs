@@ -30,7 +30,23 @@ namespace ShoesStore.Repositories
             string tentinh = context.Tinhs.FirstOrDefault(x => x.Matinh == phieuMua.maTinh).Tentinh;
             string tenquan = context.Quans.FirstOrDefault(x => x.Maquan == phieuMua.maQuan).Tenquan; 
             string tenphuong = context.Phuongs.FirstOrDefault(x => x.Maphuong == phieuMua.maPhuong).Tenphuong;
+            Khachhang kh = context.Khachhangs.FirstOrDefault(x => x.Makh == phieuMua.khInfo.Makh);
+            if (kh != null)
+            {
+                kh.Tongxu -= phieuMua.coinApply;
+                kh.Tongxu += phieuMua.coinGet;
+                context.Khachhangs.Update(kh);
+                context.SaveChanges();
+            }
 
+            Voucher vc = context.Vouchers.FirstOrDefault(x => x.Mavoucher == phieuMua.Choosenvoucher.Mavoucher);
+            if (vc != null)
+            {
+                vc.Soluong -= 1;
+                context.Vouchers.Update(vc);
+                context.SaveChanges();
+            }
+            
             string Diachi = phieuMua.Diachi + ", "+tentinh +", "+tenquan+", "+tenphuong;
             Phieumua newpm = new Phieumua()
             {
