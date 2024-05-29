@@ -25,7 +25,7 @@ namespace ShoesStore.Controllers
             var order = _phieuMuaRepo.GetOrderById(orderId);
             if (order == null)
             {
-                return View("NotFound");  // Ensure you have a view to handle the not found case.
+                return PartialView("NotFound");  // Ensure you have a view to handle the not found case.
             }
 
             return PartialView("TrackingDetails", order);

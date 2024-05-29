@@ -69,6 +69,6 @@ app.MapAreaControllerRoute(
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Account}/{action=UserProfile}/{id?}");
+    pattern: "{controller=SanPham}/{action=HienThiSanpham}/{masp=55}/{madongsanpham=13}");
 
 app.Run();

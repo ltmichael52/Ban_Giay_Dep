@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Binhluan>
+﻿@using X.PagedList
+@using ShoesStore.ViewModels
+@model CommentViewModel
 @inject IHttpContextAccessor HttpContextAccessor
 @{
 	ViewBag.Title = "Show Comment";
@@ -42,109 +44,76 @@
 	}
 
 
-	function VerifyRating() {
-		var rating = $("#lblRating").val();
-		if (rating == "0") {
-			alert("Please Select Rating");
-			return false;
-		}
-	}
 
 	function verifyCommentLength() {
+		var rating = $("#lblRating").val();
+		var check = true;
+		if (rating == "0") {
+			document.getElementById('checkRating').innerText = "Please rating";
+			document.getElementById('checkRating').removeAttribute("hidden");
+			check = false;
+		}
+		else{
+			document.getElementById("checkRating").setAttribute("hidden", "hidden");
+		}
+
 		var comment = document.getElementById("txtSanPhamComment").value;
 		if (comment.length > 300) {
 			document.getElementById("checkLengthComment").innerText = "Comment length cannot exceed 300 characters.";
 			document.getElementById("checkLengthComment").removeAttribute("hidden");
-			return false; // Prevent form submission
-		} else {
+			check = false;
+		}
+		else if (comment.length <= 0) {
+			document.getElementById("checkLengthComment").innerText = "Please enter comment";
+			document.getElementById("checkLengthComment").removeAttribute("hidden");
+			check = false;
+		}
+		else {
 			document.getElementById("checkLengthComment").setAttribute("hidden", "hidden");
-			return true; // Allow form submission
+		
 		}
+		return check;
 	}
+	$(document).ready(function () {
+		$('#btnSubmitComment').click(function () {
+			console.log("In click");
+			if (verifyCommentLength()) {
+				var ratingView = $("#lblRating").val();
+				var comment = document.getElementById("txtSanPhamComment").value;
+				$.ajax({
+					url: '/SanPham/AddComment',
+					type: 'GET',
+					data: {
+						rating: ratingView,
+						SanPhamComment: comment
+					},
+					success: function (response) {
+						$('#partialComment').html(response);
+					}
+				});
+				$("#lblRating").val("0");
+				$('#txtSanPhamComment').val("");
+				for (var i = 1; i <= 5; i++) {
+					$("#span" + i).attr('class', 'fa fa-star'); // Đặt lại các sao còn lại về màu mặc định
+				}
+			}
+		});
+	});
+	
 </script>
-<div class="col-lg-6">
-	@*Average*@
-	<div class="row total_rate">
-		<div class="col-6">
-			<div class="box_total">
-				<h5>Overall</h5>
-				<h4>4.0</h4>
-				<h6>(03 Reviews)</h6>
-			</div>
-		</div>
-		<div class="col-6">
-			<div class="rating_list">
-				<h3>Based on 3 Reviews</h3>
-				<ul class="list">
-					<li>
-						<a href="#">
-							5 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							4 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							3 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							2 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							1 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	@*lIST*@
-	<div class="review_list">
-		@foreach (var item in Model)
-		{
-			<div class="review_item">
-				<div class="media">
-					<div class="d-flex">
-						<img src="img/product/review-1.png" alt="">
-					</div>
-					<div class="media-body">
-						<h4>
-							@item.MakhNavigation.Tenkh
-							<span style="font-size:12px">
-								@item.Ngaybl.ToString("dd-MMM-yyyy")
-							</span>
-						</h4>
-						@for (int i = 0; i < item.Rating; i++)
-						{
-							<i class="fa fa-star yellow"></i>
-						}
-						@for (int i = item.Rating; i < 5; i++)
-						{
-							<i class="fa fa-star"></i>
-						}
-					</div>
-				</div>
-				<p>
-					@item.Noidungbl
-				</p>
-			</div>
-		}
-	</div>
 
+<div class="col-lg-6">
+	<div id="partialComment">
+	<partial name="PartialShowComment" model="Model"/>
+	</div>
 </div>
+
 <div class="col-lg-6">
 	<div class="review_box">
 		<h4>Add a Review</h4>
 		@if (HttpContextAccessor.HttpContext.Session.GetString("Email") == null)
 		{
-			<p>Vui lòng <a href="@Url.Action("Login", "Account")">đăng nhập</a> để thêm đánh giá và bình luận.</p>
+			<p>Please <a asp-action="Login" asp-controller="Account" asp-route-backToPage="comment">login</a> to add comment and rating.</p>
 		}
 		else
 		{
@@ -158,21 +127,19 @@
 				<i id="span5" onmouseout="CRateOut(5)" onmouseover="CRateOver(5)" onclick="CRateClick(5)" class="fa fa-star"></i>
 			</div>
 
-			<p class="text-danger" id="checkLengthComment" hidden></p>
+			<span class="text-danger" id="checkRating" hidden></span>
 
-			<form class="row contact_form" asp-action="AddComment" asp-controller="SanPham" method="post" onsubmit="return verifyCommentLength()" asp-route-name="rating">
-				<div class="col-md-12">
-					<div class="form-group">
-						<textarea class="form-control" name="SanPhamComment" id="txtSanPhamComment" rows="1" placeholder="Review" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Review'"></textarea>
-					</div>
-				</div>
-				<div class="col-md-12 text-right">
-					<button type="submit" value="submit" class="primary-btn">Submit Now</button>
-				</div>
-				<div>
-					<input type="hidden" id="lblRating" name="rating" value="0" />
-				</div>
-			</form>
+		<div class="form-group mt-2">
+			<textarea class="form-control" name="SanPhamComment" id="txtSanPhamComment" rows="4" placeholder="Review" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Review'"></textarea>
+			<span class="text-danger" id="checkLengthComment" hidden></span>
+		</div>
+
+			<div class="col-md-12 text-right">
+				<button class="primary-btn" id="btnSubmitComment">Submit Now</button>
+			</div>
+			<div>
+				<input type="hidden" id="lblRating" name="rating" value="0" />
+			</div>
 
 		}
 

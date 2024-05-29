@@ -33,7 +33,7 @@
                         <input asp-for="@Model.Khachhang.EmailNavigation.Email" value="123" hidden />
                         <input asp-for="@Model.Khachhang.EmailNavigation.Matkhau" value="123" hidden />
                         <div class="col-md-12 form-group">
-                            <input asp-for="@Model.Khachhang.Tenkh" type="text" class="form-control" placeholder="Họ và Tên" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tên tài khoản'">
+                            <input asp-for="@Model.Khachhang.Tenkh" type="text" class="form-control" placeholder="User name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'User name'">
                             <span class="text-danger" style="position: absolute; left: 0; margin-top: -3px; margin-left: 30px;">@Html.ValidationMessageFor(model => model.Khachhang.Tenkh)</span>
                         </div>
                         <div class="col-md-12 form-group">
@@ -45,18 +45,18 @@
                             <span class="text-danger" style="position: absolute; left: 0; margin-top: -3px; margin-left: 30px;">@Html.ValidationMessageFor(model => model.Taikhoan.Matkhau)</span>
                         </div>
                         <div class="col-md-12 form-group">
-                            <input asp-for="@Model.Khachhang.Sdt" type="text" class="form-control" placeholder="Số điện thoại" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Số điện thoại'">
+                            <input asp-for="@Model.Khachhang.Sdt" type="text" class="form-control" placeholder="Phone number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone number'">
                             <span class="text-danger" style="position: absolute; left: 0; margin-top: -3px; margin-left: 30px;">@Html.ValidationMessageFor(model => model.Khachhang.Sdt)</span>
                         </div>
                         <div class="col-md-12 form-group">
                             <select asp-for="@Model.Khachhang.Gioitinh" class="form-control">
-                                <option value="true">Nam</option>
-                                <option value="false">Nữ</option>
+                                <option value="true">Male</option>
+                                <option value="false">Female</option>
                             </select>
                             <span class="text-danger" style="position: absolute; left: 0; margin-top: -3px; margin-left: 30px;">@Html.ValidationMessageFor(model => model.Khachhang.Gioitinh)</span>
                         </div>
                         <div class="col-md-12 form-group">
-                            <input asp-for="@Model.Khachhang.Ngaysinh" type="date" class="form-control" placeholder="Ngày sinh" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ngày sinh'">
+                            <input asp-for="@Model.Khachhang.Ngaysinh" type="date" class="form-control" placeholder="Birth" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Birth'">
                             <span class="text-danger" style="position: absolute; left: 0; margin-top: -3px; margin-left: 30px;">@Html.ValidationMessageFor(model => model.Khachhang.Ngaysinh)</span>
                         </div>
                         <div class="col-md-12 form-group">

@@ -119,8 +119,8 @@
 								</ul>
 							</li>
 						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a asp-action="ViewCart" asp-controller="ShoppingCart" class="cart"><span class="ti-bag"></span></a></li>
+						<ul class="nav navbar-nav navbar-right"> 
+							<li class="nav-item"><a asp-action="ViewCart" asp-controller="ShoppingCart"  class="cart"><span class="ti-bag" ></span></a></li>
 								<li class="nav-item"><a asp-action="ViewFavouriteProducts" asp-controller="FavouriteProducts" class="heart"><span class="ti-heart"></span></a></li>
 							<li class="nav-item">
 								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
@@ -135,7 +135,7 @@
 			<div class="container">
 				<div id="kmToggle">
 				<form class="d-flex justify-content-between" asp-action="SanPhamTheoLoai" asp-controller="SanPham" id="searchForm">
-					<input type="text" name="searchString" class="form-control" id="search_input" placeholder="Tìm kiếm sản phẩm">
+					<input type="text" name="searchString" class="form-control" id="search_input" placeholder="Searching shoes">
 					<button type="submit" class="btn"></button>
 					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
 				</form>
@@ -224,7 +224,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 	<!-- End footer Area -->
 
-	@* <div class="float-contact">
+	<div class="float-contact">
 		<button class="chat-zalo">
 			<a asp-action="zalo" asp-controller="Home">Zalo</a>
 		</button>
@@ -234,7 +234,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		<button class="hotline">
 			<a href="tel:0585.969.282">Hotline: 0585.969.282</a>
 		</button>
-	</div>   *@
- </body>
+	</div>
 
+ </body>
+	
 </html>

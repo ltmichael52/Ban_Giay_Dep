@@ -60,7 +60,7 @@ namespace ShoesStore.Areas.Admin.Repositories
                 _context.SaveChanges();
             }
         }*/
-        public void UpdatePhieuMua(Phieumua pm, int id)
+        public void UpdatePhieuMua(Phieumua pm, int id,string oldState)
         {
             var PhieuMua = _context.Phieumuas.Find(id);
             if (PhieuMua != null)
@@ -72,6 +72,26 @@ namespace ShoesStore.Areas.Admin.Repositories
                             .Where(c => c.Mapm == id)
                             .Sum(c => c.Dongia * c.Soluong);
                 _context.SaveChanges();
+            }
+            if(PhieuMua.Makh != null)
+            {
+                if(oldState != PhieuMua.Tinhtrang)
+                {
+                    Khachhang kh = _context.Khachhangs.Find(PhieuMua.Makh);
+
+                    decimal coinGet = Math.Ceiling((PhieuMua.Tongtien ?? 0) / 100000);
+                    coinGet *= 1000;
+                    if (PhieuMua.Tinhtrang == "Confirm")
+                    {
+                        kh.Tongxu += coinGet;
+                    }
+                    else if(PhieuMua.Tinhtrang == "Cancel")
+                    {
+                        kh.Tongxu -= coinGet;
+                    }
+                    _context.Khachhangs.Update(kh);
+                    _context.SaveChanges();
+                }
             }
         }
         /*public void DeletePhieuMua(int Id)

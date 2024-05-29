@@ -1,4 +1,5 @@
-﻿<section class="banner-area organic-breadcrumb">
+﻿@model int
+<section class="banner-area organic-breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 			<div class="col-first">
@@ -15,6 +16,7 @@
 <!--================Order Details Area =================-->
 <section class="order_details section_gap">
 	<div class="container">
-		<h3 class="title_confirmation">Checkout success. Thanks for order!</h3>
+		<h3 class="title_confirmation" style="margin-bottom:8px">Checkout success. Thanks for order!</h3>
+		<h3 class="title_confirmation" style="margin-bottom:50px;">Your order id: @Model</h3>
 </div>
 </section>

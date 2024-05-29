@@ -37,10 +37,10 @@ namespace ShoesStore.Controllers
 
         public IActionResult ThanhToan()
         {
-            //if (HttpContext.Session.Get<List<ShoppingCartItem>>("Cart") == null)
-            //{
-            //    return RedirectToAction("SanPhamTheoLoai", "SanPham", new { maloai = -1 });
-            //}
+            if (HttpContext.Session.Get<List<ShoppingCartItem>>("Cart") == null)
+            {
+                return RedirectToAction("SanPhamTheoLoai", "SanPham", new { maloai = -1 });
+            }
             //if (HttpContext.Session.GetString("Email") == null || HttpContext.Session.GetString("Loaitk") != "0")
             //{
             //    TempData["ThanhToan"] = "Please login before checkout";
@@ -232,7 +232,7 @@ namespace ShoesStore.Controllers
             }
 
             spsize.MinusSanPhamSize(phieuMua);
-            pm.AddPhieuMua(phieuMua);
+            int mapm = pm.AddPhieuMua(phieuMua);
             //khRepo.UpdateKh(phieuMua.khInfo);
 
             HttpContext.Session.Remove("Cart");
@@ -242,7 +242,7 @@ namespace ShoesStore.Controllers
             string message = "ORDER ID: ";
             emailSender.SendEmail(receiver, subject, message);
 
-            return RedirectToAction("Confirmation", "PhieuMua");
+            return RedirectToAction("Confirmation", "PhieuMua", new {mapm = mapm});
         }
 
         public IActionResult AddressNoteBook()
@@ -294,10 +294,9 @@ namespace ShoesStore.Controllers
             return Json(selectPhuong);
         }
 
-        public IActionResult Confirmation()
+        public IActionResult Confirmation(int mapm)
         {
-
-            return View();
+            return View(mapm);
         }
 
         public void CreateSelectAddress()

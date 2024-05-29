@@ -25,7 +25,7 @@ namespace ShoesStore.Repositories
             DateTime datenow = DateTime.Now;
             for (int i = 1; i <= largestMonth; ++i)
             {
-                decimal moneyInMonth = _context.Phieumuas.Where(x => x.Tinhtrang == "Đã duyệt" && x.Ngaydat.Month == i && x.Ngaydat.Year == datenow.Year).Sum(x => x.Tongtien) ?? 0;
+                decimal moneyInMonth = _context.Phieumuas.Where(x => x.Tinhtrang == "Confirm" && x.Ngaydat.Month == i && x.Ngaydat.Year == datenow.Year).Sum(x => x.Tongtien) ?? 0;
 
                 salebyMonth.Add(new SalesByMonthViewModel
                 {
@@ -72,7 +72,7 @@ namespace ShoesStore.Repositories
             // Implement logic to calculate total revenue for the given month
             // For example:
             var totalRevenue = _context.Phieumuas
-                .Where(pm => pm.Ngaydat.Month == month && pm.Tinhtrang == "Đã duyệt")
+                .Where(pm => pm.Ngaydat.Month == month && pm.Tinhtrang == "Confirm")
                 .Sum(pm => (decimal?)pm.Tongtien) ?? 0; // Provide default value if null
             return totalRevenue;
         }

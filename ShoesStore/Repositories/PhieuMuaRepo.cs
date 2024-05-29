@@ -13,7 +13,7 @@ namespace ShoesStore.Repositories
             this.context = context;
         }
 
-        public void AddPhieuMua(PhieuMuaViewModel phieuMua)
+        public int AddPhieuMua(PhieuMuaViewModel phieuMua)
         {
             //decimal tongtien = 0;
             //foreach (ShoppingCartItem cartItem in phieuMua.listcartItem)
@@ -30,18 +30,18 @@ namespace ShoesStore.Repositories
             string tentinh = context.Tinhs.FirstOrDefault(x => x.Matinh == phieuMua.maTinh).Tentinh;
             string tenquan = context.Quans.FirstOrDefault(x => x.Maquan == phieuMua.maQuan).Tenquan; 
             string tenphuong = context.Phuongs.FirstOrDefault(x => x.Maphuong == phieuMua.maPhuong).Tenphuong;
-            Khachhang kh = context.Khachhangs.FirstOrDefault(x => x.Makh == phieuMua.khInfo.Makh);
-            if (kh != null)
+
+            if (phieuMua.khInfo != null)
             {
+                Khachhang kh = context.Khachhangs.FirstOrDefault(x => x.Makh == phieuMua.khInfo.Makh);
                 kh.Tongxu -= phieuMua.coinApply;
-                kh.Tongxu += phieuMua.coinGet;
                 context.Khachhangs.Update(kh);
                 context.SaveChanges();
             }
 
-            Voucher vc = context.Vouchers.FirstOrDefault(x => x.Mavoucher == phieuMua.Choosenvoucher.Mavoucher);
-            if (vc != null)
+            if (phieuMua.Choosenvoucher?.Mavoucher != null)
             {
+                Voucher vc = context.Vouchers.FirstOrDefault(x => x.Mavoucher == phieuMua.Choosenvoucher.Mavoucher);
                 vc.Soluong -= 1;
                 context.Vouchers.Update(vc);
                 context.SaveChanges();
@@ -51,7 +51,7 @@ namespace ShoesStore.Repositories
             Phieumua newpm = new Phieumua()
             {
                 Ghichu = phieuMua.GhiChu,
-                Makh = phieuMua.khInfo.Makh,
+                Makh = phieuMua.khInfo?.Makh,
                 Ngaydat = DateTime.Now,
                 Tinhtrang = "Pending",
                 Mapttt = phieuMua.Mapttt,
@@ -61,7 +61,7 @@ namespace ShoesStore.Repositories
                 Sdtnguoinhan = phieuMua.Sdt,
                 Emailnguoinhan = phieuMua.Email,
                 Diachinguoinhan = Diachi,
-                Mavoucher = phieuMua.Choosenvoucher.Mavoucher
+                Mavoucher = phieuMua.Choosenvoucher?.Mavoucher
             };
             
             context.Phieumuas.Add(newpm);
@@ -81,7 +81,7 @@ namespace ShoesStore.Repositories
 
             context.Chitietphieumuas.AddRange(ctpmList);
             context.SaveChanges();
-
+            return newpm.Mapm;
         }
 
         public List<Phieumua> GetOrderHistoryByEmail(string email)

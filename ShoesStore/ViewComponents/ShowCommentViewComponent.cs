@@ -2,36 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using ShoesStore.Models;
+using ShoesStore.InterfaceRepositories;
+using X.PagedList;
+using ShoesStore.ViewModels;
 
 namespace ShoesStore.ViewComponents
 {
 	public class ShowCommentViewComponent : ViewComponent
 	{
-		private readonly ShoesDbContext _context;
-
-		public ShowCommentViewComponent(ShoesDbContext context)
+		IBinhLuan blRepo;
+		public ShowCommentViewComponent(IBinhLuan blRepo)
 		{
-			_context = context;
+			this.blRepo = blRepo;
 		}
 
 		public IViewComponentResult Invoke()
 		{
 			int Masp = HttpContext.Session.GetInt32("Masp") ?? 0;
-			Sanpham sp = _context.Sanphams.Find(Masp);
-			int Madongsanpham = _context.Dongsanphams.FirstOrDefault(x => x.Madongsanpham == sp.Madongsanpham).Madongsanpham;
-			var listofComment = _context.Binhluans
-				.Where(objComment => objComment.Madongsanpham == Madongsanpham)
-				.Select(x => new Binhluan
-				{
-					Makh = x.Makh,
-					MakhNavigation = x.MakhNavigation,
-					Ngaybl = x.Ngaybl,
-					Rating = x.Rating,
-					Noidungbl = x.Noidungbl
-				})
-				.ToList();
+			CommentViewModel cmtView = blRepo.GetBlList(Masp);
+			
 			TempData["Comment"] = "Vui lòng đăng nhập trước khi comment";
-			return View(listofComment);
+			return View(cmtView);
 		}
 	}
 }

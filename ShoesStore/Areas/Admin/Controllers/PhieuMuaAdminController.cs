@@ -61,10 +61,10 @@ namespace ShoesStore.Areas.Admin.Controllers
         // POST: /Admin/PhieuMuaAdmin/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, Phieumua phieuMua)
+        public IActionResult Edit(int id, Phieumua phieuMua,string oldState)
         {
 
-            _pmrepo.UpdatePhieuMua(phieuMua, id);
+            _pmrepo.UpdatePhieuMua(phieuMua, id,oldState);
             return RedirectToAction(nameof(Index));
 
         }

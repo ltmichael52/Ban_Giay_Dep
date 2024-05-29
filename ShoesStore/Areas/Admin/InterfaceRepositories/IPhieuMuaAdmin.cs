@@ -8,7 +8,7 @@ namespace ShoesStore.Areas.Admin.InterfaceRepositories
     {
         Phieumua GetPhieuMuaById(int id);
         IQueryable<Phieumua> GetAllPhieuMua();
-        void UpdatePhieuMua(Phieumua pm, int id);
+        void UpdatePhieuMua(Phieumua pm, int id,string oldState);
        // void DeletePhieuMua(int Id);
     }
 }

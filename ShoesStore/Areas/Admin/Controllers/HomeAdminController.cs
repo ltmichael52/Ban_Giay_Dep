@@ -30,7 +30,7 @@ namespace ShoesStore.Areas.Admin.Controllers
             int currentMonth = DateTime.Now.Month;
 
             // Tổng doanh thu (tháng hiện tại)
-            decimal totalRevenue = _reportRepository.GetTotalRevenue(currentMonth);
+            //decimal totalRevenue = _reportRepository.GetTotalRevenue(currentMonth);
 
             // Tổng sản phẩm đã bán (tháng hiện tại)
             int totalProductsSold = _reportRepository.GetTotalProductsSold(currentMonth);
@@ -49,7 +49,7 @@ namespace ShoesStore.Areas.Admin.Controllers
             int totalCustomers = _dbContext.Khachhangs.Count();
 
             // Truyền dữ liệu vào ViewBag để sử dụng trong view
-            ViewBag.TotalRevenue = totalRevenue;
+            //ViewBag.TotalRevenue = totalRevenue;
             ViewBag.TotalProductsSold = totalProductsSold;
             ViewBag.TotalOrders = totalOrders;
             ViewBag.TotalEmployees = totalEmployees;

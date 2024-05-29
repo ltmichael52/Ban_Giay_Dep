@@ -69,8 +69,14 @@ namespace ShoesStore.Controllers
         }
 
         // GET: /Account/Login
-        public IActionResult Login()
+        public IActionResult Login(string backToPage = "")
         {
+            if(backToPage != "")
+            {
+                ViewBag.backToPage = backToPage;
+                
+            }
+          
             // Kiểm tra xem người dùng đã đăng nhập hay chưa
             if (HttpContext.Session.GetString("Email") == null || HttpContext.Session.GetString("Loaitk") != "0")
             {
@@ -94,7 +100,7 @@ namespace ShoesStore.Controllers
         // POST: /Account/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Login(Taikhoan taikhoan, int thanhtoan, int comment)
+        public IActionResult Login(Taikhoan taikhoan, string backToPage = "")
         {
             // Kiểm tra xem người dùng đã đăng nhập hay chưa
             if (HttpContext.Session.GetString("Email") == null || HttpContext.Session.GetString("Loaitk") != "0")
@@ -108,9 +114,16 @@ namespace ShoesStore.Controllers
                     HttpContext.Session.SetString("Email", user.Email);
                     HttpContext.Session.SetString("Loaitk", user.Loaitk.ToString());
 
-                    if (thanhtoan == 1)
+                    if (backToPage == "thanhtoan")
                     {
                         return RedirectToAction("ThanhToan", "PhieuMua");
+                    }
+                    if (backToPage == "comment")
+                    {
+                        int masp = HttpContext.Session.GetInt32("Masp") ?? 0;
+                        int madongsp = _db.Sanphams.Find(masp).Madongsanpham;
+
+                        return RedirectToAction("HienThiSanpham", "SanPham", new { madongsanpham = madongsp, masp =masp});
                     }
                     //if (comment == 1)
                     //{
@@ -120,15 +133,11 @@ namespace ShoesStore.Controllers
                     return RedirectToAction("Index", "Home");
                 }
             }
-            if (thanhtoan == 1)
+            if (backToPage != "")
             {
-                TempData["ThanhToan"] = "Vui lòng đăng nhập trước khi thanh toán";
+                ViewBag.backToPage = backToPage;
             }
-            //if (comment == 1)
-            //{
-            //    TempData["Comment"] = "Vui lòng đăng nhập trước khi comment";
-            //}
-            // Nếu thông tin không hợp lệ, hiển thị lại trang đăng nhập với thông báo lỗi
+           
             return View(taikhoan);
         }
 
@@ -146,14 +155,14 @@ namespace ShoesStore.Controllers
         public IActionResult UserProfile()
         {
             // Kiểm tra xem người dùng đã đăng nhập hay chưa
-            //if (HttpContext.Session.GetString("Email") == null)
-            //{
-            //    // Nếu chưa đăng nhập, chuyển hướng đến trang Login
-            //    return RedirectToAction("Login", "Account");
-            //}
+            if (HttpContext.Session.GetString("Email") == null)
+            {
+                // Nếu chưa đăng nhập, chuyển hướng đến trang Login
+                return RedirectToAction("Login", "Account");
+            }
 
             // Lấy thông tin tài khoản khách hàng từ Session
-            string userEmail = /*HttpContext.Session.GetString("Email")*/ "lephat@gmail.com";
+            string userEmail = HttpContext.Session.GetString("Email");
             var user = _db.Taikhoans
                             .Include(t => t.Khachhang)
                             .FirstOrDefault(x => x.Email == userEmail);

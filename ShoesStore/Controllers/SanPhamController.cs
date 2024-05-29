@@ -75,21 +75,20 @@ namespace ShoesStore.Controllers
 			ViewBag.MauList = MauList;
 		}
 
-        [HttpPost]
         public IActionResult AddComment(int rating, string SanPhamComment)
         {
-            // Kiểm tra xem người dùng đã đăng nhập hay chưa
-            if (HttpContext.Session.GetString("Email") == null)
-            {
-                return RedirectToAction("Login", "Account");
-            }
+			// Kiểm tra xem người dùng đã đăng nhập hay chưa
+			if (HttpContext.Session.GetString("Email") == null)
+			{
+				return RedirectToAction("Login", "Account");
+			}
 
-            // Lấy mã sản phẩm từ session
-            int Masp = HttpContext.Session.GetInt32("Masp") ?? 0;
+			// Lấy mã sản phẩm từ session
+			int Masp = HttpContext.Session.GetInt32("Masp") ?? 0;
             // Lấy thông tin sản phẩm từ mã sản phẩm
             Sanpham sp = spRepo.Getsanpham(Masp);
             // Lấy thông tin người dùng đang đăng nhập
-            string userEmail = HttpContext.Session.GetString("Email");
+            string userEmail = HttpContext.Session.GetString("Email") ;
             var user = khRepo.GetCurrentKh(userEmail);
 
             if (user == null)
@@ -114,8 +113,15 @@ namespace ShoesStore.Controllers
 
             // Thêm bình luận vào cơ sở dữ liệu
             blRepo.AddBinhLuan(objComment);
-
-            return RedirectToAction("HienThiSanpham", new { madongsanpham = sp.Madongsanpham, masp = Masp });
+			CommentViewModel cmtView = blRepo.GetBlList(Masp);
+			return PartialView("PartialShowComment", cmtView);
         }
+
+		public IActionResult FilterCommentPage(int page) {
+			int Masp = HttpContext.Session.GetInt32("Masp") ?? 0;
+			CommentViewModel cmtView = blRepo.GetBlList(Masp,page);
+
+			return PartialView("PartialShowComment", cmtView);
+		}
     }
 }

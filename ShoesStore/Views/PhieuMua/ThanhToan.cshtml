@@ -182,7 +182,7 @@
                             }
                             else
                             {
-                                <h1>Login to receive coin</h1>
+                                <h1><a style="text-decoration:underline" asp-action="Login" asp-controller="Account" asp-route-backToPage="thanhtoan">Login</a> to receive coin</h1>
                             }
                             <h3 style="border: none;
                                     margin: 0;font-size:16px;">
@@ -197,13 +197,16 @@
                             <div class="col-6">
                                 <h2 >Shipping info</h2>
                             </div>
-                            <div class="col-6">
-                                <a data-toggle="modal" data-target="#exampleModal"
-                                    style="cursor:pointer;" class="float-right">
-                                    <i class="bi bi-journal-bookmark-fill"></i> 
-                                    <span style="text-decoration:underline;color:orange">Choose from address notebook</span>
-                                </a>
-                            </div>
+                            @if(Model.khInfo != null)
+                            {
+                                <div class="col-6">
+                                    <a data-toggle="modal" data-target="#exampleModal"
+                                       style="cursor:pointer;" class="float-right">
+                                        <i class="bi bi-journal-bookmark-fill"></i>
+                                        <span style="text-decoration:underline;color:orange">Choose from address notebook</span>
+                                    </a>
+                                </div>
+                            }
                         </div>
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document" style="max-width:575px">
