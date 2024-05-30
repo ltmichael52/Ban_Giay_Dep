@@ -39,7 +39,7 @@ namespace ShoesStore.Areas.Admin.Repositories
                 /*MakhNavigation = _context.Khachhangs.FirstOrDefault(x => x.Makh == pm.Makh),
                 ManvNavigation = _context.Nhanviens.FirstOrDefault(x => x.Manv == pm.Manv),
                 MaptttNavigation = _context.Phuongthucthanhtoans.FirstOrDefault(x => x.Mapttt == pm.Mapttt)*/
-            });
+            }).OrderByDescending(x=>x.Mapm);
 
             return phieuMuas;
         }
