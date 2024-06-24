@@ -11,7 +11,7 @@ Vì ban đầu là tụi mình định làm tiếng việt do mình tưởng th�
 ## Bảng quy ước
 - Cái này là object cho các chức năng trên giao diện cho mọi người dễ dùng
 
-|STT | DATABASE | UI   |
+|INDEX | DATABASE | UI   |
 |--- | --- | ---------------- | 
 |1| MAU   | COLOR |
 |2| LOAI  |  SHOES CATEGORY | 
