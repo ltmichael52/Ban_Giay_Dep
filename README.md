@@ -1,4 +1,4 @@
-## prerequisites:
+## Prerequisites:
 - .Net 
 ## Website có các chức năng sau:
 + Hiển thị sản phẩm giày dép, sales, voucher, checkout
